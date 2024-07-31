@@ -1,0 +1,15 @@
+<pl-question-panel>
+<p>
+  A heat exchanger exchanges energy between a hot fluid and a cold fluid. </p>
+ <p>  The cold fluid with specific heat {{params.Cpc}} {{params.unitsCp}} flows at a rate of {{params.mc}} {{params.unitsMassRate}}. 
+  </p>
+<p> The cold fluid enters the pipe at a temperature of {{params.Tci}} {{params.unitsTemperature}} and exits at {{params.Tco}} {{params.unitsTemperature}}.</p>
+<p> The hot fluid of specific gravity {{params.Cph}} {{params.unitsCp}} exits at the rate of {{params.mh}} {{params.unitsMassRate}} with {{params.Tho}} {{params.unitsTemperature}}.</p>
+</p>
+</pl-question-panel>
+
+
+<p> How much heat (in {{params.unitsHeatRate}}) was supplied to heat the cold fluid? </p>
+<pl-number-input answers-name="Q" comparison="sigfig" digits="3" label="Q  (in {{params.unitsHeatRate}})"></pl-number-input>
+<p> What is the temperature (in degrees {{params.unitsTemperature}} ) of the hot fluid  entering the pipe? </p>
+<pl-number-input answers-name="Thi" comparison="sigfig" digits="3" label="T  (in deg {{params.unitsTemperature}})"></pl-number-input>

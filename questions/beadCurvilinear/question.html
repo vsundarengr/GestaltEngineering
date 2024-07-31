@@ -1,0 +1,14 @@
+<pl-question-panel>
+  <pl-figure file-name="bead.png"></pl-figure>
+A bead of {{params.masslabel}} {{params.mass}} {{params.unitsMass}} is moving on a semicircular hoop of a radius {{params.radius}} {{params.unitsDist}}. When the bead is at a point A on the hoop, the bead is moving at a speed of {{params.speed}} {{params.unitsSpeed}}. Point A is on the hoop and makes an angle \( \theta \) = {{params.angle}} {{params.unitsAngle}} with the positive horizontal axis.
+
+What is the magnitude of the normal reaction (in {{params.unitsForce}}) between the bead and the hoop?
+<pl-number-input answers-name="T" comparison="sigfig" digits="3" label="{{correct_answers_labels.T}}"></pl-number-input>
+
+What is the magnitude of the tangential acceleration (in ${{params.unitsAcc}}$) of the bead at this instant?
+
+<pl-number-input answers-name="at" comparison="sigfig" digits="3" label="{{correct_answers_labels.at}}"></pl-number-input>
+
+What is the magnitude of the centripetal acceleration (in $ {{params.unitsAcc}} $) of the bead at this instant?
+<pl-number-input answers-name="ac" comparison="sigfig" digits="3" label="Centripetal acceleration"></pl-number-input>
+</pl-question-panel>

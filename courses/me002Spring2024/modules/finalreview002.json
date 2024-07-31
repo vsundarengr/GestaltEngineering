@@ -1,0 +1,953 @@
+{
+"name": "finalreview",
+"title": "Final Review",
+"topics" : [ 
+{
+"name": "math",
+"title": "Mathematics",
+"topics": [
+{
+	"name": "trig",
+	"title": "Trigonometry",
+	"contents": [		
+				{ "fname": "trigRightTriangle",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+				}
+				
+				
+	]
+},
+{	"name": "vectors", 
+		"title": "Two dimensional vectors",
+		"contents" : [
+			{ "fname": "addVectorsGeometry",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "vectorLengthAngleToXY",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "vectorXYToLengthAngle",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			
+		]
+	
+	}
+]
+},
+{
+	"name": "kin",
+	"title": "kinematics",
+	"topics": 
+		[
+		{
+			"name": "rectilinear",
+			"title": "Rectilinear",
+			"contents" : [
+			{ "fname": "constAcc1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "constAcc2",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "ballThrownUp",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "averageVelAcc",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "averageVelMultiple",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			
+		]
+		},{
+			"name": "moreprobs",
+			"title": "Translation",
+			"contents": [
+					{ "fname": "kinematics/translation1d/constAcc1",
+						  "min" : 1,
+						  "max" : 20,
+						  "weight": 1,
+						  "maxScore": 1
+					},
+					{ "fname": "kinematics/translation1d/carSpeedReduction",
+						  "min" : 1,
+						  "max" : 20,
+						  "weight": 1,
+						  "maxScore": 1
+					},
+					{ "fname": "kinematics/translation1d/decelCalc",
+						  "min" : 1,
+						  "max" : 20,
+						  "weight": 1,
+						  "maxScore": 1
+					}
+			]
+		},
+
+		{
+			"name": "projectile",
+			"title": "Projectile 0",
+			"contents": [
+			{ "fname": "projectileBasic",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "projectileBasic2",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "projectileHorizontal",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "projectile1",
+			"title": "Projectile 1",
+			"contents": [
+			{ "fname": "kinematics/projectilemotion/projectileHotBalloon",
+				  "min" : 1,
+				  "max" : 5,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/projectilemotion/skier",
+				  "min" : 1,
+				  "max" : 5,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "projectile2",
+			"title": "Projectile 2",
+			"contents": [
+			{ "fname": "kinematics/projectilemotion/planeNut",
+				  "min" : 1,
+				  "max" : 5,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "projectile3",
+			"title": "Projectile 3",
+			"contents": [
+			{ "fname": "kinematics/projectilemotion/carAccidentSeasideCliffRoad",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/projectilemotion/carAccidentSeasideCliffRoad2",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+		{
+			"name": "rotational",
+			"title": "Rotational",
+			"topics": [
+			{
+				"name": "basicrot",
+				"title": "Basic Rotation",
+				"contents" : [
+				{ "fname": "angularVelocity",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				},
+				{ "fname": "constAngAcc1",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				},
+				{ "fname": "rotCentAcc",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				}	
+			]
+				
+			},
+			{
+				"name": "vectrot",
+				"title": "Rotation and vectors",
+				"contents" : [
+				{ "fname": "angularVelocityVector",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				},
+				{ "fname": "rotCentAccVectors",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				}
+			]
+			}
+			]
+			
+		}
+	]
+	
+},
+{
+	"name": "force",
+	"title": "Force analysis",
+	"topics": 
+		[
+		{
+			"name": "basicf",
+			"title": "Basic problems",
+			"contents": [
+				{ "fname": "airplaneForce",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				},
+				{ "fname": "airplaneForceFriction",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				}
+			]
+		},
+		{
+			"name": "newtonc1",
+			"title": "Newton's laws: Connected Bodies 1",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/connectedBlocks",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtonc2",
+			"title": "Newton's laws: Connected Bodies 2",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/accelerationMassesInclinedPlaneSmooth",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtonc3",
+			"title": "Newton's laws: Connected Bodies 3",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/forceTruckTrailerSmooth",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+		{
+			"name": "basict",
+			"title": "Torque Definition",
+			"contents": [
+				{ "fname": "constAngAccTorqueRot",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+				}
+			]
+		},
+		{
+			"name": "bank",
+			"title": "Banking and Turns",
+			"contents": [
+			{
+				"fname": "carCornerBank",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carCornerMax",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carCornerMaxForces",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carCornerBankForces",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "planeBank",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+			
+		},
+		{
+			"name": "carreactions",
+			"title": "Car Problems",
+			"contents": [
+			{
+				"fname": "carWheelReactionsAccLevel",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carWheelReactionsMaxAccSlope",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carWheelReactionsAccSlope",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carWheelReactionsCurveLevel",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carWheelReactionsCurveSlope",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carWheelReactionsMaxAccLevel",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+			
+		}
+
+		
+			]
+
+	
+},
+{
+	"name": "statics",
+	"title": "Statics",
+	"topics": [
+	{
+		"name": "basicst",
+		"title":"Basic Problems",
+		"contents": [
+		{
+				"fname": "twocablesStaticEqbm",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "rollerVBlockStaticEqbm",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+		]
+	},
+		{
+		"name": "statprob",
+		"title":"Multiple forces",
+		"contents": [
+		{
+				"fname": "boomStaticEqbm",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "ladderWeight",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "ladderWeight2",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+		]
+	},
+	{
+		"name": "reactions",
+		"title": "Reactions",
+		"contents": [
+			{
+				"fname": "simplySupportedBeam",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "beamCableStaticEqbm",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carWheelReactionsStaticLevel",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{
+				"fname": "carWheelReactionsStaticSlope",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			
+		]
+	}
+	]
+	
+},
+{
+	"name": "workenergy",
+	"title": "Work and Energy",
+	"topics": 
+		[
+		{
+			"name": "energydefns",
+			"title": "Definitions",
+			"contents": [
+			{ "fname": "kineticEnergyDefn",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "potentialEnergyDiff",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "springEnergyDefn",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "basicwork",
+			"title": "Basic Work",
+			"contents": [
+			{ "fname": "workBlock2",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "forceBlock1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{ "fname": "blockPulley1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			
+			
+			]
+			
+		},
+	
+		{
+			"name": "inclinedw",
+			"title": "Inclined planes",
+			"contents": [
+			{ "fname": "workInclinedParallel",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			
+			{ "fname": "blockPulleyInclined",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "frictionw",
+			"title": "Friction",
+			"contents": [
+			{ "fname": "workInclinedHorizontalWE",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "energyw",
+			"title": "Energy Conservation",
+			"contents": [
+			{
+			  "fname": "rollerCoaster1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "rollerCoaster2",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "springMassCompression",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "springMassVerticalUp",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			
+			]
+		},
+		{
+			"name": "springenergy",
+			"title": "Spring Energy Conservation",
+			"contents": [
+			{
+			  "fname": "springBallRampHeight",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "springBallRampMaxHeight",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "springBallRampSpeedAtTop",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "springBallRampSpeedProjectile",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			
+			]
+		}
+		
+		]
+	
+	
+},
+{
+	"name": "som",
+	"title": "Mechanics of materials",
+	"topics": 
+		[
+		{
+			"name": "tension",
+			"title": "Tension",
+			"contents": [
+			{
+			  "fname": "wireTensionSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "wireTensionSOMUSCS",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "cylinderCompressionSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "shear",
+			"title": "Shear",
+			"contents": [
+			{
+			  "fname": "shearDefnSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "singleShearPlateSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "doubleShearPlateSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "somapplications",
+			"title": "Applications",
+			"contents": [
+			{
+			  "fname": "keywaySOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "doubleShearPlateDesignSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "boltCircleShearSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "twocablesStaticEqbmSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "boomStaticEqbmSOM",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		}
+		]
+	
+},
+{
+	"name": "fluids",
+	"title": "Fluids",
+	"topics": [
+	{
+		"name": "fluidprops",
+		"title": "Fluid Properties",
+		"topics": [
+		{
+			"name": "density",
+			"title": "Density",
+			"contents": [
+			{
+			  "fname": "fluidDensity1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "fluidDensity2",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+			{
+			"name": "viscosity1",
+			"title": "Viscosity",
+			"contents": [
+			{
+			  "fname": "viscosity1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "bulkmodulus",
+			"title": "Bulk Modulus",
+			"contents": [
+			{
+			  "fname": "bulkModulus",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		}
+		]
+	},
+	{
+		"name": "massconv",
+		"title": "Mass conservation",
+		"topics": [
+		{
+			"name" : "defn",
+			"title": "Definitions",
+			"contents": [
+			{
+			  "fname": "pump1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "windMillPower",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		}
+			
+		]
+	},
+	{
+		"name": "energyfluid",
+		"title": "Energy conservation",
+		"topics": [
+		{
+			"name": "pitot1",
+			"title": "Pitot tube",
+			"contents": [
+			{
+			  "fname": "pitot1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		},
+		{
+			"name": "pump",
+			"title": "Pump",
+			"contents": [
+			{
+			  "fname": "pump2",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			},
+			{
+			  "fname": "pump3",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+			}
+			]
+		}
+		]
+	}
+	
+	]
+},
+{
+	"name": "thermal",
+	"title": "Thermal science",
+	"topics": [
+	{
+		"name": "basic",
+		"title": "Basics",
+		"contents": [
+		{
+			  "fname": "heatDefn1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+		},
+		{
+			  "fname": "heatWater",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+		},
+		{
+			  "fname": "heatPhaseChange",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+		}
+		
+		]
+	},
+	{
+		"name": "heatex",
+		"title": "Heat Exchange",
+		"contents": [
+		{
+			  "fname": "heatMixture",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+		},
+		{
+			  "fname": "heatExchanger",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+		},
+		{
+			  "fname": "heatExchanger1",
+			  "min" : 1,
+			  "max" : 1,
+			  "weight": 1,
+			  "maxScore": 1
+		}
+
+		]
+	}
+	]
+}
+
+]
+}

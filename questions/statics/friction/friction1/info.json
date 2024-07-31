@@ -1,0 +1,35 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Friction forces",
+    "stem":"Statics",
+    "topic": "Friction",
+    "tags": ["Force analysis", "static friction","friction forces"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "epere194@ucr.edu",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video1",
+            "title": "Video: Basics of friction",
+            "url": "https://ucr.yuja.com/V/Video?v=3359494&node=14548636&a=171898322&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video2",
+            "title": "Video: Friction example",
+            "url": "https://ucr.yuja.com/V/Video?v=3359497&node=14548635&a=2361088&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video3",
+            "title": "Video: Friction example",
+            "url": "https://ucr.yuja.com/V/Video?v=3359501&node=14548637&a=147319604&autoplay=1"
+        }]
+}
+

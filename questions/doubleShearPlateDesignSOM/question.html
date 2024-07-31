@@ -1,0 +1,12 @@
+<pl-question-panel>
+  <pl-figure file-name="doubleshear.png"></pl-figure>
+<p>
+  The bolted joint is to support a load of P = {{params.Fd}} {{params.unitsForce}}. 
+</p>
+<p> The bolt is made of {{params.materialName}} with yield strength {{params.sult}} {{params.unitsStress}}, shear yield strength of {{params.tult}} {{params.unitsStress}}, modulus of elasticity {{params.E}} {{params.unitsModulusElasticity}} and Poisson's ratio {{params.nud}}</p>
+</pl-question-panel>
+
+If the factor of safety is to be {{params.fs}}, what is the minimum diameter (in {{params.unitsDiameter}}) of the bolt?
+<pl-number-input answers-name="desdia" comparison="sigfig" digits="3" label="d (in {{params.unitsDiameter}})"></pl-number-input>
+
+

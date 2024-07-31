@@ -1,0 +1,14 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        The braking distance can be calculated using the equation for uniform deceleration: \( v^2 = u^2 + 2as \), where \( v \) is the final speed, \( u \) is the initial speed, \( a \) is the acceleration, and \( s \) is the distance.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        Since the car comes to a stop, the final velocity \( v \) is 0. The initial velocity \( u \) is {params.v1} {params.unitsSpeed}, and the braking distance \( s \) is {params.d} {params.unitsDistance}.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        Rearrange the equation to solve for acceleration \( a \): \( a = -\frac{{params.v1}^2}{2 \times {params.d}} \). Then, use this acceleration to find the braking time using the formula \( t = -\frac{u}{a} \).
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        Substituting the given values, the braking time is calculated as \( t = -\frac{{params.v1}}{{a}} \). The time taken to decelerate to a stop is {correct_answers.t} {params.unitsTime}.
+    </pl-hint>
+</pl-solution-panel>

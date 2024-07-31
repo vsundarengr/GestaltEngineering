@@ -1,0 +1,36 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Centrifugal compressor: Power",
+    "stem":"centrifugal compressor",
+    "topic": "fluids",
+    "tags": ["energy", "pressure","fluid", "turbomachines", "thermodynamics", "air"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video1",
+            "title": "Velocity triangles",
+            "url": "https://ucr.yuja.com/V/Video?v=9190178&node=39330964&a=131904432&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video2",
+            "title": "Torque and power",
+            "url": "https://ucr.yuja.com/V/Video?v=9190177&node=39330961&a=105882112&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video3",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=9190174&node=39330952&a=157668194&autoplay=1"
+            
+        }
+    ]
+}

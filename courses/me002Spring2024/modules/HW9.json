@@ -1,0 +1,132 @@
+{
+"name": "hw9",
+"title": "Preclass 9",
+"topics" : [ 
+{
+			"name": "static1",
+			"title": "Basic static equilibrium",
+			"contents": [
+			{ "fname": "twocablesStaticEqbm",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "rollerVBlockStaticEqbm",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "static2",
+			"title": "Static equilibrium",
+			"contents": [
+			{ "fname": "ladderWeight",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "ladderWeight2",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "static3",
+			"title": "Beam reactions",
+			"contents": [
+			{ "fname": "cantileverReactions",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "simplySupportedBeam",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "static4",
+			"title": "More static reactions",
+			"contents": [
+			{ "fname": "beamCableStaticEqbm",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "boomStaticEqbm",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "work1",
+			"title": "Basic work",
+			"contents": [
+			{ "fname": "forceBlock1",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "blockPulley1",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "work2",
+			"title": "More work",
+			"contents": [
+			{ "fname": "workBlock2",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/workEnergy/workInclinedParallel",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/workEnergy/workInclinedHorizontal",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "worke",
+			"title": "Work energy principle",
+			"contents": [
+			{ "fname": "forceBlock1WE",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+}
+]
+}

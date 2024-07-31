@@ -1,0 +1,15 @@
+<pl-solution-panel>
+    
+    <pl-hint level="1" data-type="text"> Compute the velocity at the inlet using the geometry of the impeller and the speed of the impeller </pl-hint>
+    <pl-hint level="2" data-type="text"> Compute the stagnation temperature from the inlet static temperature and the velocity of the gas </pl-hint>
+    <pl-hint level="3" data-type="text"> Compute the stagnation pressure from the stagnation temperature and the inlet pressure </pl-hint>
+    <pl-hint level="4" data-type="text"> 
+        <ul>
+            <li> $ \dot{V} = A V_{n2} \implies V_{n2} = \frac{\dot{V} } {2 \pi R_1 b_1} = {{correct_answers.Vn1}} {{params.unitsSpeed}} $ </li>
+            <li> Since the entry is radial, $ V_1  = V_{n1} $ </li>
+            <li> $ T_{01} = T_1 + \frac{V_1^2}{2 C_p} = (273 + {{params.temperature}}) + \frac{ {{correct_answers.Vn1}}^2 }{2 \times {{params.Cp}}} = {{correct_answers.T01}} \, {{params.unitsTemperatureAbs}} $ </li>
+            <li> $ P_{01} = P_1 \times (\frac{T_{01} }{T_1})^{ \gamma/(\gamma -1)} = (\frac{ {{correct_answers.T01}} }{ {{correct_answers.T1}} })^{1.4/(1.4-1)} = {{correct_answers.P01}} {{params.unitsPressure}} $ </li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+

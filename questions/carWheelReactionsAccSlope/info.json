@@ -1,0 +1,29 @@
+{
+    "uuid": "1f435c36-1126-43b0-aba5-627eeb2e10f9",
+    "title": "Car tire reactions",
+	"stem": "Car", 
+    "topic": "Mechanics",
+    "tags": ["force","moments","torque"],
+	"prereqs": "force",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript",
+	"resources": [
+        {
+            "type": "video",
+            "name": "hx1",
+            "title": "Example",
+            "url": "https://www.youtube.com/watch?v=Yk3fIdDUsP0"
+        },
+        {
+            "type": "video",
+            "name": "hx2",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7859731&node=33271174&a=56906342"
+        }
+    ]
+}

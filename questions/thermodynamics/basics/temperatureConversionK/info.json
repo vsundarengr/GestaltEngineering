@@ -1,0 +1,15 @@
+{
+  "uuid": "f7d6a8b3-4e3c-4f3a-9e3b-6c7d8e9a2b1c",
+  "title": "Temperature Conversion Question",
+  "stem": "Conversion of absolute temperature from Rankine to Celsius",
+  "topic": "Thermodynamics",
+  "tags": ["temperature", "conversion", "thermodynamics"],
+  "prereqs": "Understanding of temperature scales and conversion formulas",
+  "isAdaptive": true,
+  "createdBy": "",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

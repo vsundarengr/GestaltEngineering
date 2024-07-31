@@ -1,0 +1,6 @@
+<pl-question-panel>
+  <p> You are driving down a road at {{params.speed}} {{params.unitsSpeed}} and see a couch on the road that has fallen off a truck. You slam on the brakes decelerating the car at its maximum braking deceleration of {{params.deceleration}} {{params.unitsDeceleration}}. </p>
+  <p> What's the minimum distance (in {{params.unitsDistance}}) that the couch can be so that you can avoid hitting the couch? </p>
+</pl-question-panel>
+
+<pl-number-input answers-name="d" comparison="sigfig" digits="3" label="Distance (in {{params.unitsDistance}})"></pl-number-input>

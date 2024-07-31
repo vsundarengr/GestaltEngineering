@@ -1,0 +1,24 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Ball thrown upwards",
+    "stem":"Ball thrown upwards",
+    "topic": "Kinematics",
+    "tags": ["constant acceleration", "gravity"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "acc1",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=9841353&node=43201695&a=42724774"
+        }
+	]
+
+}

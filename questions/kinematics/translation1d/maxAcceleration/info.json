@@ -1,0 +1,19 @@
+{
+    "uuid": "d7f6a8b3-9c4e-4f3d-8e3a-6b2c1e9f5a2d",
+    "title": "Maximum Acceleration of a Car",
+    "stem": "What is the 0-60 mph time in seconds?",
+    "topic": "Physics",
+    "tags": [
+        "acceleration",
+        "car",
+        "physics"
+    ],
+    "prereqs": "Understanding of acceleration and conversion of units",
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

@@ -1,0 +1,23 @@
+<pl-question-panel>
+  <p>
+  Consider the  matrix:
+  </p>
+  <p>
+  $ \mathbf{A} = <pl-matrix-latex params-name="A" digits={{params.nDigits}}></pl-matrix-latex> $
+  </p>
+  
+ <p> 
+  Perform LU decomposition with partial pivoting at each step.   
+  </p>
+  <p>
+    Write down the permutation matrix (P), lower triangular matrix (L) and upper triangular matrix (U) at each step. 
+  </p>
+  </pl-question-panel>
+
+  <pl-static-text name="stepNumber"> <h4> Iteration 1 </h4> </pl-static-text>
+  
+  <pl-matrix-input answers-name="P" comparison="sigfig" digits={{params.sigfigs}} label="${\bf P} =$"></pl-matrix-input>
+  <pl-matrix-input answers-name="L" comparison="sigfig" digits={{params.sigfigs}} label="${\bf L} =$"></pl-matrix-input>
+  <pl-matrix-input answers-name="U" comparison="sigfig" digits={{params.sigfigs}} label="${\bf U} =$"></pl-matrix-input>
+
+

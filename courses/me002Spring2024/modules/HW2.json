@@ -1,0 +1,159 @@
+{
+"name": "hw2",
+"title": "Preclass 2",
+"topics" : [ 
+{
+	"name": "numproblems",
+	"title": "Basic numerical problems",
+	"contents": [
+			{ "fname": "kinematics/translation1d/acclTranslation",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/brakingDistance",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/brakingDistance2",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/maxAcceleration",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "moreprobs",
+	"title": "More problems",
+	"contents": [
+			{ "fname": "kinematics/translation1d/constAcc1",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/carSpeedReduction",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/decelCalc",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "motiongravity",
+	"title": "Motion under gravity",
+	"contents": [
+			{ "fname": "kinematics/translation1d/constAcc2",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/ballThrownUp",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "trig",
+	"title": "Trigonometry",
+	"contents": [		
+				{ "fname": "trigRightTriangle",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+				},
+				{ "fname": "math/trig/triangleGeomCosine",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+				}
+				
+	]
+},
+{
+	"name": "basicvectors",
+	"title": "Basic vectors",
+	"contents": [
+			{ "fname": "unitVector",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "vectorLengthAngleToXY",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "vectorXYToLengthAngle",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "addvectors",
+	"title": "Vector addition",
+	"contents": [
+			{ "fname": "addVectorsGeometry",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+
+	{
+			"name": "projectile",
+			"title": "Projectile",
+			"contents": [
+			{ "fname": "projectileBasic",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "projectileBasic2",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "projectileHorizontal",
+				  "min" : 1,
+				  "max" : 1,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+		}
+
+]
+}

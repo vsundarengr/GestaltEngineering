@@ -1,0 +1,33 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">Problem Statement: The problem involves calculating the amount of heat required to raise the temperature of water in a tank from {{params.initialTemp}}°{{params.unitsTemp}} to {{params.finalTemp}}°{{params.unitsTemp}}. The tank's dimensions are given, and it is half full of water.</pl-hint>
+    <pl-hint level="2" data-type="text">Known Variables Description:
+        <ul>
+            <li>Volume of the tank: \( {{params.length}} \times {{params.width}} \times {{params.height}} = {{params.length * params.width * params.height}} \) {{params.unitsLength}}^3</li>
+            <li>Volume of water (half full): \( \frac{1}{2} \times ({{params.length * params.width * params.height}}) = {{params.fillFraction * params.length * params.width * params.height}} \) {{params.unitsLength}}^3</li>
+            <li>Density of water: \( {{params.densityWater}} \) {{params.unitsDensity}} (converted based on selected unit system)</li>
+            <li>Specific heat of water: \( c_p = {{params.specificHeatWater}} \) {{params.unitsSpecificHeat}} (converted based on selected unit system)</li>
+            <li>Initial temperature: \( T_i = {{params.initialTemp}}°{{params.unitsTemp}} \)</li>
+            <li>Final temperature: \( T_f = {{params.finalTemp}}°{{params.unitsTemp}} \)</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="3" data-type="text">Equation Setup: The heat required to raise the temperature of a substance can be calculated using the equation:
+        \[ Q = m \cdot c_p \cdot \Delta T \]
+        where:
+        <ul>
+            <li>\( Q \) is the heat added (in {{params.unitsHeat}}),</li>
+            <li>\( m \) is the mass of the substance (in kg), calculated as volume of water \(\times\) density of water,</li>
+            <li>\( c_p \) is the specific heat capacity (in {{params.unitsSpecificHeat}}),</li>
+            <li>\( \Delta T \) is the change in temperature (in °{{params.unitsTemp}}).</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="4" data-type="text">Solution Process:
+        <ol>
+            <li>Calculate the mass of water using the volume and density:
+                \[ m = ({{params.fillFraction * params.length * params.width * params.height}}) \times {{params.densityWater}} = {{params.mass}} \] kg</li>
+            <li>Calculate the change in temperature:
+                \[ \Delta T = {{params.finalTemp}} - {{params.initialTemp}} = {{params.tempChange}} \] °{{params.unitsTemp}}</li>
+            <li>Calculate the heat required using the specific heat capacity of water:
+                \[ Q = {{params.mass}} \times {{params.specificHeatWater}} \times {{params.tempChange}} = {{correct_answers.Q}} \] {{params.unitsHeat}}</li>
+        </ol>
+    </pl-hint>
+</pl-solution-panel>

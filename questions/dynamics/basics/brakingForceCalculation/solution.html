@@ -1,0 +1,37 @@
+<pl-solution-panel>
+    <h3>Problem Solving Guide: Calculating Braking Force</h3>
+    <p>This interactive guide will help you understand how to calculate the braking force required to bring a vehicle to a stop under certain conditions.</p>
+
+    <pl-hint level="1" data-type="text">
+        <p><strong>Step 1: Understanding the Problem Context</strong></p>
+        <p>We begin with the kinematic equation and Newton's second law to determine the braking force. The kinematic equation is: \( v_f^2 = v_i^2 + 2a \Delta x \), where:</p>
+        <ul>
+            <li>\( v_f \) is the final speed (0 in the stoppage scenario),</li>
+            <li>\( v_i \) is the initial speed,</li>
+            <li>\( a \) is the acceleration (negative for deceleration), and</li>
+            <li>\( \Delta x \) is the stopping distance.</li>
+        </ul>
+    </pl-hint>
+
+    <pl-hint level="2" data-type="text">
+        <p><strong>Step 2: Calculating the Acceleration (a)</strong></p>
+        <p>To solve for \(a\), we rearrange the kinematic equation: \( a = -\frac{v_i^2}{2 \Delta x} \). Substituting the values provided,</p>
+        <p>\( a = -\frac{{{params.speed}}^2}{2 \times {{params.distance}}} \).</p>
+        <p>It's essential to ensure that the initial speed (\(v_i\)) and the distance (\(\Delta x\)) are in consistent units for accurate results.</p>
+    </pl-hint>
+
+    <pl-hint level="3" data-type="text">
+        <p><strong>Step 3: Applying Newton's Second Law</strong></p>
+        <p>With the acceleration calculated, we apply Newton's second law, \( F = ma \), to find the braking force. Substituting the calculated acceleration and given weight,</p>
+    <p>\( F = {{params.weight}} \times a \), where \(a\) is the acceleration from step 2.</p>
+    </pl-hint>
+
+    <pl-hint level="4" data-type="text">
+        <p><strong>Step 4: Final Answer</strong></p>
+        <p>Therefore, the braking force required to bring the vehicle to a complete stop is:</p>
+        <p>\( F = {{correct_answers.F}} {{params.unitsForce}} \).</p>
+        <p>This calculation includes converting units for compatibility and rounding the answer to the nearest third decimal place for precision.</p>
+    </pl-hint>
+
+    <p>Recap: We've applied the kinematic equation to find deceleration and then used Newton's second law to calculate the braking force. By substituting our dynamically generated parameters, we've solved for the specific scenario provided.</p>
+</pl-solution-panel>

@@ -1,0 +1,16 @@
+<pl-question-panel>
+<p>
+  A cylinder of diameter {{params.diam}} {{params.unitsDiameter}} and length {{params.L}} {{params.unitsDiameter}} has a compressive force of {{params.Fd}} {{params.unitsForce}}. 
+</p>
+<p> The wire is made of material with yield strength {{params.sult}} {{params.unitsStress}}, modulus of elasticity {{params.E}} {{params.unitsModulusElasticity}} and Poisson's ratio {{params.nud}}</p>
+</pl-question-panel>
+
+What is the magnitude of the stress (in {{params.unitsStress}}) in the cylinder?
+<pl-number-input answers-name="sigma" comparison="sigfig" digits="3" label="$\sigma $ (in {{params.unitsStress}})"></pl-number-input>
+What is the factor of safety in the cylinder?
+<pl-number-input answers-name="fs" comparison="sigfig" digits="3" label="Factor of safety"></pl-number-input>
+What is the change in length (in {{params.unitsDLength}}) of the cylinder?
+<pl-number-input answers-name="dL" comparison="sigfig" digits="3" label="Change in length (in {{params.unitsDLength}})"></pl-number-input>
+What is the change in the diameter (in {{params.unitsDDiameter}}) of the cylinder?
+<pl-number-input answers-name="dd" comparison="sigfig" digits="3" label="Change in diameter (in {{params.unitsDDiameter}})"></pl-number-input>
+

@@ -1,0 +1,20 @@
+{
+    "uuid": "f7d6b7a1-8e3d-4e3b-9c3a-6f7d8e9a0b1c",
+    "title": "Stopping Distance Calculation",
+    "stem": "Calculation of stopping distance for a truck under braking force",
+    "topic": "Physics",
+    "tags": [
+        "kinematics",
+        "mechanics",
+        "braking force",
+        "stopping distance"
+    ],
+    "prereqs": "Understanding of kinematics and forces",
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

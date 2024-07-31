@@ -1,0 +1,18 @@
+<pl-question-panel>
+  <pl-figure file-name="twoblocksinccable.png"></pl-figure>
+  <p> The figure shows two blocks A and B moving on a surface and connected by a cable and being tugged by a force P = {{params.P}} {{params.unitsForce}} on a smooth surface. </p>
+  <p> The {{params.masslabel}} of block A is {{params.mA}} {{params.unitsMass}} while the {{params.masslabel}} of block B is {{params.mB}} {{params.unitsMass}}. </p>
+  <p> The cable makes an angle {{params.theta}} degrees. </p>
+</pl-question-panel>
+
+What's the tension (in {{params.unitsForce}}) in the cable?
+<pl-number-input answers-name="T" comparison="sigfig" digits="3" label="Cable tension (in {{params.unitsForce}})"></pl-number-input>
+
+What's the acceleration (in {{params.unitsAcceleration}}) of the two blocks?
+<pl-number-input answers-name="a" comparison="sigfig" digits="3" label="Acceleration (in {{params.unitsAcceleration}})"></pl-number-input>
+
+What's the magnitude of the normal reaction (in {{params.unitsForce}}) between the surface and block A?
+<pl-number-input answers-name="Na" comparison="sigfig" digits="3" label="Normal reaction $ N_A $ (in {{params.unitsForce}})"></pl-number-input>
+
+What's the magnitude of the normal reaction (in {{params.unitsForce}}) between the surface and block B?
+<pl-number-input answers-name="Nb" comparison="sigfig" digits="3" label="Normal reaction $ N_B $ (in {{params.unitsForce}})"></pl-number-input>

@@ -1,0 +1,32 @@
+<pl-question-panel>
+  <p> A centrifugal compressor has an impeller of inner radius {{params.r1}} {{params.unitsDiameter}} and outer radius {{params.r2}} {{params.unitsDiameter}}. </p>
+  <p> The impeller width at the inner radius is {{params.b1}} {{params.unitsDiameter}} and at the outer radius is {{params.b2}} {{params.unitsDiameter}}.</p>
+  <p> The blade angle at the inlet is  $ {{params.beta1deg}}^\circ $ and at the exit  is $ {{params.beta2deg}}^\circ $. </p>
+  <p> It operates at {{params.omegad}} rpm </p>
+  <p> Air enters with a radial component of {{params.Vn1}} {{params.unitsSpeed}}. </p>
+  <p></p>
+
+</pl-question-panel>
+
+<hr/>
+
+  What is the magnitude of the velocity (in {{params.unitsSpeed}}) at the inlet?
+  <pl-number-input answers-name="V1" comparison="sigfig" digits="3" label="Magnitude of velocity (in {{params.unitsSpeed}})"></pl-number-input>
+  
+  What is the tangential component of the velocity (in {{params.unitsSpeed}}) at the inlet?
+  <pl-number-input answers-name="Vt1" comparison="sigfig" digits="3" label="Tangential component of velocity (in {{params.unitsSpeed}})"></pl-number-input>
+
+  What is the angle made by the  velocity vector (in degrees) at the inlet?
+  <pl-number-input answers-name="alpha1deg" comparison="sigfig" digits="3" label=" $ \alpha_1 $ "></pl-number-input>
+
+  What is the normal component of the velocity (in {{params.unitsSpeed}}) at the outlet?
+  <pl-number-input answers-name="Vn2" comparison="sigfig" digits="3" label=" Normal component of velocity (in {{params.unitsSpeed}}) "></pl-number-input>
+
+  What is the tangential component of the velocity (in {{params.unitsSpeed}}) at the outlet?
+  <pl-number-input answers-name="Vt2" comparison="sigfig" digits="3" label="Tangential component of velocity (in {{params.unitsSpeed}})"></pl-number-input>
+ 
+  What is the magnitude of the velocity (in {{params.unitsSpeed}}) at the outlet?
+  <pl-number-input answers-name="V2" comparison="sigfig" digits="3" label="Magnitude of velocity (in {{params.unitsSpeed}})"></pl-number-input>
+
+  What is the angle (in degrees) made by the velocity of the fluid   at the exit?
+  <pl-number-input answers-name="alpha2deg" comparison="sigfig" digits="3" label=" $ \alpha_2 $ "></pl-number-input>

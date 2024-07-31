@@ -1,0 +1,11 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        Acceleration is defined as the rate of change of velocity over time. Use the formula \(a = \frac{\Delta v}{\Delta t}\), where \(\Delta v\) is the change in velocity and \(\Delta t\) is the change in time. Ensure all units are in a consistent system (m/s for SI or ft/s for USCS) before applying this formula.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        For unit conversion in SI, use dimensional analysis. For example, to convert km/h to m/s, set up the ratio: \( \frac{1000\, \text{m}}{1\, \text{km}} \times \frac{1\, \text{hour}}{3600\, \text{s}} \). In USCS, to convert miles/h to ft/s, use: \( \frac{5280\, \text{ft}}{1\, \text{mile}} \times \frac{1\, \text{hour}}{3600\, \text{s}} \). These setups ensure that units cancel out properly, leaving you with the desired unit.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        With the car starting from rest, initial velocity is 0. The final velocity is {{params.v}} {{params.unitsSpeed}}, and time taken is {{params.t}} {{params.unitsTime}}. Convert final velocity into a consistent unit (m/s or ft/s) using dimensional analysis, then substitute these values into the formula: \(a = \frac{{v_converted}}{{params.t}}\) in the chosen acceleration unit (m/s² or ft/s²).
+    </pl-hint>
+    </pl-solution-panel>

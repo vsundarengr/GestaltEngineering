@@ -1,0 +1,260 @@
+<%- include('partials/header'); -%>
+
+
+
+<div class="goback">
+    <button> Show all courses </button>
+</div>
+
+<header>
+    <div class="headings">
+        <h3><%= title %>: <%= course.name%></h3>
+    </div>
+  </header>
+
+  <div class="cdetails">
+    <a class="delete" data-doc="<%= course._id %>">
+        <img src="/trashcan.svg" alt="delete icon" />
+    </a>
+
+    <table>
+        <tr>
+            <td> Course Number </td>
+            <td> <%= course.courseNumber %> </td>
+        </tr>
+        <tr>
+            <td> Session </td>
+            <td> <%= course.session %> </td>
+        </tr>
+        <tr>
+            <td> Section </td>
+            <td> <%= course.section %> </td>
+        </tr>
+        <tr>
+            <td> Instructor </td>
+            <td> <%= course.instructor %> </td>
+        </tr>
+    </table>
+  </div>
+
+  <form class="manageCourseUsers" data-doc="<%= course._id %>" data-fname="<%= course.fname %>" >
+    <button> Manage users of course </button>
+  </form>
+
+  <form class="addModuleForm" data-doc="<%= course._id %>">
+    <button> Add Module </button>
+</form>
+
+<form class="addQuizForm" data-doc="<%= course._id %>">
+    <button> Add Quiz </button>
+</form>
+
+<div class="moduletable"> 
+<h3> Modules </h3>
+</div>
+<div class="modulelist">
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Dates </th>
+                <th> Active</th>
+                <th> Action </th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (course.moduleList.length > 0) { %>
+                <% course.moduleList.forEach( module =>{%>
+            <tr>
+                <td> <%= module.module.title %></td>
+                <td> <%= module.startDate %> - <%= module.endDate %></td>
+                <td> <%= module.isActive %> </td>
+                <td> <button name = "launch" id="<%= module.moduleId %>" onclick = 'launchModule("<%= course._id %>","<%= module.moduleId %>")'> Launch </button></td>
+                <td> <a class="deletemodule" onclick = 'deleteModule("<%= module.moduleId %>", "<%=course._id%>")'>
+                    <img src="/trashcan.svg" alt="delete icon" />
+                </a> </td>
+            </tr>
+            <%}) ;%>
+            <%} %>
+        </tbody>
+
+    </table>
+</div>
+
+<div class="quiztable"> 
+    <h3> Quizzes</h3>
+</div>
+<div class="quizlist">
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Dates </th>
+                <th> Active</th>
+                <th> Action </th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (quizList.length > 0) { %>
+                <% let count = 0 %>
+                <% quizList.forEach( quiz =>{%>
+            <tr>
+                <td> <%= quiz.title %></td>
+                <td> <%= quiz.startDate %> - <%= quiz.endDate %></td>
+                <td> <%= quiz.isActive %> </td>
+                <td> <button name = "activate"  onclick = 'activateSAQuiz("<%= course._id %>","<%= course.quizList[count]._id %>")'> Activate </button></td>
+                <td> <button name = "launch"  onclick = 'launchSAQuiz("<%= course._id %>","<%= quiz._id %>")'> Try out </button></td>
+                <td> <button name = "update"  onclick = 'updateSAQuiz("<%= course._id %>","<%= quiz._id %>", "<%= course.quizList[count]._id %>")'> Update </button></td>
+                <td> <button name = "reviewsquizwork"  onclick = 'reviewQuizSAWork("<%= course._id %>","<%= quiz._id %>", "<%= course.quizList[count]._id %>")'> Review student work </button></td>
+                <td> <a class="deletequiz" onclick = 'deleteQuizSA("<%= quiz._id %>", "<%=course._id%>")'>
+                    <img src="/trashcan.svg" alt="delete icon" />
+                </a> </td>
+            </tr>
+            <% count++ %>
+            <%}) ;%>
+            <%} %>
+        </tbody>
+
+    </table>
+</div>
+
+
+<script>
+
+const manageStudentsForm = document.querySelector('.manageCourseUsers');
+manageStudentsForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    console.log('Manage students pressed');
+    const courseId = manageStudentsForm.dataset.doc;
+    const fname = manageStudentsForm.dataset.fname;
+    const urlSearch = new URLSearchParams({courseId: courseId, fname: fname});
+    const endPoint = "/manageCourseUsers?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+  //  const endPoint = '/manageCourseUsers?' + manageStudentsForm.dataset.doc;
+    location.assign(endPoint);
+
+})
+
+const addModuleForm = document.querySelector('.addModuleForm');
+addModuleForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const endPoint = "/addModule/" + addModuleForm.dataset.doc;
+    location.assign(endPoint);
+});
+
+
+
+const addQuizForm = document.querySelector('.addQuizForm');
+addQuizForm.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    const endPoint = "/addQuizSA/" + addQuizForm.dataset.doc;
+    console.log('Quiz form ', endPoint);
+    location.assign(endPoint);
+});
+
+async function activateSAQuiz(courseId, quizId) {
+    const jsonToSend = { courseId: courseId, quizId: quizId};
+    const endPoint = '/activateQuizSA';
+    console.log(`Endpoint is ${endPoint} and JOSB is ${jsonToSend}`);
+    try {
+        const res = await fetch( endPoint, {
+            method: 'POST',
+            body: JSON.stringify(jsonToSend),
+            headers: {'Content-Type': 'application/json'}
+        });
+        const data = await res.json();
+        console.log('DATA is ', data);
+    }
+    catch (err) {
+        console.log('Unable to activate quizzes for students');
+    }
+}
+
+function launchModule(courseId, moduleId){
+    const urlSearch = new URLSearchParams({courseId: courseId, moduleId: moduleId});
+    const endPoint = "/module?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint);
+
+    // fetch(endPoint)
+    //     .then( response =>  response.json())
+    //     .then( data => window.location.href = data.redirect)
+    //     .catch( error => console.log('Cannot fetch'));
+}
+
+function updateSAQuiz(courseId, quizId, ctempQuizId) {
+    const urlSearch = new URLSearchParams({courseId: courseId, quizId: quizId, ctempQuizId, ctempQuizId});
+    const endPoint = "/updateQuizSA?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint);
+}
+
+function reviewQuizSAWork(courseId, quizId, ctempQuizId) {
+    const urlSearch = new URLSearchParams({courseId: courseId, quizId: quizId, ctempQuizId, ctempQuizId});
+    const endPoint = "/reviewQuizSAWork?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint);
+}
+
+function launchSAQuiz(courseId, quizId){
+    const urlSearch = new URLSearchParams({courseId: courseId, quizId: quizId});
+    const endPoint = "/quizsa?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint);
+    // fetch(endPoint)
+    //     .then( response =>  response.json())
+    //     .then( data => window.location.href = data.redirect)
+    //     .catch( error => console.log('Cannot fetch'));
+}
+
+const trashcan = document.querySelector('a.delete');
+    trashcan.addEventListener('click', (e)=>{
+        const endpoint = `/deleteCourse/${trashcan.dataset.doc}`;
+        console.log(`Deleting record ${endpoint}`);
+        fetch(endpoint, {
+            method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => window.location.href = data.redirect)
+        .catch( err => console.log(err))
+    });
+
+
+function deleteModule(moduleId, courseId) {
+    const urlSearch = new URLSearchParams({courseId: courseId, moduleId: moduleId})
+    console.log('URL Search: ', urlSearch);
+    const endpoint = '/deleteModule?' + urlSearch.toString();
+    console.log('End point is ', endpoint);
+    fetch(endpoint, {
+        method: 'DELETE'
+    } )
+    .then ( response => response.json())
+    .then ( data => window.location.href = data.redirect)
+    .catch( err => console.log(err));
+}
+
+function deleteQuizSA(quizId, courseId) {
+    const urlSearch = new URLSearchParams({quizId: quizId, courseId: courseId});
+    console.log('URL Search: ', urlSearch);
+    const endpoint = '/deleteQuiz?' + urlSearch.toString();
+    console.log('End point is ', endpoint);
+    fetch(endpoint, {
+        method: 'DELETE'
+    } )
+    .then ( response => response.json())
+    .then ( data => window.location.href = data.redirect)
+    .catch( err => console.log(err));
+}
+
+
+const goback = document.querySelector('.goback');
+    goback.addEventListener('click', (e)=>{
+        location = "/courses";
+    });
+</script>
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,42 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Compressive stress in cylinder",
+    "stem":"Stress",
+    "topic": "som",
+    "tags": ["force", "stress","strain"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "acc1",
+            "title": "Introduction to stress and strain",
+            "url": "https://www.youtube.com/embed/aQf6Q8t1FQE"
+        },
+        {
+            "type": "video",
+            "name": "acc2",
+            "title": "Young's modulus",
+            "url": "https://www.youtube.com/embed/DLE-ieOVFjI"
+        },
+        {
+            "type": "video",
+            "name": "acc3",
+            "title": "Poisson's Ratio",
+            "url": "https://www.youtube.com/embed/DLE-ieOVFjI"
+        },
+        {
+            "type": "video",
+            "name": "acc4",
+            "title": "Solved Problems",
+            "url": "https://ucr.yuja.com/V/Video?v=7889869&node=33443777&a=89962652&autoplay=1"
+        }
+	]
+    
+}

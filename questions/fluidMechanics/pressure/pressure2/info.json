@@ -1,0 +1,30 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Pressure ocean",
+    "stem":"heat",
+    "topic": "fluids",
+    "tags": ["heat", "temperature","specificheat"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "press1",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7931392&node=33753521&a=37371679"
+        },
+        {
+            "type": "video",
+            "name": "press2",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7931391&node=33753520&a=68619249"
+        }
+    
+    ]
+}

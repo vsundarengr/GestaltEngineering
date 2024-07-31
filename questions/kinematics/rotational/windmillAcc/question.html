@@ -1,0 +1,11 @@
+
+<pl-question-panel>
+  <p> A wind turbine is rotating at a constant speed of {{params.omegarpm}} {{params.unitsAngSpeed}}. </p>
+  <p> The hub diameter is {{params.d1}} {{params.unitsDist}} while the tip diameter is {{params.d2}} {{params.unitsDist}}.</p>
+</pl-question-panel>
+
+What is the acceleration of a point on the hub (in {{params.unitsAcc}})?
+<pl-number-input answers-name="a1" comparison="sigfigs" digits="3" label="Acceleration at hub (in {{params.unitsAcc}}) = "></pl-number-input>
+
+What's the acceleration of a point at the tip (in {{params.unitsAcc}})?
+<pl-number-input answers-name="a2" comparison="sigfigs" digits="3" label="Acceleration at tip (in {{params.unitsAcc}}) ="></pl-number-input>

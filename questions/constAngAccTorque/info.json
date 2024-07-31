@@ -1,0 +1,14 @@
+{
+    "uuid": "8b4fa1d4-64d1-4e89-4567-ad2189f25b2f",
+    "title": "Constant Angular Acceleration Motion and Torque",
+    "topic": "Rotational Kinetics",
+    "tags": ["angular acceleration", "angular velocity", "torque"],
+	"prereqs": ["acceleration", "velocity", "angular acceleration", "angular velocity"],
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

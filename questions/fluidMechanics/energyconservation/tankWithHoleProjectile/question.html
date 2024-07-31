@@ -1,0 +1,19 @@
+<pl-question-panel>
+    <p> A tank of diameter {{params.D}} {{params.unitsDist}} and height {{params.H}} {{params.unitsDist}} has a small spout of diameter {{params.dh}} {{params.unitsDiameter}} at the bottom of the tank. The spout is angled at an angle {{params.angled}} degrees with the horizontal.  
+    <p> The tank is mounted on a platform that is {{params.Htank}} {{params.unitsDist}} above the ground. </p>
+    <p> The tank has liquid {{params.fluidName}} (specific gravity = {{params.sg}}) to some height and the space above the liquid is filled with {{params.gasName}} gas (molar mass = {{params.mw}}).</p>
+    <p> A liquid level indicates that the tank is {{params.perliq}}% filled with the liquid.</p>
+    <p> When the spout is opened, the liquid {{params.fluidName}} shoots out in a jet and lands at a horizontal distance of {{params.xrange}} {{params.unitsDist}} from the spout. </p>
+    
+    </pl-question-panel>
+    
+
+    <p > What is the velocity (in {{params.unitsSpeed}}) of the jet of the fluid issuing from the hole? </p>
+    <pl-number-input answers-name="vel" comparison="sigfig" digits="3" label="$ v $ (in {{params.unitsSpeed}})"></pl-number-input>
+    <p > What is the volumetric flow rate (in {{params.unitsFlowRate}}) of the jet of the fluid issuing from the hole? </p>
+    <pl-number-input answers-name="vdot" comparison="sigfig" digits="3" label="$ \dot{V} $ (in {{params.unitsFlowRate}})"></pl-number-input>
+    <p>  What is the gage pressure (in {{params.unitsPressure}}) at the bottom of the tank? </p>
+    <pl-number-input answers-name="pgage" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>
+    <p>  What is the gage pressure (in {{params.unitsPressure}}) of the {{params.fluidName}} in the space above the fluid? </p>
+    <pl-number-input answers-name="pgas" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>
+    

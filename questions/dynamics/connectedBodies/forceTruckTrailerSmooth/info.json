@@ -1,0 +1,15 @@
+{
+  "uuid": "a1b9c8e7-4d3f-2a1b-1c0d-9e8f7a6b5c4d",
+  "title": "Force Calculation in Truck-Trailer System",
+  "stem": "Calculation of force in the hitch connecting a truck and trailer",
+  "topic": "Mechanics",
+  "tags": ["force", "trailer", "truck", "friction", "acceleration"],
+  "prereqs": "Understanding of Newton's laws of motion, friction, and force calculation",
+  "isAdaptive": true,
+  "createdBy": "",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

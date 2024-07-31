@@ -1,0 +1,21 @@
+{
+    "uuid": "d3f7b3a1-8e3d-4c7b-9e3a-6f3d8e1c7b9e",
+    "title": "Total Distance Traveld given Breaking Speed",
+    "stem": "A 70 mph - 0 mph braking distance for a car is 170 feet. How far (in feet) will the car travel in 1.5 seconds?",
+    "topic": "Physics",
+    "tags": [
+        "kinematics",
+        "motion",
+        "braking distance"
+    ],
+    "prereqs": [
+        "basic understanding of velocity and time"
+    ],
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

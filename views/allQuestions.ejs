@@ -1,0 +1,61 @@
+<%- include('partials/header'); -%>
+
+<header>
+  <div class="headings">
+    <h2>Questions</h2>
+  </div>
+</header>
+
+<form class="insertQuestionForm">
+    <button> Insert Question </button>
+</form>
+<form class="importZipForm">
+    <button> Import question from .zip file </button>
+</form>
+
+<div class="questions content">
+    <table> 
+        <thead>
+            <tr> 
+                <th> Title </th>
+                <th> Location </th>
+                <th> Topic </th>
+                <th> Tags </th>
+                <th> Difficulty </th>
+                <th> Created By </th>
+            </tr>
+        </thead>
+        <tbody> 
+    <% if (questions.length > 0) {%>
+        <% questions.forEach(question =>{%>
+            <tr> 
+                <td> <a class="single" href="questionInstance/<%= question._id%>" >  <%= question.title %> </a> </td> 
+                <td> <%= question.location %> </td>
+                <td> <%= question.topic %> </td>
+                <td> <%= question.tags %> </td>
+                <td> <%= question.difficulty %> </td>
+                <td> <%= question.createdBy %> </td>
+          </tr>
+        <%}) ;%>
+    <%} %>
+        </tbody>
+</table>
+</div>
+
+<script>
+    const form1 = document.querySelector('.insertQuestionForm');
+    form1.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        location.assign('/insertQuestion');
+    })
+</script>
+<script>
+    const form2 = document.querySelector('.importZipForm');
+    form2.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        location.assign('/importZip');
+    })
+</script>
+
+
+<%- include('partials/footer'); -%>

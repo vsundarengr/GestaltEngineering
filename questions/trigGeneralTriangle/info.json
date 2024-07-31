@@ -1,0 +1,15 @@
+{
+    "uuid": "8b4891d4-64d1-4e89-d72d-ad2133f25b2f",
+    "title": "Solve for sides of a triangle",
+    "topic": "Trigonometry",
+    "tags": ["triangle", "cosine rule"],
+    "type": "v3",
+	"prereqs": "",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

@@ -1,0 +1,15 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-8740-fab6433ffbb2f",
+    "title": "Down force on block",
+    "stem":"Compute acceleration",
+    "topic": "work",
+    "tags": ["force", "vectors","displacement","secondlaw"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript"
+}

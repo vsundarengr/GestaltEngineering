@@ -1,0 +1,11 @@
+<pl-question-panel>
+<p>
+A power plant operates at a maximum temperature of {{params.Tmin}} {{params.unitsTemperature}} and at an ambient temeperature of {{params.Tmax}} {{params.unitsTemperature}}. 
+</p>
+<p> The power plant is to produce an electrical output power is {{params.Pout}} {{params.unitsPower}}. </p>
+</pl-question-panel>
+
+<p> What is the maximum percentage efficiency of the plant? </p>
+<pl-number-input answers-name="effmax" comparison="sigfig" digits="3" label="Max Efficiency (in %)"></pl-number-input>
+<p> How much power (in {{params.unitsPower}}) needs to be supplied to the plant? </p>
+<pl-number-input answers-name="Pin" comparison="sigfig" digits="3" label="Input power (in {{params.unitsPower}})"></pl-number-input>

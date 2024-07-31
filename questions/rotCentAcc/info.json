@@ -1,0 +1,14 @@
+{
+    "uuid": "8b48914d-045-4ef-4e89-4567-df",
+    "title": "Centripetal acceleration magnitude something",
+    "topic": "Rotational Kinematics",
+    "tags": ["acceleration", "velocity", "angular acceleration", "angular velocity"],
+	"prereqs": ["acceleration","velocity","geometry"],
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

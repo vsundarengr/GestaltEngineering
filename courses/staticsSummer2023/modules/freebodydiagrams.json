@@ -1,0 +1,101 @@
+{
+ "title": "Free body diagrams",
+ 
+ "topics": "fbd",
+ "pre-reqs": ["forces", "moments"],
+ "createdBy": "sundar@google.com",
+ "contents": [
+ { "name": "objectives",
+	"title":"Objectives",
+	"type": "static_content",
+	"objectives": ["understand forces in common elements", "draw free-body diagrams", "understand reactions of various supports"],
+	"additionalinfo": ""
+ },
+ { "name": "prereq_quiz",
+   "title": "Background quiz",
+   "type": "quiz",
+   "questions": [ "trigRightTriangle", "trigGeneralTriangle"],
+   "order": "random",
+   "selection": {"min": 2, "max": 2},
+   "numquest": 2,
+   "graded": true,
+   "contents": [
+	{ "fname": "momentBeamSingleForce",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "momentBeam",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1
+	}]
+ },
+ { "name": "vid1",
+   "title": "Free body diagrams",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=3310669&node=14548626&a=141750981&autoplay=1"
+ },
+ { "name": "quiz1",
+   "title": "Quiz",
+   "type": "quiz",
+   "questions": [],
+   "order": "random",
+   "selection": "all",
+   "numquest": 3,
+   "graded": false,
+      "contents": [
+	{ "fname": "statics/fbd/hangingWeight",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/fbd/pincers",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/fbd/beamDistributed",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/fbd/columnFoundation",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/fbd/groceryBag",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/fbd/rollerInclined1",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/fbd/rollerInclined2",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/fbd/rollerInclined3",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	}]
+}]
+ 
+}
+

@@ -1,0 +1,8 @@
+
+<pl-question-panel>
+  <p> A cylindrical tank of diameter {{params.D}} {{params.unitsDist}} and height {{params.H}} {{params.unitsDist}}  is {{params.fillFraction}}% full of {{params.fluid}} (specific gravity = {{params.sg}}).</p>
+  <p> What is the {{params.masslabel}} (in {{params.unitsMass}}) of {{params.fluid}} in the tank? </p>
+</pl-question-panel>
+
+
+<pl-number-input answers-name="mass" comparison="sigfig" digits="3" label="{{params.masslabel}} (in {{params.unitsMass}}) ="></pl-number-input>

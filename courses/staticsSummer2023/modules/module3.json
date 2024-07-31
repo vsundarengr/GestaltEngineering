@@ -1,0 +1,28 @@
+{
+ "title": "Vectors in Two Dimensions",
+ "objective": ["review basic trigonometry", "define two-dimensional vectors", "represent vectors", "add and subtract vectors in two dimensions"],
+ "topics": "vec2d",
+ "pre-reqs": ["geometry", "trigonometry"],
+ "createdBy": "sundar@google.com",
+ "contents": [
+ { "name": "vid1",
+   "title": "Lecture video",
+   "type": "video",
+   "url": "https://www.youtube.com/embed/ONjX_-GusWA"
+ },
+ { "name": "vid2",
+   "title": "Lecture video",
+   "type": "video",
+   "url": "https://www.youtube.com/embed/5CmpRgXcaeY"
+ },
+ { "name": "first",
+   "title": "Reading",
+   "type": "static_page",
+   "url": "/tests/firstpage.html"
+	},
+ { "name": "second",
+   "title": "Reading",
+   "type": "static_page",
+	"url": "/tests/second.html"
+	}]
+}

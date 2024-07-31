@@ -1,0 +1,13 @@
+<pl-question-panel>
+    <p> A tank of diameter {{params.D}} {{params.unitsDist}} and height {{params.H}} {{params.unitsDist}} is filled to a height of {{params.H}} {{params.unitsDist}} with {{params.fluidName}} (specific gravity = {{params.sg}}).</p>
+    <p> The space above the liquid is filled with {{params.gasName}} gas (molar mass = {{params.mw}}) at pressure {{params.pgas}} {{params.unitsPressure}}.</p>
+    <p> A small hole of diameter {{params.dh}} {{params.unitsDiameter}} develops at the bottom of the tank.</p>
+    </pl-question-panel>
+    
+    <p>  What is the gage pressure (in {{params.unitsPressure}}) at the bottom of the tank? </p>
+    <pl-number-input answers-name="pgage" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>
+    <p > What is the velocity (in {{params.unitsSpeed}}) of the jet of the fluid issuing from the hole? </p>
+    <pl-number-input answers-name="vel" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsSpeed}})"></pl-number-input>
+    <p > What is the volumetric flow rate (in {{params.unitsFlowRate}}) of the jet of the fluid issuing from the hole? </p>
+    <pl-number-input answers-name="vdot" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsFlowRate}})"></pl-number-input>
+    

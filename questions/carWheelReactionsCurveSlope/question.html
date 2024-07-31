@@ -1,0 +1,12 @@
+
+<pl-question-panel>
+  <p> A car of {{params.md}} {{params.unitsMass}} {{params.masslabel}} is traveling along on a banked road with bank angle of {{params.thetad}} degrees at a constant speed of {{params.vd}} {{params.unitsSpeed}}.  </p>
+  <p> The road curves with a radius of {{params.R}} {{params.unitsDist}} </p>
+  <p> The distance between the inner and the outer wheels is {{params.B}} {{params.unitsCarDim}}.</p>
+  <p> The center of mass is between the inner and outer wheels. The center of mass is at a height {{params.h}} {{params.unitsCarDim}} from the ground.</p>
+  <p> What are the reaction forces (in {{params.unitsForce}}) on the inner and outer wheels? </p>
+</pl-question-panel>
+
+
+<pl-number-input answers-name="Ni" comparison="sigfig" digits="3" label="Reaction on inner wheels (in {{params.unitsForce}}) ="></pl-number-input>
+<pl-number-input answers-name="No" comparison="sigfig" digits="3" label="Reaction on outer wheels (in {{params.unitsForce}}) ="></pl-number-input>

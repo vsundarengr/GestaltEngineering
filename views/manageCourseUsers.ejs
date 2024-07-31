@@ -1,0 +1,113 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Manage Users for Course </h2>
+    </div>
+</header>
+
+<input type="hidden" id="cid" name="cid" value="<%= courseId%>">
+<input type="hidden" id="courseName" name="courseName" value="<%= courseName%>">
+
+<div class="goback">
+    <button> Back to Course: <%= courseName %> </button>
+</div>
+
+<form class="addUsersHere">
+    <label for="siusers"> Enter email of students to be added separated by commas: </label>
+    <input type="textarea" id="siusers" name="siusers">
+</br>
+    <button> Add users </button>
+</form>
+
+</br>
+
+<form class = "addUsersFile">
+    <label for="sifname">Select a file containing student emails:</label>
+    <input type="text" id="sifname" name="sifname">
+    </br>
+    <button> Add users </button>
+</br>
+</form>
+
+
+<form class="addNonStudentUser">
+    <label for="nonstudentuser"> Enter email for non-student </label>
+    <input type="textarea" id="siusers" name="siusers">
+    <select name="userrole">
+        <option value="instructor" selected> Instructor </option>
+        <option value="ta"> Teaching Assistant </option>
+        <option value="observer"> Observer </option>
+        <option value="contentcreator"> Content Creator </option>
+        <option value="developer"> Developer </option>
+    </select> <br>
+</br>
+</form>
+
+<script>
+
+    const addNonStudentUser = document.querySelector('.addNonStudentUser');
+    addNonStudentUser.addEventListener('submit', async e=>{
+        e.preventDefault();
+        console.log('Add non-student user pressed ');
+
+    })
+
+    const addUsersHereForm = document.querySelector('.addUsersHere');
+    addUsersHereForm.addEventListener('submit', async e =>{
+        e.preventDefault();
+        siusers = document.getElementById('siusers').value;
+        let courseId = document.getElementById('cid').value;
+        let courseName = document.getElementById('courseName').value;
+        console.log(`Users = ${siusers}, CourseId = ${courseId}, CourseName = ${courseName}`);
+        try {
+            const endPoint = '/addStudentsToCourse';
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify({data: siusers, intype: "enum", courseId: courseId, courseName: courseName}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+       //     location.assign('/courses/' + addModuleForm.dataset.doc);
+
+        } catch(err) {
+            console.log(err);
+        }
+    })
+
+    const addUsersFileForm = document.querySelector('.addUsersFile');
+    addUsersFileForm.addEventListener('submit', async e=>{
+        e.preventDefault();
+        siFileName = document.getElementById('sifname').value;
+        let courseId = document.getElementById('cid').value;
+        let courseName = document.getElementById('courseName').value;
+        console.log('File name is ', siFileName);
+
+        try {
+            const endPoint = '/addStudentsToCourse';
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify({data: siFileName, intype: "file", courseId: courseId, courseName: courseName}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+       //     location.assign('/courses/' + addModuleForm.dataset.doc);
+
+        } catch(err) {
+            console.log(err);
+        }
+
+
+    })
+
+    const goback = document.querySelector('.goback');
+    goback.addEventListener('click', (e)=>{
+        let courseId = document.getElementById('cid').value;
+        location = "/courses/" + courseId;
+    });
+
+</script>
+
+<%- include('partials/footer'); -%>

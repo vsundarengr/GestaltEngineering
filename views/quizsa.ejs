@@ -1,0 +1,520 @@
+<%- include('partials/header'); -%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+<link rel="stylesheet" href="/treestyle.css">
+
+<style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+    
+      /* Position the tooltip */
+     /* position: absolute;
+      z-index: 1; */
+      top: -5px;
+      left: 105%;
+    }
+    
+
+    .tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    </style>
+
+
+<div class="goback">
+        <button onClick="goback()"> Back to main course page  </button>
+</div>
+
+<input type="hidden" id="cid" name="cid" value="<%= quizData.courseId%>">
+<input type="hidden" id="currentLevel" name="currentLevel" value="0">
+
+
+<div id="reviewpanel">
+
+    <div class="qtree">
+        <h3> Topics </h3>
+        <!-- This is the tree-->
+        <%- quizData.htmlString %>
+    </div>
+
+    <div class="practice" data-doc="<%= quizData.quizId %>"> 
+        <button id="practicebutton" > Practice now!</button>
+        <button id="reviewyourquizbutton"> Review your work </button>
+  <!---     <button id="refreshtreebutton"> Refresh </button> -->
+    </div>
+
+    <div class="question">
+
+    </div>
+
+    <div class="hints">
+
+    </div>
+    
+    <div class="submitpanel">
+        <div class="nextstep" data-doc="1">
+            <button id="nextstepbutton" style="display:none;"> Next Step</button>
+        </div>
+
+        <div class="showanswers" data-doc="1">
+            <button id="showanswers" style="display:none;"> Show answer</button>
+        </div>
+        <div class="submitanswers" data-doc="1">
+            <button id="submitanswers" style="display:none;" > Submit answer </button>
+        </div>
+        <div class="nextquestion" data-doc="1">
+            <button id="nextquestion"  style="display:none;"> Next Question </button>
+        </div>
+
+        <div class="showresources">
+
+        </div>
+
+        <div class="showhintsdiv" data-doc="1">
+            <button id="showhints"  style="display:none;"> Show hint </button>
+        </div>
+
+
+        
+
+    </div>
+
+</div>
+
+<script>
+
+const showHints = document.querySelector('.showhintsdiv');
+    showHints.addEventListener('click', async (e)=>{
+        e.preventDefault();
+        const currentLevel = Number(document.getElementById('currentLevel').value);
+        const questionInstId = showHints.dataset.doc;
+      //  const questionInstId = showAnswer.dataset.doc;
+        const urlSearch = new URLSearchParams({qid: questionInstId, currentLevel: currentLevel});
+        const endPoint = '/showHint?' + urlSearch.toString();
+        //const endPoint = '/showHint/' + questionInstId;
+       // console.log('Endpoint is ', endPoint);
+        fetch(endPoint)
+        .then (response => response.json())
+        .then (data => {
+          //  console.log('Data = ', data.hintString);
+            document.getElementById('currentLevel').value = currentLevel + 1;
+            const hints = document.querySelector('.hints')
+            hints.innerHTML = data.hintString;
+            MathJax.typeset();
+        })
+        .catch( err=> {console.log('Unable to retrieve hint'), err});
+    });
+
+
+const nextStepForm = document.querySelector('.nextstep');
+    nextStepForm.addEventListener('click', async(e)=>{
+        e.preventDefault();
+        const questionInstId = nextStepForm.dataset.doc;
+        const urlSearch = new URLSearchParams({qid: questionInstId});
+        const endPoint = '/showNextStep?' + urlSearch.toString();
+        console.log('ENDPOINT = ', endPoint);
+        try {
+            const res = await fetch(endPoint);
+            const data = await res.json();
+            console.log('RESPONSE (next step) IS ', data);
+            const sn = document.querySelector('[name=stepNumber]');
+            sn.innerHTML = `<h4> Iteration: ${data.nextStep} </h4> `;
+            let responseEls = document.getElementsByClassName('response');
+            for (let i = 0; i < responseEls.length; i++) {
+                responseEls[i].value = '';
+            }
+            let feedbacks = document.getElementsByClassName('feedback')
+            
+            for (let i = 0; i < feedbacks.length; i++) {
+            //    console.log('Feedback is ', feedbacks[i].innerHTML);
+                feedbacks[i].innerHTML = '';
+            }
+            if (data.lastStep === true ) {
+                document.getElementById('nextstepbutton').setAttribute('disabled','true');
+            }
+
+            const submitAnswersButton = document.getElementById('submitanswers');
+            submitAnswersButton.style = "display:inline";
+            submitAnswersButton.removeAttribute('disabled');
+
+        } catch (err) {
+            console.log('ERROR in getting next step is ', err);
+        }
+
+    });
+
+function showResources(){
+        const showResources = document.querySelector('.showresources');
+        const selection = document.querySelector('#resources');
+        
+        // console.log('Selection value is ', selection.value);
+        // console.log('Selection is ', selection.children);
+        
+        //const url1 = selection.children[selection.value].getAttribute("data-url");
+        
+        const selopt = document.getElementById(selection.value.trim());
+        console.log('Selection value is ', selopt);
+        const url = selopt.dataset.url;
+        console.log('URL in selection is ', url);
+        window.open(url);
+    }
+
+
+    
+const submitAnswer = document.querySelector('.submitanswers');
+submitAnswer.addEventListener('click', async (e)=>{
+    e.preventDefault();
+    const endpoint = '/checkAttempt';
+    
+    let answerForms = document.querySelectorAll('.answers');
+    responses = {};
+    for (let i = 0 ; i < answerForms.length; i++) {
+        let formName = answerForms[i].getAttribute('name');
+        let responseEls = answerForms[i].getElementsByClassName('response');
+    //    console.log('Number of responses is ', responseEls.length);
+        resp = [];
+        chbxs = {};
+        for (let j = 0; j < responseEls.length; j++) {
+            id = responseEls[j].getAttribute('id');
+            type = responseEls[j].getAttribute('type');
+            name = responseEls[j].getAttribute('name');
+        //    console.log(`ID ${id} NAME ${name} TYPE: ${type} `);
+            if ( type === 'number' || type === 'text') {
+                val = responseEls[j].value;
+           //     console.log(`ID is ${id} and VALUE is ${val}`);
+                let d = {responseId: name, type: "text", studentResponse: val};
+                resp.push(d);
+            } else if (type === 'radio') {
+                if (responseEls[j].checked) {
+                    let d = {responseId: name, type: "radio", studentResponse: id};
+                    resp.push(d);                    
+                }
+            } else if (type === 'checkbox') {
+                if (responseEls[j].checked) {
+                    let k ; 
+                    for (k = 0; k < resp.length; k++) {
+                        if (resp[k].responseId === name)
+                            break;
+                    }
+                    if (k >= resp.length){
+                        let d = {responseId: name, type: "checkbox", studentResponse: [id]};
+                        resp.push(d); 
+                    } else {
+                        resp[k].studentResponse.push(id);
+                    }
+                }
+            } else if (type === 'matrix') {
+                    val = responseEls[j].value;
+                    console.log(`ID is ${id} and VALUE is ${val}`);
+                    let d = {responseId: name, type: "matrix", studentResponse: val};
+                    resp.push(d);
+                }
+            }
+        responses[formName] = resp;
+    }
+
+    console.log(responses);
+    
+    try {
+        const json1 = {
+            instanceId: submitAnswer.dataset.doc,
+            responses: responses
+        }
+        console.log('JSON IS : ', json1);
+        const res = await fetch(endpoint, {
+            method: 'POST',
+            body: JSON.stringify(json1),
+            headers: {'Content-Type': 'application/json'}
+        });
+
+        const data = await res.json();
+     //   console.log('INCOMING DATA IS :', data);
+        let datar = data.responses;
+        let allCorrect = true;
+        answerForms = document.querySelectorAll('.answers');
+        for (let i = 0 ; i < answerForms.length; i++) {
+                let formName = answerForms[i].getAttribute('name');
+                let responseEls = answerForms[i].getElementsByClassName('response');
+                let formFeedback = answerForms[i].getElementsByClassName('feedback');
+                let formFeed = datar[formName];
+           //     console.log('FORM FEED IS ', formFeed);
+                for (let j = 0; j < formFeed.length; j++) {
+                let itemFeed = formFeed[j];
+           //     console.log('IOTEM FEED IUS ', itemFeed);
+                id = responseEls[j].getAttribute('id');
+                type = responseEls[j].getAttribute('type');
+                name = responseEls[j].getAttribute('name');
+                let cr = itemFeed['checkRes'].res;
+                if (cr) {
+                    formFeedback[0].innerHTML = 'Correct!';
+                    formFeedback[0].style.color = 'green';
+               //     console.log('Setting Feedbak CHECK RES IS ', cr);
+                    document.getElementById('nextquestion').removeAttribute('disabled');
+
+                } else {
+                    formFeedback[0].innerHTML = itemFeed['checkRes'].errors;
+                   // formFeedback[0].innerHTML = 'Incorrect!';
+                    formFeedback[0].style.color = 'red';
+                    allCorrect = false;
+                }
+                }
+        }
+     //   console.log('DATAR IS ', datar);
+
+        if (allCorrect) {
+            document.getElementById('submitanswers').setAttribute('disabled','true');
+        }
+
+        if ( !allCorrect && datar.numAttempts > datar.showAnswerTimes) {
+            console.log('Setting style');
+            document.getElementById('showanswers').style = "display:inline;";
+            document.getElementById('nextquestion').removeAttribute('disabled');
+            
+        }
+    } catch(err){
+        console.log('Error checking Answer: ', err);
+    }
+});
+
+const showAnswer = document.querySelector('.showanswers');
+showAnswer.addEventListener( 'click', async (e)=>{
+    e.preventDefault();
+    const questionInstId = showAnswer.dataset.doc;
+    const endPoint = '/showAnswer/' + questionInstId;
+   // console.log('Fetching answer from ', endPoint);
+    fetch(endPoint)
+        .then (response => response.json())
+        .then (data => {
+          //  console.log('DATA RETURNED FROM SHOW ANSWER IS ', data);
+            answerForms = document.querySelectorAll('.answers');
+            let answers = data.answers;
+            for (let i = 0 ; i < answerForms.length; i++) {
+                let formName = answerForms[i].getAttribute('name');
+                let formFeedback = answerForms[i].getElementsByClassName('feedback');
+                let ans = answers[formName];
+                let ansType = typeof ans;
+
+                if (isNaN(ans)) {
+                        if (ansType === 'string') {
+                        formFeedback[0].innerHTML = ans ;
+                        MathJax.typeset();
+                    }
+                    else {
+                    let answerText = 'Correct selection: ';
+                    for (let j = 0; j < answers[formName].length; j ++) {
+                        let answerId = answers[formName][j];
+                        console.log('Answer ID = ', answerId);
+                        let ch = answerForms[i].querySelector(`#${answerId}`);
+                        answerText += ch.value;
+                        answerText += `</br>`;
+                    }
+                   // formFeedback[0].innerHTML = answers[formName];
+                   formFeedback[0].innerHTML = answerText;
+                }
+                    
+                } else {
+                    ans = Math.round(100*ans)/100;
+                    formFeedback[0].innerHTML = ans;
+                }
+                formFeedback[0].style.color = 'blue';
+                document.getElementById('submitanswers').setAttribute('disabled','true');                   }
+            })
+        .catch( err=> console.log('Cannot retrieve answers ', err));
+});
+
+async function getNewQuestion(e) {
+    e.preventDefault();
+    
+    const selected = $('.qtree').jstree("get_checked");
+    
+    if (selected.length === 0 ) {
+        window.alert("Please select the topics you want to practice");
+        return;
+    }
+
+    const courseId = document.getElementById('cid').value;
+    const practice = document.querySelector('.practice');
+    const quizId = practice.dataset.doc;
+   
+    const pf = {
+            courseId: courseId,
+            quizId: quizId,
+            selected: selected
+    };
+
+    const endPoint = '/getQuizSAQuestion';
+
+    console.log('Endpoint is ', endPoint, ' Selection = ', selected);
+
+    try {
+        const res = await fetch( endPoint, {
+            method: 'POST',
+            body: JSON.stringify(pf),
+            headers: {'Content-Type': 'application/json'}
+        });
+        const data = await res.json();
+        if (data.retrieved) {
+            console.log(data);
+            const questionBody = document.querySelector('.question');
+            questionBody.innerHTML = data.contentHTML;
+            MathJax.typeset();
+           
+            const submitAnswers = document.querySelector('.submitanswers');
+            submitAnswers.dataset.doc = data.questionInstId;
+       
+            const submitAnswersButton = document.getElementById('submitanswers');
+            submitAnswersButton.style = "display:inline";
+            submitAnswersButton.removeAttribute('disabled');
+
+            const showAnswersButton = document.getElementById('showanswers');
+            showAnswersButton.style = "display:none;";
+
+            const nextStepClass = document.querySelector('.nextstep')
+            const nextStepButton = document.getElementById('nextstepbutton');
+            
+    
+            if (data.stepType === "iterative") {
+                console.log('Problem is iterative');
+                nextStepButton.style = "display:inline;"
+                nextStepClass.dataset.doc = data.questionInstId;
+            }
+            else {
+                console.log('Problem is not iterative');
+                nextStepButton.style = "display:none;"
+                nextStepClass.dataset.doc = 1;
+            }
+
+            const showAnswers = document.querySelector('.showanswers');
+            showAnswers.dataset.doc = data.questionInstId;
+
+            const showresources = document.querySelector('.showresources');
+            if (showresources) {
+              showresources.innerHTML = data.resourceString;
+            }
+            else {
+                showresources.innerHTML = "";
+            }
+            
+
+            const showHintsButton = document.querySelector('#showhints');
+            document.getElementById('currentLevel').value = 0;
+            const hintsDiv = document.querySelector('.hints');
+            hintsDiv.innerHTML = '';
+            if (data.hasHints) {
+                showHintsButton.style = "display:inline;"
+                const showHintsClass = document.querySelector('.showHintsDiv');
+                showHintsClass.dataset.doc = data.questionInstId;
+            } else {
+                showHintsButton.style = "display:none";
+                const showHintsClass = document.querySelector('.showHintsDiv');
+                showHintsClass.dataset.doc = '1';
+            }
+
+
+
+            // const qtreeDiv = document.querySelector('.qtree');
+            // qtreeDiv.innerHTML = data.treeHTMLString;
+
+            document.getElementById('nextquestion').style = "display:inline;"
+            
+        }
+       
+    }
+    catch (err) {
+        console.log('Error obtaining quiz question ', err);
+    }
+}
+
+const nextQuestion = document.querySelector('.nextquestion');
+nextQuestion.addEventListener('click', getNewQuestion);
+
+const practiceButton = document.getElementById('practicebutton');
+practiceButton.addEventListener('click', getNewQuestion);
+
+// const refreshtreebutton = document.getElementBy('refreshtreebutton');
+// refreshtreebutton.addEventListener('click', async (e) => {
+//     e.preventDefault();
+//     const practiceform = document.querySelector('.practice');
+//     const quizId = practiceform.dataset.doc;
+//     const courseId = document.getElementById('cid').value;
+//     const urlSearch = new URLSearchParams({courseId: courseId, quizId: quizId});
+//     const endPoint = "/quizsa?" + urlSearch.toString();
+//     console.log('Endpoint is ', endPoint);
+//     location.assign(endPoint);
+// });
+
+const reviewYourWorkButton = document.getElementById('reviewyourquizbutton');
+reviewYourWorkButton.addEventListener( 'click', async (e)=> {
+    e.preventDefault();
+    console.log('Review Your Work Button pressed!');
+    
+    const selected = $('.qtree').jstree("get_checked");
+
+    if (selected.length === 0 ) {
+        window.alert("Please select the topics you want to practice");
+        return;
+    }
+
+    const courseId = document.getElementById('cid').value;
+    const practiceform = document.querySelector('.practice');
+    const quizId = practiceform.dataset.doc;
+   
+   
+
+    const urlSearch = new URLSearchParams({courseId: courseId, quizId: quizId, selected: selected})
+    const endPoint = '/getReviewSA?' + urlSearch.toString();
+
+    console.log('Endpoint is ', endPoint, ' Selection = ', selected);
+    location.assign(endPoint);
+});
+
+
+    $(document).ready(function() {
+    $('.qtree').jstree({
+        "plugins": ["checkbox"]
+    });
+
+    $(".qtree").on("changed.jstree", function(e,data) {
+        if (data.selected.length) {
+            $(data.selected).each(function(idx) {
+                var node = data.instance.get_node(data.selected[idx]);
+                console.log('The selected node is ', node.text);
+            });
+        }
+    });
+
+});
+
+function goback() {
+    const courseId = document.getElementById('cid').value;
+    const endPoint = '/showStudentCourse/' + courseId;
+    location.assign(endPoint );
+}
+</script>
+
+
+
+<%- include('partials/footer'); -%>

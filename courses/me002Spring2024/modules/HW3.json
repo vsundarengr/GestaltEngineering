@@ -1,0 +1,162 @@
+{
+"name": "hw3",
+"title": "Preclass 3",
+"topics" : [ 
+{
+	"name": "moreprobs",
+	"title": "More problems",
+	"contents": [
+			{ "fname": "kinematics/translation1d/constAcc1",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/carSpeedReduction",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/decelCalc",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "motiongravity",
+	"title": "Motion under gravity",
+	"contents": [
+			{ "fname": "kinematics/translation1d/constAcc2",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/ballThrownUp",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "basicvectors",
+	"title": "Basic vectors",
+	"contents": [
+			{ "fname": "unitVector",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "vectorLengthAngleToXY",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "vectorXYToLengthAngle",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "addvectors",
+	"title": "Vector addition",
+	"contents": [
+			{ "fname": "addVectorsGeometry",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+			"name": "projectile1",
+			"title": "Projectile",
+			"contents": [
+			{ "fname": "kinematics/projectilemotion/projectileHotBalloon",
+				  "min" : 1,
+				  "max" : 5,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/projectilemotion/skier",
+				  "min" : 1,
+				  "max" : 5,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "projectile2",
+			"title": "Projectile 2",
+			"contents": [
+			{ "fname": "kinematics/projectilemotion/planeNut",
+				  "min" : 1,
+				  "max" : 5,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "projectile3",
+			"title": "Projectile 3",
+			"contents": [
+			{ "fname": "kinematics/projectilemotion/carAccidentSeasideCliffRoad",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/projectilemotion/carAccidentSeasideCliffRoad2",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newton",
+			"title": "Newton's laws",
+			"contents": [
+			{ "fname": "dynamics/basics/boeing747takeoffAcceleration",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/boeing747takeoffThrustCalculation",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/brakingForceCalculation",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/stoppingDistanceCalculation",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+}
+]
+}

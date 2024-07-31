@@ -1,0 +1,21 @@
+{
+    "uuid": "d7f6b9a8-4c3e-4f3d-9a2b-1e8c7d6f5a2e",
+    "title": "Deceleration Calculation",
+    "stem": "A 70-0 mph braking distance for a car is 170 feet. What's the deceleration in ft/s^2?",
+    "topic": "Physics",
+    "tags": [
+        "deceleration",
+        "braking",
+        "physics"
+    ],
+    "prereqs": [
+        "Understanding of distance, speed, and acceleration"
+    ],
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

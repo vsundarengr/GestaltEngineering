@@ -1,0 +1,20 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        <p>We'll determine the final speed (\(V_f\)) of an airplane using the average velocity formula, where distance (\(\Delta x\)) is expressed as \(\Delta x = \frac{1}{2}(V_f + V_0) \times t\).</p>
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        <p>Rearranging the formula, we find \(V_f = \left(\frac{2}{t} \times \Delta x\right) - V_0\).</p>
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        <p>Given: \(\Delta x = {{params.d}}\) {{params.unitsDistance}}, \(V_0 = {{params.v1}}\) {{params.unitsSpeed}}, and \(t = {{params.t}}\) {{params.unitsTime}}. Ensure proper unit conversion before substitution.</p>
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        <p>Substituting values into the formula, we get \(V_f = \left(\frac{2}{{params.t}} \times {{params.d}}\right) - {{params.v1}}\).</p>
+    </pl-hint>
+    <pl-hint level="5" data-type="text">
+        <p>Final calculation: \(V_f = \frac{2 \times {{params.d}}}{{params.t}} - {{params.v1}}\), resulting in \(V_f = {{correct_answers.vf}}\) {{params.unitsSpeed}}.</p>
+    </pl-hint>
+    <pl-hint level="6" data-type="text">
+        <p>Recap: We've used the average velocity formula to find the final speed (\(V_f\)) of the airplane, considering the initial speed (\(V_0\)), distance (\(\Delta x\)), and time (\(t\)). Proper unit conversion is essential for accurate results.</p>
+    </pl-hint>
+</pl-solution-panel>

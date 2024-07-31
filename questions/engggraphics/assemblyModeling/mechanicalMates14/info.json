@@ -1,0 +1,15 @@
+{
+    "uuid": "7c4ccac6-1031-43ed-a685-feb64c2afccd",
+    "title": "Mechanichal Mates",
+	"stem": "Assembly Modeling",
+    "topic": "engg_graphics",
+    "tags": ["Assembly Modeling", "Mechanichal Mates"],
+    "prereqs":"",
+	"isAdaptive": "false",
+	"createdBy": "sundar@google.com",
+	"qType":"mcq",
+	"nSteps": 1,
+	"updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "none"
+}

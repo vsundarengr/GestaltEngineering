@@ -1,0 +1,8 @@
+<pl-question-panel>
+    What's the pressure at a depth of {{params.H}} {{params.unitsDist}} in the ocean? Specific gravity of sea water is {{params.sg}}.
+</pl-question-panel>
+
+<p> What is the gage pressure (in {{params.unitsPressure}}) at the bottom of the tank? </p>
+<pl-number-input answers-name="pgage" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>
+<p > What is the absolute pressure (in {{params.unitsPressure}}) at the bottom of the tank? </p>
+<pl-number-input answers-name="pabs" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>

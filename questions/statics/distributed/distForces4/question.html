@@ -1,0 +1,13 @@
+<pl-question-panel>
+    <pl-figure file-name="distributedForces4.png"></pl-figure>
+    <p> The beam shown has a distributed force modeled by $ w(x) = kx^3 $ where $ w(x) $ is the force per unit length, and k is constant. 
+    </p>
+    <P>Let the length $ \mathbf{L}_1 = {{params.length1}} {{params.unitsDist}}$ and Let $ \mathbf{k} = {{params.constant}}$.</P>
+</pl-question-panel>
+
+<p>Compute the moment about point A in ${{params.unitsForce}}$-${{params.unitsDist}}$</p>
+<pl-number-input answers-name="momentA" comparison="sigfig" digits="3" label="Moment about point A ="></pl-number-input>
+<p> Determine the equivalent concentrated force (in ${{params.unitsForce}}$)corresponding to the distributed load</p>
+<pl-number-input answers-name="forceF" comparison="sigfig" digits="3" label="Equivalent force  ="></pl-number-input>
+<p> Determine the distance (in {{params.unitsDist}}) from point A of the point through which the concentrated force so that it has the same moment as the distributed load </p>
+<pl-number-input answers-name="distance" comparison="sigfig" digits="3" label="Distance from point A  ="></pl-number-input>

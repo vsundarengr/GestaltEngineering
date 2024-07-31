@@ -1,0 +1,14 @@
+{
+    "uuid": "8b4891d4-045-a90-4e89-4567-ad2133f25b2f",
+    "title": "Centripetal acceleration vector",
+    "topic": "Rotational Kinematics",
+    "tags": ["acceleration", "velocity", "angular acceleration", "angular velocity"],
+	"prereqs": ["acceleration","velocity","geometry"],
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

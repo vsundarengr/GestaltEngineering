@@ -1,0 +1,29 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Projectile Motion",
+    "stem":"Horizontal projection",
+    "topic": "Kinematics",
+    "tags": ["constant acceleration", "gravity"],
+    "prereqs":"1D kinematics",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "proj1",
+            "title": "Example 1",
+            "url": "https://ucr.yuja.com/V/Video?v=9842934&node=43208378&a=190483692"
+        },
+        {
+            "type": "video",
+            "name": "proj2",
+            "title": "More examples",
+            "url": "https://ucr.yuja.com/V/Video?v=7813372&node=33068087&a=139922682"
+        }
+    ]
+}

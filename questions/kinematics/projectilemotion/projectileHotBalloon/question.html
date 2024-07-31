@@ -1,0 +1,11 @@
+<pl-question-panel>
+ <p> At a particular instant, a hot air balloon is {{params.H}} {{params.unitsDist}} in the air and descending at a constant speed of {{params.vy}} {{params.unitsSpeed}} </p>
+ <p> At this exact instant, a girl throws a ball horizontally, relative to herself, with an initial speed of {{params.vx}} {{params.unitsSpeed}}. </p>
+</pl-question-panel>
+<p> Ignore air resistance.</p> 
+
+When she lands, where will she find the ball? 
+<pl-number-input answers-name="L" comparison="sigfig" digits="3" label="L (in {{params.unitsDist}})"></pl-number-input>
+
+With what speed (in {{params.unitsSpeed}}) does the ball hit the ground? 
+<pl-number-input answers-name="vf" comparison="sigfig" digits="3" label="Speed (in {{params.unitsSpeed}})"></pl-number-input>

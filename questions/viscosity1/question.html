@@ -1,0 +1,12 @@
+
+<pl-question-panel>
+  <p> A plate of length {{params.a}} {{params.unitsDist}} and width {{params.b}} {{params.unitsDist}} is separated from a large plate by a gap of {{params.delta}} {{params.unitsGap}}.</p>
+  <p> The gap is filled with a fluid of specific gravity {{params.sg}} and dynamic viscosity {{params.mud}} {{params.unitsViscosity}}. </p>
+  <p> The plate is dragged parallel to itself with a speed of {{params.vel}} {{params.unitsSpeed}}. </p>
+</pl-question-panel>
+
+
+What is the force (in {{params.unitsForce}}) required to drag the plate?
+<pl-number-input answers-name="F" comparison="sigfig" digits="3" label=" F (in {{params.unitsForce}}) "></pl-number-input>
+What is the power (in {{params.unitsPower}}) required to drag the plate?
+<pl-number-input answers-name="P" comparison="sigfig" digits="3" label="P (in {{params.unitsPower}})"></pl-number-input>

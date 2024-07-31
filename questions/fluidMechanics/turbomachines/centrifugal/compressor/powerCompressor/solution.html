@@ -1,0 +1,20 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text"> $ \dot{m} = \rho A V_{n1} $ where $ A = 2 \pi R_1 b_1 $ and $ \rho $ is given by the ideal gas law  </pl-hint>
+    <pl-hint level="2" data-type="text"> Since the entry is radial, the inlet triangle is a right triangle.  </pl-hint>
+    <pl-hint level="3" data-type="text"> By continuity, the flow rate at the inner radius (entry) and the flow rate at the outer radius (exit) is the same. The volumetric flow rate at the entry and exit is $ V_n A $ </pl-hint>
+    <pl-hint level="4" data-type="text"> Draw the outlet triangle with the blade velocity $ u_2 $  as one side. The relative velocity vector $ V_{r2} $ makes an angle {{params.beta2deg}} degrees with $ u_2 $. Also $ V_{t2} $ can be computed </pl-hint>
+    <pl-hint level="5" data-type="text"> The torque is $ T = \dot{m} V_{t2} R_2 $, $ P = \dot{m} V_{t2} R_2 $ and $ w = V_{t2} u_2 $ </pl-hint>
+    <pl-hint level="6" data-type="text"> 
+        <ul>
+            <li> $ u_1 = R_1 \omega $ and $ u_2 = R_2 \omega $</li>
+            <li> $ \rho = P/RT = {{params.pressure}}/( 0.287 \times ({{params.temperature}} + 273) ) = {{params.rho}} $ {{params.unitsDensity}} </li>
+            <li> $ \dot{m} = \rho A V_{n2} = {{params.rho}} \times (2 \pi \times {{params.r1}} {{params.b1}}) \times {{params.Vn2}} = {{params.mdot}} {{params.unitsMassRate}} $ </li>
+            <li> Volumetric flow rate: $ \dot{V} = 2 \pi R_1 b_1 V_{n1} = 2 \pi R_2 b_2 V_{n2} \implies V_{n2} = {{params.Vn2}}{{params.unitsSpeed}}  $</li>
+            <li> $ V_{t2} = u_2 - V_{n2} \, cot \beta_2  \implies V_{t2} = {{params.Vt2}}  {{params.unitsSpeed}} $ </li>
+            <li> $ T  =  \dot{m} V_{t2} R_2 = {{params.mdot}} \times {{params.Vt2}} \times {{params.r2}} = {{correct_answers.torque}} {{params.unitsTorque}} $ </li>
+            <li> $ Power = \dot{m} V_{t2} R_2 = {{params.mdot}} \times {{params.Vt2}} \times R_2 = {{correct_answers.power}} {{params.unitsPower}} $ </li>
+            <li> Work per unit mass = $ V_{t2} u_2 = {{params.Vt2}} \times {{params.u2}} = {{correct_answers.workpermass}} {{params.unitsWorkPerMass}} $</li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+

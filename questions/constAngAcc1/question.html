@@ -1,0 +1,7 @@
+
+<pl-question-panel>
+  <p> {{params.object}}, rotating at a speed of {{params.v1}} {{param_labels.unitsv1}}, {{params.speedslab}} to a speed of {{params.v2}} {{param_labels.unitsv2}} in {{params.time}} seconds. What is the angular acceleration of the {{params.object}} in $ {{correct_answers_labels.unitsacc}} $ ? What is the number of rotations of the {{params.object}}  during acceleration (round to nearest integer)?</p>
+</pl-question-panel>
+
+<pl-number-input answers-name="acc" comparison="sigfigs" digits="3" label="{{correct_answers_labels.acc}}="></pl-number-input>
+<pl-number-input answers-name="dist" comparison="sigfigs" digits="3" label="{{correct_answers_labels.dist}}="></pl-number-input>

@@ -1,0 +1,15 @@
+{
+    "uuid": "7c4ccac6-1031-43ed-a685-feb64c2afccd",
+    "title": "Engineering Design Process",
+	"stem": "Engineering Design Process and Geometric Constraints",
+    "topic": "engg_graphics",
+    "tags": ["Engineering Design Process"],
+    "prereqs":"",
+	"isAdaptive": "false",
+	"createdBy": "sundar@google.com",
+	"qType":"ma",
+	"nSteps": 1,
+	"updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "none"
+}

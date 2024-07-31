@@ -1,0 +1,13 @@
+<pl-question-panel>
+The figure shows {{params.numForcesString}}  acting on the beam that is connected to a wall at O. {{params.htmlString}} 
+<p>
+What are the reaction forces (in {{params.unitsForce}}) and reaction moment (in {{params.unitsMoment}}) at point O?
+</pl-question-panel>
+{{params.svgString}}
+<pl-number-input answers-name="Ox" comparison="sigfigs" digits="3" label="$ {{correct_answers_labels.Ox}} $="></pl-number-input>
+<pl-number-input answers-name="Oy" comparison="sigfigs" digits="3" label="$ {{correct_answers_labels.Oy}} $="></pl-number-input>
+<pl-number-input answers-name="reactionMoment" comparison="sigfigs" digits="3" label="${{correct_answers_labels.moment}}$="></pl-number-input>
+
+
+
+

@@ -1,0 +1,33 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "3D statics",
+    "stem":"Statics",
+    "topic": "3D rigid bodies",
+    "tags": ["Force analysis", "Moment","Vectors"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "epere194@ucr.edu",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [{
+        "type": "video",
+        "name": "video1",
+        "title": "Basics",
+        "url": "https://ucr.yuja.com/V/Video?v=4113465&node=14041234&a=1283717411&autoplay=1"
+    },
+    {
+        "type": "video",
+        "name": "video2",
+        "title": "Solving for 3D forces",
+        "url": "https://ucr.yuja.com/V/Video?v=4115705&node=14052614&a=870910590&autoplay=1"
+    },
+    {
+        "type": "video",
+        "name": "video3",
+        "title": "Solving for 3D moments",
+        "url": "https://ucr.yuja.com/V/Video?v=4307336&node=14533344&a=1327482555&autoplay=1"
+    }]
+}

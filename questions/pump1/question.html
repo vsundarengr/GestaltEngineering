@@ -1,0 +1,12 @@
+<pl-question-panel>
+  <p> A pump lifts {{params.Qd}} {{params.unitsFlowRate}} of {{params.fluidName}} (specific gravity = {{params.sg}}) from a tank that is {{params.H1}} {{params.unitsDist}} below the level of the pump and delivers it to a tank that is {{params.H2}} {{params.unitsDist}} above the pump level. </p>
+  <p> The diameter of the pump is {{params.D}} {{params.unitsDiameter}}.
+  <p> Both the supply and delivery tank operate at atmospheric pressure.</p>
+</pl-question-panel>
+  
+  
+  What is the velocity (in {{params.unitsSpeed}}) in the pipe?
+  <pl-number-input answers-name="V" comparison="sigfig" digits="3" label=" V (in {{params.unitsSpeed}}) "></pl-number-input>
+  What is the mass flow rate (in {{params.unitsMassRate}}) ?
+  <pl-number-input answers-name="mdot" comparison="sigfig" digits="3" label=" $ \dot{m} $ (in {{params.unitsMassRate}})"></pl-number-input>
+  

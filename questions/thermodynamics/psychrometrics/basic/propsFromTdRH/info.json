@@ -1,0 +1,36 @@
+{
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Propeties from Td and RH",
+    "stem":"compute all properties",
+    "topic": "Psychrometrics",
+    "tags": ["thermodynamics", "psychrometrics"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video1",
+            "title": "Humidity Ratio, Relative humidity and dew point",
+            "url": "https://ucr.yuja.com/V/Video?v=9116239&node=39107485&a=194398400&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video2",
+            "title": "Enthalpy",
+            "url": "https://ucr.yuja.com/V/Video?v=9119588&node=39117635&a=204442716&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video3",
+            "title": "Video: Specific volume",
+            "url": "https://ucr.yuja.com/V/Video?v=9119584&node=39117613&a=158603156&autoplay=1"
+        }
+
+    ]
+}

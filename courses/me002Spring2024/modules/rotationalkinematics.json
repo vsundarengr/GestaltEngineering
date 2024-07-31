@@ -1,0 +1,35 @@
+{
+    "title": "Rotational Kinematics",
+    
+    "topics": "rotkin",
+    "pre-reqs": ["geometry", "trigonometry", "linear motion"],
+    "createdBy": "sundar@google.com",
+    "contents": [
+    { "name": "objectives",
+       "title":"Objectives",
+       "type": "static_content",
+       "objectives": ["define angular displacement, angular velocity and angular acceleration", "define torque", "relate rotational motion and linear motion"],
+       "additionalinfo": ""
+    },
+    { "name": "vid1",
+      "title": "Definitions and Kinematics",
+      "type": "video",
+      "url": "https://ucr.yuja.com/V/Video?v=7335000&node=31147215&a=104886679&preload=false"
+    },
+    { "name": "vid2",
+      "title": "Torque and Angular Acceleration",
+      "type": "video",
+      "url": "https://ucr.yuja.com/V/Video?v=7334999&node=31147214&a=40228096&preload=false"
+    },
+   { "name": "vid3",
+      "title": "Relation between rotational and linear quantities",
+      "type": "video",
+      "url": "https://ucr.yuja.com/V/Video?v=7335548&node=31148515&a=56786907&preload=false"
+    },
+ { "name": "vid4",
+      "title": "Vector relations between rotational and linear quantities",
+      "type": "video",
+      "url": "https://ucr.yuja.com/V/Video?v=7335547&node=31148514&a=177803848&preload=false"
+    }
+]
+   }

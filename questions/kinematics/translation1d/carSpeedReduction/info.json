@@ -1,0 +1,21 @@
+{
+    "uuid": "d7f6b8a1-9c4e-4e3b-8c7d-6f3a2e1d0b9a",
+    "title": "Car Speed Reduction",
+    "stem": "Calculating the time required for a car to reduce its speed",
+    "topic": "Physics",
+    "tags": [
+        "kinematics",
+        "speed",
+        "acceleration"
+    ],
+    "prereqs": [
+        "Understanding of speed, acceleration, and distance"
+    ],
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

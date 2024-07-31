@@ -1,0 +1,14 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        The time taken for a car to decelerate from an initial speed to a final speed over a certain distance can be calculated using the average speed formula.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        First, calculate the average speed during deceleration using \( \text{average speed} = \frac{{params.v1} + {params.v2}}{2} \), where {params.v1} and {params.v2} are the initial and final speeds, respectively.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        Then, use the formula \( t = \frac{2 \times {params.d}}{\text{average speed}} \) to find the time. Substitute the calculated average speed and the distance {params.d} {params.unitsDist} into the formula to find the time.
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        The time taken for the car to decelerate is {correct_answers.t} {params.unitsTime}.
+    </pl-hint>
+</pl-solution-panel>

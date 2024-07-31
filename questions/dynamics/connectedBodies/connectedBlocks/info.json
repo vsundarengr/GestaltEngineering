@@ -1,0 +1,15 @@
+{
+  "uuid": "a1b9c8d7-e5f4-4a3b-9c2d-1e0f3a2b1c0d",
+  "title": "Motion of Connected Blocks",
+  "stem": "The figure shows two blocks connected by a massless cable over a frictionless pulley.",
+  "topic": "Newtonian Mechanics",
+  "tags": ["motion", "connected blocks", "Newton's laws", "frictionless pulley"],
+  "prereqs": "Understanding of Newton's laws of motion, concepts of mass, force, and acceleration",
+  "isAdaptive": true,
+  "createdBy": "",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

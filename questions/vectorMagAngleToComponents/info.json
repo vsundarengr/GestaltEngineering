@@ -1,0 +1,15 @@
+{
+    "uuid": "1f435c36-1126-9384-fba5-627eeb2e10f9",
+    "title": "Determine components of a vector",
+	"stem": "Vector Components", 
+    "topic": "Linear Algebra",
+    "tags": ["basic", "vector", "algebra", "operations", "addition", "components"],
+	"prereqs": "",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

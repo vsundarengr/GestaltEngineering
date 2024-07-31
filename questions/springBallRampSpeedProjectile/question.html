@@ -1,0 +1,16 @@
+<pl-question-panel>
+<pl-figure file-name="springBall2.png"></pl-figure>
+The figure shows a ball of {{params.masslabel}} {{params.mass}} {{params.unitsMass}} resting against a spring-loaded plunger. The spring has a constant of {{params.k}} {{params.unitsSpringConst}} and length {{params.L0}} {{params.unitsSpringLength}}. 
+</p>
+<p> The spring is compressed by {{params.defl}} {{params.unitsSpringLength}} to propel the ball up the ramp to a height {{params.H}} {{params.unitsDist}} (point A). </p>
+<p>
+<p>
+What is the horizontal distance (in  {{params.unitsDist}}) that the ball lands (point B)?
+<pl-number-input answers-name="range" comparison="sigfig" digits="3" label="Range (in {{params.unitsDist}}) ="></pl-number-input>
+What is the magnitude of the speed (in {{params.unitsSpeed}}) that the ball lands?
+<pl-number-input answers-name="vs" comparison="sigfig" digits="3" label="Speed (in {{params.unitsSpeed}}) ="></pl-number-input>
+What is the acute angle (in {{params.unitsAngle}}) made by the velocity vector with the horizontal  that the ball lands?
+<pl-number-input answers-name="angle" comparison="sigfig" digits="3" label="Angle (in {{params.unitsAngle}}) ="></pl-number-input>
+</pl-question-panel>
+
+

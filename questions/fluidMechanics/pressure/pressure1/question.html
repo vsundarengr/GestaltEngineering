@@ -1,0 +1,9 @@
+<pl-question-panel>
+<p> A tank is filled to a height of {{params.H}} {{params.unitsDist}} with {{params.fluidName}} (specific gravity = {{params.sg}}).</p>
+<p> The space above the liquid is filled with {{params.gasName}} gas with gage pressure {{params.pgas}} {{params.unitsPressure}}.</p>
+</pl-question-panel>
+
+<p> What is the gage pressure (in {{params.unitsPressure}}) at the bottom of the tank? </p>
+<pl-number-input answers-name="pgage" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>
+<p > What is the absolute pressure (in {{params.unitsPressure}}) at the bottom of the tank? </p>
+<pl-number-input answers-name="pabs" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>

@@ -1,0 +1,14 @@
+{
+    "uuid": "8b4fa1d4-64d1-4e89-4567-ad2133f25b2f",
+    "title": "Vehicle motion differential",
+    "topic": "Rotational Kinematics",
+    "tags": ["acceleration", "velocity", "angular acceleration", "angular velocity"],
+	"prereqs": "",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

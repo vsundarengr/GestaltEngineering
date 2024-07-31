@@ -1,0 +1,7 @@
+
+<pl-question-panel>
+  <p> {{params.article}} {{params.object}}, is thrown {{params.direction}} with initial velocity {{params.v1}} {{param_labels.unitsv1}} from the roof of a building that is {{params.height}} {{param_labels.unitsheight}}. How long (in seconds) does it take for the {{params.object}} to hit the ground? With what speed (in {{correct_answers_labels.unitsspeed}}) does it hit the ground?</p>
+</pl-question-panel>
+
+<pl-number-input answers-name="time" comparison="sigfig" digits="3" label="{{correct_answers_labels.time}}="></pl-number-input>
+<pl-number-input answers-name="speed" comparison="sigfig" digits="3" label="{{correct_answers_labels.speed}}="></pl-number-input>

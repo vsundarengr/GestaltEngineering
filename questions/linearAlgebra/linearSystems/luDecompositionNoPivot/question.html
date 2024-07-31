@@ -1,0 +1,31 @@
+<pl-question-panel>
+  <p>
+  Consider the two matrices:
+  </p>
+  
+  <p>
+  ${\bf A} = <pl-matrix-latex params-name="A" digits={{params.nDigits}}></pl-matrix-latex>$
+  </p>
+  
+  and 
+  <p>
+  ${\bf b} = <pl-matrix-latex params-name="b" digits={{params.nDigits}}></pl-matrix-latex>$
+  </p>
+  
+
+  Use LU Decomposition without pivoting to solve the system $ Ax = b $. Since $ A = LU $, $ LUx = b $. Setting $ Ux = y $, gives  $ Ly = b $. 
+  Identify the matrices L and U and the column vectors $ x $ and $ y $
+  </p>
+  <p></p>
+  </pl-question-panel>
+  
+  <p> Lower triangular matrix $ L $ </p>
+  <pl-matrix-input answers-name="L" comparison="sigfig" digits={{params.sigfigs}} label="$ L  =$"></pl-matrix-input>
+  <p> Upper triangular matrix $ U $ </p>
+  <pl-matrix-input answers-name="U" comparison="sigfig" digits={{params.sigfigs}} label="$ U  =$"></pl-matrix-input>
+  <p> Intermediate solution vector $ y $ </p>
+  <pl-matrix-input answers-name="y" comparison="sigfig" digits={{params.sigfigs}} label="$ y  =$"></pl-matrix-input>
+  <p> Solution vector $ x$ </p>
+  <pl-matrix-input answers-name="x" comparison="sigfig" digits={{params.sigfigs}} label="$ x  =$"></pl-matrix-input>
+
+

@@ -1,0 +1,415 @@
+<%- include('partials/header'); -%>
+
+
+<header>
+    <div class="headings">
+        <h3>Module: <%= module.module.title %> </h3>
+    </div>
+</header>
+
+<div class="goback">
+    <button onClick="goback()"> Back to main course page </button>
+</div>
+
+
+<input type="hidden" id="cid" name="cid" value="<%= courseId%>">
+<input type="hidden" id="miid" name="miid" value="<%= moduleInstance._id %>">
+<input type="hidden" id="mid" name="mid" value="<%= moduleInstance.moduleId %>">
+<input type="hidden" id="maxIndex" name="maxIndex" value="<%= module.module.contents.length %>">
+<input type="hidden" id="contentId" name="contentId" value="<%=module.module.contents[moduleInstance.currentIndex].contentId %>">
+<input type="hidden" id="qid" name="qid" value="">
+
+<span class="navopen" onclick="openNav()">&#9776; Show Module Contents </span>
+    <div id="mySidenav" class = "sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <% module.module.contents.forEach( item => { %>
+            <a href="#" id = "<%= item.name %>" onClick = "showModuleComp('<%= item.name %>')"><%=item.title %> </a> </br>
+        <% }) %>
+    </div>
+
+<div class="content">
+    <div class="contenttitle"> <%= module.module.contents[moduleInstance.currentIndex].title %></div>
+    <% if (module.module.contents[moduleInstance.currentIndex].type === 'quiz')  { %>
+    <div class="questiontitle"> Question: </div>
+    <%} %>
+    <div class="contentbody"> 
+        <% if (contentHTML) { %>
+        <%- contentHTML %>
+        <%} %>
+    </div>
+    
+    <div class="contentcontrols">
+        <div class="container">  
+        <% if (module.module.contents[moduleInstance.currentIndex].type === 'quiz')  { %>
+            <% if (questionInstId !== '') { %>
+            <input type="hidden" id="qid" name="qid" value="<%= questionInstId%>">
+            <div class="showanswers" data-doc="<%= questionInstId %>">
+                <button id="showanswers" style="display:none;"> Show answer</button>
+            </div>
+            <div class="submit" data-doc="<%= questionInstId %>">
+                <button id="submitanswers"> Submit answer </button>
+            </div>
+            <div class="nextquestion" data-doc="<%= questionInstId %>">
+                <button id="nextquestion" disabled="true"> Next Question </button>
+            </div>
+            <% } else { %>
+                <input type="hidden" id="qid" name="qid" value="">
+                <% if (state === 'completed') { %> }
+                <div class="review" data-doc="">
+                    <button id="reviewcompleted" onClick="reviewQuiz()"> Review completed quiz </button>
+                </div>
+                <% } else { %>
+                    <% if (state === 'inprogress') {%>
+                    <div class="nextquestion" data-doc="">
+                        <button id="nextquestion" > Resume quiz </button>
+                    </div>
+                    <%} else { %> 
+                        <div class="nextquestion" data-doc="">
+                            <button id="nextquestion" > Start quiz</button>
+                        </div>
+                    <% } %>
+                    <div class="review" data-doc="">
+                        <button id="reviewcurrent" onClick="reviewQuiz()"> Show progress so far </button>
+                    </div>
+                <% } %>
+            <% }  %>
+        <% } else if ( contentId == -1) {%>
+            <input type="hidden" id="qid" name="qid" value="">
+            <div class="startmodule" data-doc="">
+                <button id="startmodule" onClick = "showModuleComp('objectives')"> Start Module </button>
+            </div>
+        <% } %>
+    </div>
+    </div>
+</div>
+
+
+<div class="modulenav"> 
+    <div class="container">
+        <%if (contentId !== -1 ) { %>
+        <% if (moduleInstance.currentIndex === 0 ) { %>
+            <button name="prev" id="prev" onclick="showModuleComp('prev')" disabled> Previous </button>
+        <% } else {%>
+            <button name="prev" id="prev" onclick="showModuleComp('prev')" > Previous </button>
+        <%} %>
+        <% if (moduleInstance.currentIndex < moduleInstance.contents.length -1) {%>
+            <button name="next" id="next" onclick="showModuleComp('next')"> Next </button>
+        <% } else {%>
+            <button name="next" id="next" onclick="showModuleComp('next')" disabled> Next </button>
+        <%} %>
+        <%} %>
+    </div>
+</div>
+
+</br>
+<button id="showstudentfeedback" onclick="showStudentFeedback('show')"> Questions/Feedback/Comments </button>
+</br>
+
+
+<div class="studentfeedback" id="studentfeedback" style="display:none">
+    <form action="" id="sfForm" class="sfForm">
+        <label for="sftitle"> Feedback title: </label> 
+        <input type="text" id="sftitle" name="title"/></br>
+        <label for="sftype"> Feedback type </label>
+        <select name="sftype">
+            <option value="question"> Question about this material </option>
+            <option value="comment"> Comments/ Thoughts </option>
+            <option value="feedback"> Feedback </option>
+        </select> <br>
+        <label for="sftext"> Feedback body: </label>
+        <textarea id="sftext"></textarea></br>
+        <div class="feedback"> </div>
+        <button type="submit" class ="feedbackSubmit"> Submit </button> 
+        <button type="reset" value="reset"> Clear </button>
+    </form>
+  
+    <button onclick="showStudentFeedback('hide')"> Hide Feedback form </button>
+</div>
+
+<script>
+
+function showStudentFeedback(choice) {
+  //  console.log('Show Student feedback pressed');
+    if (choice === 'show') {
+        document.getElementById('studentfeedback').style = "display:inline;"
+        studentFeedbackForm.getElementsByClassName("feedback")[0].innerHTML = "";
+        studentFeedbackForm.getElementsByClassName("feedbackSubmit")[0].removeAttribute('disabled');
+    } else {
+        const studentFeedbackForm = document.querySelector('.sfForm');
+        studentFeedbackForm.getElementsByClassName("feedback")[0].innerHTML = "";
+        studentFeedbackForm.getElementsByClassName("feedbackSubmit")[0].removeAttribute('disabled');
+        document.getElementById('studentfeedback').style = "display:none";
+    }
+
+}
+
+const studentFeedbackForm = document.querySelector('.sfForm');
+studentFeedbackForm.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const contentId = document.getElementById('contentId').value;
+    const moduleInstanceId = document.getElementById('miid').value;
+    const moduleId = document.getElementById('mid').value;
+    const courseId = document.getElementById('cid').value;
+    const sftitle = document.getElementById('sftitle').value;
+    const sftext = document.getElementById('sftext').value;
+    const qid = document.getElementById('qid').value;
+    const sftype = studentFeedbackForm.sftype.value;
+
+    if (!sftitle || !sftext) {
+        studentFeedbackForm.getElementsByClassName("feedback")[0].innerHTML = "Please enter valid text in the boxes";
+        return;
+    }
+
+    let sf = {
+        contentId: contentId,
+        moduleInstanceId: moduleInstanceId,
+        moduleId: moduleId,
+        courseId: courseId,
+        sftitle: sftitle,
+        sftext: sftext,
+        qid: qid,
+        sftype: sftype
+    };
+
+    const endPoint = '/feedbackFromStudents';
+    console.log('Endpoint is', sf);
+    try {
+
+        const res = await fetch(endPoint, {
+            method: 'POST',
+            body: JSON.stringify(sf),
+            headers: {'Content-Type': 'application/json'}
+        });
+
+        const data = await res.json();
+        if (data.code) {
+            studentFeedbackForm.getElementsByClassName("feedback")[0].innerHTML = "Thanks for your feedback! Submitted";
+            //studentFeedbackForm.getElementsByClassName("feedbackSubmit")[0].setAttribute("disabled","true");
+            document.getElementById('sftitle').value ='';
+            document.getElementById('sftext').value='';
+        }
+    }
+    catch ( err) {
+        console.log('Error submitting feedback');
+    }
+
+    
+});
+
+function reviewQuiz(){
+    const courseId = document.getElementById('cid').value;
+    const contentId = document.getElementById('contentId').value;
+    const moduleInstanceId = document.getElementById('miid').value;
+    const urlSearch = new URLSearchParams({courseId: courseId, contentId: contentId, moduleInstanceId: moduleInstanceId})
+    const endPoint = '/reviewQuiz?' + urlSearch.toString();
+ //   console.log('ReviewQuiz is ', endPoint);
+    location.assign(endPoint);
+}
+
+
+const nextQuestion = document.querySelector('.nextquestion');
+nextQuestion.addEventListener('click', async (e)=> {
+    e.preventDefault();
+    const questionInstanceId = nextQuestion.dataset.doc;
+    const contentId = document.getElementById('contentId').value;
+    const moduleInstanceId = document.getElementById('miid').value;
+    const courseId = document.getElementById('cid').value;
+    const urlSearch = new URLSearchParams({courseId: courseId, contentId: contentId, moduleInstanceId: moduleInstanceId, questionInstanceId: questionInstanceId});
+    const endPoint = '/nextquestion?' + urlSearch.toString();
+ //   console.log('Sending NextQuestion is :', endPoint);
+    location.assign(endPoint);
+
+});
+
+// const practicemore = document.querySelector('.practicemore');
+// practicemore.addEventListener('click', async (e)=> {
+//     e.preventDefault();
+//     const questionInstanceId = practicemore.dataset.doc;
+//     const contentId = document.getElementById('contentId').value;
+//     const moduleInstanceId = document.getElementById('miid').value;
+//     const courseId = document.getElementById('cid').value;
+//     const contQuiz = true;
+//     const urlSearch = new URLSearchParams({courseId: courseId, contentId: contentId, moduleInstanceId: moduleInstanceId, questionInstanceId: questionInstanceId, contQuiz: contQuiz});
+//     const endPoint = '/nextquestion?' + urlSearch.toString();
+//  //   console.log('Sending NextQuestion is :', endPoint);
+//     location.assign(endPoint);
+// });
+
+const submitAnswer = document.querySelector('.submit');
+submitAnswer.addEventListener('click', async (e)=>{
+    e.preventDefault();
+    const endpoint = '/checkAttempt';
+    
+    let answerForms = document.querySelectorAll('.answers');
+    responses = {};
+    for (let i = 0 ; i < answerForms.length; i++) {
+        let formName = answerForms[i].getAttribute('name');
+        let responseEls = answerForms[i].getElementsByClassName('response');
+    //    console.log('Number of responses is ', responseEls.length);
+        resp = [];
+        chbxs = {};
+        for (let j = 0; j < responseEls.length; j++) {
+            id = responseEls[j].getAttribute('id');
+            type = responseEls[j].getAttribute('type');
+            name = responseEls[j].getAttribute('name');
+        //    console.log(`ID ${id} NAME ${name} TYPE: ${type} `);
+            if ( type === 'number' || type === 'text') {
+                val = responseEls[j].value;
+           //     console.log(`ID is ${id} and VALUE is ${val}`);
+                let d = {responseId: name, type: "text", studentResponse: val};
+                resp.push(d);
+            } else if (type === 'radio') {
+                if (responseEls[j].checked) {
+                    let d = {responseId: name, type: "radio", studentResponse: id};
+                    resp.push(d);                    
+                }
+            } else if (type === 'checkbox') {
+                if (responseEls[j].checked) {
+                    let k ; 
+                    for (k = 0; k < resp.length; k++) {
+                        if (resp[k].responseId === name)
+                            break;
+                    }
+                    if (k >= resp.length){
+                        let d = {responseId: name, type: "checkbox", studentResponse: [id]};
+                        resp.push(d); 
+                    } else {
+                        resp[k].studentResponse.push(id);
+                    }
+                }
+            }
+            }
+        responses[formName] = resp;
+    }
+
+    console.log(responses);
+    
+    try {
+        const json1 = {
+            instanceId: submitAnswer.dataset.doc,
+            responses: responses
+        }
+        console.log('JSON IS : ', json1);
+        const res = await fetch(endpoint, {
+            method: 'POST',
+            body: JSON.stringify(json1),
+            headers: {'Content-Type': 'application/json'}
+        });
+
+        const data = await res.json();
+     //   console.log('INCOMING DATA IS :', data);
+        let datar = data.responses;
+        let allCorrect = true;
+        answerForms = document.querySelectorAll('.answers');
+        for (let i = 0 ; i < answerForms.length; i++) {
+                let formName = answerForms[i].getAttribute('name');
+                let responseEls = answerForms[i].getElementsByClassName('response');
+                let formFeedback = answerForms[i].getElementsByClassName('feedback');
+                let formFeed = datar[formName];
+           //     console.log('FORM FEED IS ', formFeed);
+                for (let j = 0; j < formFeed.length; j++) {
+                let itemFeed = formFeed[j];
+           //     console.log('IOTEM FEED IUS ', itemFeed);
+                id = responseEls[j].getAttribute('id');
+                type = responseEls[j].getAttribute('type');
+                name = responseEls[j].getAttribute('name');
+                let cr = itemFeed['checkRes'].res;
+                if (cr) {
+                    formFeedback[0].innerHTML = 'Correct!';
+                    formFeedback[0].style.color = 'green';
+               //     console.log('Setting Feedbak CHECK RES IS ', cr);
+                    document.getElementById('nextquestion').removeAttribute('disabled');
+
+                } else {
+                    formFeedback[0].innerHTML = 'Incorrect!';
+                    formFeedback[0].style.color = 'red';
+                    allCorrect = false;
+                }
+                }
+        }
+     //   console.log('DATAR IS ', datar);
+
+        if (allCorrect) {
+            document.getElementById('submitanswers').setAttribute('disabled','true');
+        }
+
+        if ( !allCorrect && datar.numAttempts > datar.showAnswerTimes) {
+            console.log('Setting style');
+            document.getElementById('showanswers').style = "display:inline;";
+            document.getElementById('nextquestion').removeAttribute('disabled');
+            
+        }
+    } catch(err){
+        console.log('Error checking Answer: ', err);
+    }
+});
+
+const showAnswer = document.querySelector('.showanswers');
+showAnswer.addEventListener( 'click', async (e)=>{
+    e.preventDefault();
+    const questionInstId = showAnswer.dataset.doc;
+    const endPoint = '/showAnswer/' + questionInstId;
+   // console.log('Fetching answer from ', endPoint);
+    fetch(endPoint)
+        .then (response => response.json())
+        .then (data => {
+          //  console.log('DATA RETURNED FROM SHOW ANSWER IS ', data);
+            answerForms = document.querySelectorAll('.answers');
+            let answers = data.answers;
+            for (let i = 0 ; i < answerForms.length; i++) {
+                let formName = answerForms[i].getAttribute('name');
+                let formFeedback = answerForms[i].getElementsByClassName('feedback');
+                let ans = answers[formName];
+                if (isNaN(ans)) {
+                //    formFeedback[0].innerHTML = answers[formName];
+                                    let answerText = 'Correct selection: ';
+                    for (let j = 0; j < answers[formName].length; j ++) {
+                        let answerId = answers[formName][j];
+          //              console.log('Answer ID = ', answerId);
+                        let ch = answerForms[i].querySelector(`#${answerId}`);
+                        answerText += ch.value;
+                        answerText += `</br>`;
+                    }
+                   // formFeedback[0].innerHTML = answers[formName];
+                   formFeedback[0].innerHTML = answerText;
+
+                } else {
+                    ans = Math.round(100*ans)/100;
+                    formFeedback[0].innerHTML = ans;
+                }
+                formFeedback[0].style.color = 'blue';
+                document.getElementById('submitanswers').setAttribute('disabled','true');                   }
+            })
+        .catch( err=> console.log('Cannot retrieve answers ', err));
+});
+
+function showModuleComp(name){
+    const courseId = document.getElementById('cid').value;
+    const moduleInstanceId = document.getElementById('miid').value;
+   // console.log(`Name = ${name}, courseId = ${courseId} and moduleInstanceId = ${moduleInstanceId}`);
+    const urlSearch = new URLSearchParams({courseId: courseId, moduleInstanceId: moduleInstanceId, name: name});
+    const endPoint = "/moduleplay?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint);
+}
+
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function goback() {
+    const courseId = document.getElementById('cid').value;
+    const endPoint = '/showStudentCourse/' + courseId;
+    location.assign(endPoint );
+}
+
+</script>
+
+<%- include('partials/footer'); -%>

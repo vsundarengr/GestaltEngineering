@@ -1,0 +1,15 @@
+{
+  "uuid": "f7d6b7a1-8e3d-4e3b-9c3a-6f4d2e1c8b9a",
+  "title": "Conversion of Temperature",
+  "stem": "Conversion of 600 degrees Rankine to Fahrenheit",
+  "topic": "Thermodynamics",
+  "tags": ["temperature", "conversion", "thermodynamics"],
+  "prereqs": ["Understanding of temperature scales and their conversions"],
+  "isAdaptive": true,
+  "createdBy": "",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

@@ -1,0 +1,36 @@
+<pl-solution-panel>
+    <pl-figure file-name="inclinedPlaneSystem.JPG"></pl-figure>
+    <pl-hint level="1" data-type="text">This problem involves analyzing the forces acting on each mass and applying Newton's second law to the system as a whole. The forces include gravitational force, normal force, and frictional force where applicable.</pl-hint>
+    <pl-hint level="2" data-type="text">Known Variables:
+        <ul>
+            <li>Masses: \( m_A = {{params.mA}} \text{{kg}} \), \( m_B = {{params.mB}} \text{{kg}} \), \( m_C = {{params.mC}} \text{{kg}} \)</li>
+            <li>Angles: \( \theta = {{params.theta}}^\circ \), \( \phi = {{params.phi}}^\circ \)</li>
+            <li>Coefficients of friction: \( \mu_s = {{params.mu_s}} \) (static), \( \mu_k = {{params.mu_k}} \) (kinetic)</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="3" data-type="text">Equation Setup:
+        The net force on the system can be described by Newton's second law:
+        \[ F_{{\text{{net}}}} = m_{{\text{{T}}}}a \]
+        where \( m_{{\text{{T}}}} \) is the total mass and \( a \) is the acceleration.
+        The forces acting on each mass are:
+        <ul>
+            <li>For \( m_A \): \( m_A g \sin(\theta) \)</li>
+            <li>For \( m_B \): \( m_B g \)</li>
+            <li>For \( m_C \): \( m_C g \sin(\phi) \) and friction \( f_k = \mu_k m_C g \cos(\phi) \)</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="4" data-type="text">Solution Process:
+        1. Write down the forces acting on each mass due to gravity and friction.
+        2. Set up the equation for the net force using Newton's second law.
+        3. Solve for the acceleration \( a \).
+        \[ F_{{\text{{net}}}} = m_B g + m_A g \sin(\theta) - m_C g \sin(\phi) - \mu_k m_C g \cos(\phi) \]
+        And the acceleration \( a \) is given by:
+        \[ a = \frac{{{{correct_answers.acceleration}}}}{{m_{{\text{{T}}}}}} \]
+    </pl-hint>
+    <pl-hint level="5" data-type="text">Explanation and Clarification:
+        The equation for \( F_{{\text{{net}}}} \) takes into account the gravitational force component along the incline for \( m_A \) and \( m_C \), the gravitational force acting on \( m_B \), and the kinetic friction force opposing the motion of \( m_C \). The total mass \( m_{{\text{{T}}}} \) is the sum of all three masses. The acceleration \( a \) is the net force divided by the total mass, calculated as \( a = {{correct_answers.acceleration}} \, {{params.unitsAcc}} \).
+    </pl-hint>
+    <pl-hint level="6" data-type="text">Educational Goal:
+        The guide aims to help understand the application of Newton's second law in a system with multiple masses connected by a string over a pulley, considering different forces such as gravity and friction. It emphasizes the importance of breaking down forces into components and combining them to find the net force and resulting acceleration.
+    </pl-hint>
+</pl-solution-panel>

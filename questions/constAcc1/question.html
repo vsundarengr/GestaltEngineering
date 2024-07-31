@@ -1,0 +1,7 @@
+
+<pl-question-panel>
+  <p> {{params.article}} {{params.vehicle}}, traveling at a speed of {{params.v1}} {{param_labels.unitsv1}} ,  {{params.speedslab}} to a speed of {{params.v2}} {{param_labels.unitsv2}} in {{params.time}} seconds. What is the acceleration of the {{params.vehicle}} in $ {{correct_answers_labels.unitsacc}} $ ? What is the distance traveled by the {{params.vehicle}} (in {{correct_answers_labels.unitsdist}}) during acceleration?</p>
+</pl-question-panel>
+
+<pl-number-input answers-name="acc" comparison="sigfig" digits="3" label="{{correct_answers_labels.acc}}="></pl-number-input>
+<pl-number-input answers-name="dist" comparison="sigfig" digits="3" label="{{correct_answers_labels.dist}}="></pl-number-input>

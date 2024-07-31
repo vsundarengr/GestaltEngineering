@@ -1,0 +1,16 @@
+{
+    "uuid": "16620404-1340-41ef-9897-20687adebaf8",
+    "title": "Differentiate a polynomial function of one variable",
+    "stem": "Differentiate the following function",
+    "topic": "Calculus",
+    "tags": ["differentiation", "derivative", "first derivative"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python"
+}
+

@@ -1,0 +1,44 @@
+{
+    "title": "Conservation of energy",
+    "topics": "conservation of energy",
+    "pre-reqs": [ "linear motion", "rotational kinematics", "fbd", "forces", "moments", "work"],
+    "createdBy": "sundar@google.com",
+    "contents": [
+    { "name": "objectives",
+       "title":"Objectives",
+       "type": "static_content",
+       "objectives": ["Understand the principle of energy", "Differentiate between conservative forces and non-conservative forces", "Apply conservation of energy to problems"],
+       "additionalinfo": ""
+    },
+	 { "name": "vidw1",
+   "title": "Introduction to work",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=7484053&node=32085401&a=28951739&preload=false"
+ },
+  { "name": "vidw2",
+   "title": "Work-Energy Principle",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=7484052&node=32085400&a=114012633&preload=false"
+ },
+	{ "name": "vide1",
+    "title": "Gravity and energy conservation",
+    "type": "video",
+    "url": "https://ucr.yuja.com/v/energyconservation0"
+    },
+	 { "name": "vide2",
+      "title": "Problems involving gravity and energy conservation",
+      "type": "video",
+      "url": "https://ucr.yuja.com/v/energyconservation1"
+    },
+	 {"name": "vide3",
+      "title": "Springs and Energy conservation",
+      "type": "video",
+      "url": "https://ucr.yuja.com/V/Video?v=7491655&node=32113670&a=71252316&autoplay=1"
+    },
+	{"name": "vide4",
+      "title": "Non-conservative forces",
+      "type": "video",
+      "url": "https://ucr.yuja.com/v/energyconservation2"
+    }
+	]
+   }

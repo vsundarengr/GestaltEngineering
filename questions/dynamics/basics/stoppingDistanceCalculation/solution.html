@@ -1,0 +1,23 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        <p>To begin understanding the problem, recognize that the stopping distance of a vehicle, such as a truck, involves calculating the deceleration required to bring it to a stop and the distance over which this deceleration acts. The deceleration is directly related to the braking force applied and the truck's mass.</p>
+    </pl-hint>
+    
+    <pl-hint level="2" data-type="text">
+        <p>The relationship between force, mass, and acceleration is given by Newton's second law, \(F = ma\), where \(F\) is the force applied, \(m\) is the mass of the truck, and \(a\) is the acceleration (or in our case, deceleration).</p>
+    </pl-hint>
+    
+    <pl-hint level="3" data-type="text">
+        <p>To calculate the deceleration, rearrange Newton's second law to \(a = \frac{F}{m}\). The mass of the truck is derived from its weight, \(m = \frac{{params.weight}}{{gravity}}\), assuming Earth's gravitational acceleration (9.81 m/s\(^2\) or equivalent in other units).</p>
+    </pl-hint>
+    
+    <pl-hint level="4" data-type="text">
+        <p>With the deceleration calculated, we apply the kinematic equation that relates stopping distance to velocity and acceleration: \(d = \frac{v^2}{2a}\), where \(v\) is the initial velocity of the truck and \(d\) is the stopping distance.</p>
+    </pl-hint>
+    
+    <pl-hint level="5" data-type="text">
+    <p>Substituting the values for velocity \(v = {{params.speed}}\), acceleration \(a = \frac{F}{m}\), and rearranging for \(d\), we can calculate the stopping distance. Be mindful of unit conversions, ensuring that velocity is in m/s if using SI units or ft/s for US customary units, and mass is in kg or lbm as appropriate. Finally, substitute the given values for force \(F = {params.force}\), weight \(m\), and velocity \(v\) to find \(d = {{correct_answers.d}} {{params.unitsDistance}}\).</p>
+    </pl-hint>
+    
+    <p>This methodical approach, starting from understanding the forces at play to applying Newton's second law and kinematic equations, allows us to accurately calculate the truck's stopping distance.</p>
+</pl-solution-panel>

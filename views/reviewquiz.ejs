@@ -1,0 +1,114 @@
+<%- include('partials/header'); -%>
+
+
+<input type="hidden" id="cid" name="cid" value="<%= courseId%>">
+<% if ( moduleInstance !== null)  {%>
+<input type="hidden" id="miid" name="miid" value="<%= moduleInstance._id %>">
+<input type="hidden" id="maxIndex" name="maxIndex" value="<%= module.module.contents.length %>">
+<input type="hidden" id="contentId" name="contentId" value="<%=module.module.contents[moduleInstance.currentIndex].contentId %>">
+<button id="goback" onClick ="backToQuiz('<%= quizName %>')"> Go back to quiz </button>
+<%} else { %> 
+    <input type ="hidden" id="qid" name="qid" value="<%= quizId %>">  
+    <button id="goback" onClick ="backToQuizSA()"> Go back to quiz </button>
+<% } %>
+<div class = "sidenav"></div>
+
+
+
+<% questionInstances.forEach( qi=> { %> 
+    <div class="individualquestion">
+    <div class="reviewquest"> 
+        <%- qi.htmlString %>
+    </div>
+    <% if (qi.attempts && qi.attempts.length > 0) { %>
+    <div class="reviewdata">
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th> Attempt </th>
+                    <% let x = qi.attempts[0].responses; %>
+                    <% let ks = Object.keys(x); %>
+                    <% for (let j = 0; j < ks.length; j++) { %> 
+                    <th> Your response for <%= ks[j] %> </th>
+                    <th> Result for <%= ks[j] %> </th>
+                    <th> Feedback for <%= ks[j] %></th>
+                    <%} %>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < qi.attempts.length; i++) { %>
+                    <tr> 
+                    <td> <%= i %> </td>
+                    <% let val = qi.attempts[i].responses; %>
+                    <% let keys = Object.keys(val);%>
+                    <% for (let j = 0; j < keys.length; j++) { %> 
+                    <% let resp = val[keys[j]] %>
+                   
+                    <%if ( resp[0].type === "radio") {%> 
+                        <% let childNodes = resp[0].studentResponse %>
+                        <% let jdata = JSON.parse(qi.data); %>
+                        <% let keyInData = jdata.answers.find(el => el.name === keys[j]) %>
+                        <% let ix = keyInData.itemOrder.findIndex(el => el === childNodes) %>
+                        <td> <%= (ix+1) %> </td>
+                    <% } else if ( resp[0].type === "checkbox") {%>
+                        <% let childNodes = resp[0].studentResponse %>
+                        <% let jdata = JSON.parse(qi.data); %>
+                        <% let keyInData = jdata.answers.find(el => el.name === keys[j]) %>
+                        <p></p>
+                        <% let vals = [] %>
+                        <% for (let k = 0; k < childNodes.length; k++) {%> 
+                            <% let ix = keyInData.itemOrder.findIndex(el => el === childNodes[k]) %>
+                            <% vals.push(ix+1) %>
+                        <%}%>
+                        <td> <%= vals.sort().toString() %> </td>                        
+                    <%} else {%>
+                       <td> <%=  resp[0].studentResponse %> </td>
+                    <% } %>
+                     <% if (resp[0].checkRes.res === true) { %> 
+                        <td> <img src="/common/checkmarksign.png" alt="Correct" width="25" height="25"/> </td>
+					<td> </td>
+                    <%} else {%>
+                        <td> <img src="/common/redcrossmark.png" alt="Incorrect" width="25" height="25"/></td>
+                        <td> <%= resp[0].checkRes.errors %> </td>
+                        <% } %>
+                    <% } %>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <p></p>
+
+    <% } else {%>
+        <strong> <u> This problem was not attempted. </u> </strong>
+        <% } %>
+    </div>
+<% }) %>
+
+<script>
+    function backToQuiz() {
+        const courseId = document.getElementById('cid').value;
+        const moduleInstanceId = document.getElementById('miid').value;
+        const contentId = document.getElementById('contentId').value;
+        console.log(`Name = ${name}, courseId = ${courseId}, moduleInstanceId = ${moduleInstanceId}, contentId = ${contentId}`);
+        const urlSearch = new URLSearchParams({courseId: courseId, moduleInstanceId: moduleInstanceId, name: name, contentId: contentId});
+        const endPoint = "/moduleplay?" + urlSearch.toString();
+        console.log('Endpoint is ', endPoint);
+        location.assign(endPoint); 
+
+    }
+
+    function backToQuizSA() {
+        const courseId = document.getElementById('cid').value;
+        const quizId = document.getElementById('qid').value;
+        console.log(` courseId = ${courseId},  quizId = ${qid}`);
+        const urlSearch = new URLSearchParams({courseId: courseId, quizId: quizId});
+        const endPoint = "/quizsa?" + urlSearch.toString();
+        console.log('Endpoint is ', endPoint);
+        location.assign(endPoint); 
+
+    }
+</script>
+
+<%- include('partials/footer'); -%></input>

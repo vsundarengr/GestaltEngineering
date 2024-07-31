@@ -1,0 +1,15 @@
+{
+  "uuid": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p",
+  "title": "Temperature Change in a Tank of Water",
+  "stem": "A tank 2 ft x 2 ft x 1 ft is half full of water at 50°F. If 500 BTU of heat is supplied, what will be the final temperature of the water?",
+  "topic": "Thermodynamics",
+  "tags": ["heat transfer", "temperature change", "water properties"],
+  "prereqs": ["basic understanding of heat transfer", "knowledge of specific heat capacity of water"],
+  "isAdaptive": true,
+  "createdBy": "lberm007@ucr.edu",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

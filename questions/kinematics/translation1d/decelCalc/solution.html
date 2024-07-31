@@ -1,0 +1,14 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        Use the equation of motion: \(v^2 = u^2 + 2as\) where \(v\) is the final velocity, \(u\) is the initial velocity, \(a\) is the acceleration, and \(s\) is the distance.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        In this case, the final velocity \(v\) is 0 (as the car comes to a stop), the initial velocity \(u\) is 70 mph (which needs to be converted to {params.unitsSpeed}), and the distance \(s\) is {params.distance} {params.unitsDistance}.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        Rearrange the equation to solve for \(a\): \(a = \frac{v^2 - u^2}{2s}\).
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        Substituting the given values and solving for \(a\) gives the deceleration. The calculated deceleration is {correct_answers.a} {params.unitsAcceleration}.
+    </pl-hint>
+</pl-solution-panel>

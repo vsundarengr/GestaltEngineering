@@ -1,0 +1,14 @@
+<pl-figure file-name="siphon.png"></pl-figure>
+<pl-question-panel>
+  <p> A pipe has diameter {{params.D}} {{params.unitsDiameter}} is dipped {{params.h2}} {{params.unitsDist}} into a tank of {{params.fluidName}} (specific gravity = {{params.sg}}) and used as a siphon. <p> </p>
+  <p> The highest point of the siphon is {{params.h4}} {{params.unitsDist}} above the fluid level while the exit of the siphon is at height {{params.h6}} {{params.unitsDist}} below the level of the fluid.</p> 
+  <p> The pressure of the fluid on the tank is atmospheric. </p>
+</pl-question-panel>
+  
+  
+  What is the velocity (in  {{params.unitsSpeed}}) of the fluid at the exit of the siphon? 
+  <pl-number-input answers-name="V" comparison="sigfig" digits="3" label=" V (in {{params.unitsSpeed}}) "></pl-number-input>
+  What is the volumetric flow rate (in {{params.unitsFlowRate}}) ?
+  <pl-number-input answers-name="vdot" comparison="sigfig" digits="3" label="Q (in {{params.unitsFlowRate}})"></pl-number-input>
+  What is the mass flow rate (in {{params.unitsMassRate}}) ?
+  <pl-number-input answers-name="mdot" comparison="sigfig" digits="3" label="$ \dot{m} $ (in {{params.unitsMassRate}})"></pl-number-input>

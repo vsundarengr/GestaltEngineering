@@ -1,0 +1,44 @@
+{
+ "title": "Vectors",
+ "objective": ["review basic trigonometry", "define two-dimensional vectors", "represent vectors", "add and subtract vectors in two dimensions"],
+ "topics": "vec2d",
+ "pre-reqs": ["geometry", "trigonometry"],
+ "createdBy": "sundar@google.com",
+ "contents": [
+ { "name": "prereq_quiz",
+   "title": "Background quiz",
+   "type": "quiz",
+   "questions": [ "trigRightTriangle", "trigGeneralTriangle"],
+   "graded": "yes"
+ },
+ { "name": "vid1",
+   "title": "Lecture video",
+   "type": "video",
+   "url": "https://youtu.be/ONjX_-GusWA"
+ },
+ { "name": "prac_quiz",
+   "title": "Practice Problems",
+   "type": "quiz",
+   "questions": ["addVectorsGeometry", "vectorLengthAngleToXY", "vectorXYtoLengthAngle"],
+   "graded": "no"
+},
+ { "name": "vid2",
+   "title": "Lecture video",
+   "type": "video",
+   "url": "https://youtu.be/U6i0zXH9iAQ"
+ },
+  { "name": "prac_quiz",
+   "title": "Practice Problems",
+   "type": "quiz",
+   "questions": ["addVectorsGeometry", "vectorLengthAngleToXY", "vectorXYtoLengthAngle", "subtractVectorsGeometry"],
+   "graded": "no"
+},
+{ "name": "final_quiz",
+   "title": "Quiz",
+   "type": "quiz",
+   "questions": ["addVectorsGeometry", "vectorLengthAngleToXY", "vectorXYtoLengthAngle", "subtractVectorsGeometry"],
+   "graded": "graded"
+}]
+ 
+}
+

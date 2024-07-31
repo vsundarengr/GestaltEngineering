@@ -1,0 +1,15 @@
+{
+  "uuid": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+  "title": "Temperature Conversion",
+  "stem": "Converting temperature from Celsius to Fahrenheit",
+  "topic": "Physics",
+  "tags": ["temperature", "conversion", "physics"],
+  "prereqs": ["Basic understanding of temperature scales"],
+  "isAdaptive": true,
+  "createdBy": "",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

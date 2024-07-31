@@ -1,0 +1,23 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "LU Decomposition",
+    "stem":"Multiply two matrices",
+    "topic": "Linear algebra",
+    "tags": ["matrix", "equations", "algebraic systems"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 2,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "stepType": "iterative",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Video",
+            "url": "https://youtu.be/btE7E24wUWI?t=136"
+        }]
+}

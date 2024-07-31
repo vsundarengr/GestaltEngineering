@@ -1,0 +1,11 @@
+<pl-question-panel>
+<p>
+  A wire of diameter {{params.diam}} {{params.unitsDiameter}}  is used a pull a {{params.masslabel}} of {{params.m}} {{params.unitsMass}} upwards. 
+</p>
+<p> The wire is made of material with yield strength {{params.sult}} {{params.unitsStress}}, shear strength {{params.tult}} {{params.unitsStress}}, modulus of elasticity {{params.E}} {{params.unitsModulusElasticity}} and Poisson's ratio {{params.nud}}</p>
+</pl-question-panel>
+
+What is the maximum allowable upwards acceleration of the mass if the factor of safety is to be {{params.fs}}?
+<pl-number-input answers-name="accfs" comparison="sigfig" digits="3" label="Acceleration ({{params.unitsAcc}})"></pl-number-input>
+What is the maximum allowable upwards acceleration of the mass before the wire begins to yield?
+<pl-number-input answers-name="accmax" comparison="sigfig" digits="3" label="Acceleration ({{params.unitsAcc}})"></pl-number-input>

@@ -1,0 +1,21 @@
+<pl-question-panel>
+  <p> Consider two numbers $a = {{params.a}}$ and $b = {{params.b}}$.</p>
+  <p> What is the sum $c = a + b$?</p>
+  <p> What is the product $ c = a b $?</p>
+  <p> What is the difference $ e = a - b $?</p>
+
+
+<pl-number-input answers-name="c" comparison="sigfigs" digits="3" label="${{correct_answers_labels.c}}=$"></pl-number-input>
+<pl-number-input answers-name="d" comparison="sigfigs" digits="3" label="${{correct_answers_labels.d}}=$"></pl-number-input>
+<pl-number-input answers-name="e" comparison="sigfigs" digits="3" label="${{correct_answers_labels.e}}=$"></pl-number-input>
+</pl-question-panel>
+
+<pl-question-panel> If $ a = 3 $ and $ b = 9 $, then $ a + b = 11 $</p>
+<pl-multiple-choice answers-name="sum" weight="1" inline="true">
+  <pl-answer correct="true">False </pl-answer>
+  <pl-answer correct="false"> True </pl-answer>
+</pl-multiple-choice>
+</pl-question-panel>
+
+
+

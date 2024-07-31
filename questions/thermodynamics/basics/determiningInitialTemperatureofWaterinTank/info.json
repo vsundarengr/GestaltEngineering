@@ -1,0 +1,15 @@
+{
+  "uuid": "f7d6b7a1-8e3d-4c3b-9e3a-6f4d2e1c8b9a",
+  "title": "Determining Initial Temperature of Water in Tank",
+  "stem": "A tank 2 ft x 2 ft x 1 ft is half full of water at an unknown initial temperature. It is to be heated to 100°F and requires 1000 BTU of heat to do so. Determine the initial temperature of the water.",
+  "topic": "Thermodynamics",
+  "tags": ["heat transfer", "temperature", "energy", "thermodynamics"],
+  "prereqs": "Basic understanding of heat transfer and energy conservation principles",
+  "isAdaptive": "true",
+  "createdBy": "lberm007@ucr.edu",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

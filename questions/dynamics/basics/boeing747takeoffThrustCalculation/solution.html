@@ -1,0 +1,25 @@
+<pl-solution-panel>
+    <h3>Solution Guide: Calculating the Thrust Required for Aircraft Takeoff</h3>
+    <pl-content>
+        <p>To solve this problem, we'll follow a step-by-step approach using the principles of physics. Follow the hints to understand how we calculate the necessary thrust.</p>
+    </pl-content>
+    <pl-hint level="1" data-type="text">
+        <strong>Step 1:</strong> The total force (F) required to accelerate the plane to take-off speed is determined by Newton's second law: \( F = ma \), where \( m \) is the mass of the plane in kilograms (kg), and \( a \) is the acceleration. Note that mass should be used here instead of weight in Newtons, as weight is the force of gravity on the mass.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        <strong>Step 2:</strong> To find the acceleration (\( a \)), use the formula: \( a = \frac{v_f - v_i}{t} \), where \( v_f \) is the final velocity in meters per second (m/s) or feet per second (ft/s), \( v_i \) is the initial velocity (0 in this case, assuming starting from rest), and \( t \) is the time in seconds. Ensure that \( v_f \) is converted to m/s or ft/s 
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        <strong>Step 3:</strong> Substituting the given values into the acceleration formula gives us: \( a = \frac{{{params.speed}} - 0}{{{params.time}}} \). Here, the final velocity (\( v_f \)) is provided as {{params.speed}} {{params.unitsSpeed}}, which must be converted to m/s (if in SI units) or ft/s (if in USCS units) before calculation, and the time (\( t \)) is {params.time} seconds.
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        <strong>Step 4:</strong> With acceleration known, calculate the required total force (F) for takeoff: \( F = m \times a \). The mass (\( m \)) of the plane is derived from {{params.weight}} {{params.unitsWeight}}, and you may need to convert weight to mass by dividing by the acceleration due to gravity (\(9.81 m/s^2\) for SI units).
+    </pl-hint>
+    <pl-hint level="5" data-type="text">
+        <strong>Step 5:</strong> Now, let's find the thrust needed from each engine to achieve this force. Assuming the aircraft has 4 engines, the thrust per engine needed is calculated by: \( \frac{F}{4} \). Each engine's capability can be assessed by comparing this required thrust to the engine's maximum thrust.
+    </pl-hint>
+    <pl-hint level="6" data-type="text">
+        <strong>Final Step:</strong> Calculating the percentage of maximum thrust each engine was operating at, we find it to be \( \frac{F}{4 \times {params.maxThrust}} \times 100 = {correct_answers.percentageThrust} \% \). This means each engine was operating at {correct_answers.percentageThrust}% of its maximum thrust capacity to achieve the required takeoff speed.
+        <p>This calculation approach helps in determining the efficiency and capability of aircraft engines during the takeoff phase, ensuring all speed values are correctly converted to the required units before calculations.</p>
+    </pl-hint>
+</pl-solution-panel>

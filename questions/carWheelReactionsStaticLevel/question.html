@@ -1,0 +1,11 @@
+
+<pl-question-panel>
+  <p> A car of {{params.md}} {{params.unitsMass}} {{params.masslabel}} is stationary on a level road. </p>
+  <p> The distance between the front and the rear wheels is {{params.L}} {{params.unitsDist}}.</p>
+  <p> The distance of the center of mass of the car is {{params.wtDist}}% of the distance between the front and the rear wheels behind the front wheel. The center of mass is at a height {{params.h}} {{params.unitsDist}} from the ground.</p>
+  <p> What are the reaction forces (in {{params.unitsForce}}) on the front and rear wheels? </p>
+</pl-question-panel>
+
+
+<pl-number-input answers-name="Nf" comparison="sigfig" digits="3" label="Reaction on front wheels (in {{params.unitsForce}}) ="></pl-number-input>
+<pl-number-input answers-name="Nr" comparison="sigfig" digits="3" label="Reaction on rear wheels (in {{params.unitsForce}}) ="></pl-number-input>

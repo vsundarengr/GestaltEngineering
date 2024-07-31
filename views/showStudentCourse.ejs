@@ -1,0 +1,105 @@
+<%- include('partials/header'); -%>
+
+
+
+<div class="goback">
+    <button> Show all courses </button>
+</div>
+
+<header>
+    <div class="headings">
+        <h3><%= title %>: <%= course.name%></h3>
+    </div>
+</header>
+
+
+<div class="modulelist">
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Dates </th>
+                <th> Active</th>
+                <th> Action </th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (course.moduleList.length > 0) { %>
+                <% course.moduleList.forEach( module =>{%>
+            <tr>
+                <td> <%= module.module.title %></td>
+                <td> <%= module.startDate %> - <%= module.endDate %></td>
+                <td> <%= module.isActive %> </td>
+                <td> <button name = "launch" id="<%= module.moduleId %>" onclick = 'launchModule("<%= course._id %>","<%= module.moduleId %>")'> Launch </button></td>
+            </tr>
+            <%}) ;%>
+            <%} %>
+        </tbody>
+
+    </table>
+</div>
+
+<div class="quiztable"> 
+    <h3> Quizzes</h3>
+</div>
+<div class="quizlist">
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Dates </th>
+                <th> Active</th>
+                <th> Action </th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (quizList.length > 0) { %>
+                <% quizList.forEach( quiz =>{%>
+            <tr>
+                <td> <%= quiz.title %></td>
+                <td> <%= quiz.startDate %> - <%= quiz.endDate %></td>
+                <td> <%= quiz.isActive %> </td>
+                <td> <button name = "launch" id="<%= quiz._id %>" onclick = 'launchSAQuiz("<%= course._id %>","<%= quiz._id %>")'> Launch </button></td>
+            </tr>
+            <%}) ;%>
+            <%} %>
+        </tbody>
+
+    </table>
+</div>
+
+
+<script>
+
+
+
+function launchModule(courseId, moduleId){
+    const urlSearch = new URLSearchParams({courseId: courseId, moduleId: moduleId});
+    const endPoint = "/module?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint)
+
+}
+
+function launchSAQuiz(courseId, quizId){
+    const urlSearch = new URLSearchParams({courseId: courseId, quizId: quizId});
+    const endPoint = "/quizsa?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint);
+    // fetch(endPoint)
+    //     .then( response =>  response.json())
+    //     .then( data => window.location.href = data.redirect)
+    //     .catch( error => console.log('Cannot fetch'));
+}
+
+const goback = document.querySelector('.goback');
+    goback.addEventListener('click', (e)=>{
+        location = "/showAllRegCourses";
+    });
+</script>
+
+<%- include('partials/footer'); -%>

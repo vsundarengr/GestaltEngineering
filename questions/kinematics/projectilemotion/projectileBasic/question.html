@@ -1,0 +1,12 @@
+<pl-question-panel>
+  <p> A projectile is fired with a speed of {{params.v}} {{params.unitsSpeed}} making an angle of {{params.theta}} degrees with the horizontal. </p>
+  <p> Use a coordinate system that has the vertical axis pointed upwards and include the sign for the vertical component.</p>
+  
+  
+</pl-question-panel>
+<p> Determine the x- and y- positions (in {{params.unitsDist}} )  {{params.t}} seconds after the projectile is fired.  </p>
+<pl-number-input answers-name="x" comparison="sigfig" digits="3" label="$x=$ (in {{params.unitsDist}})"></pl-number-input>
+<pl-number-input answers-name="y" comparison="sigfig" digits="3" label="$y=$ (in {{params.unitsDist}})"></pl-number-input>
+<p> Determine the horizontal and vertical components of the velocity  (in {{params.unitsSpeed}}) {{params.t}} seconds after the projectile is fired. </p>
+<pl-number-input answers-name="vx" comparison="sigfig" digits="3" label="$v_x = $ (in {{params.unitsSpeed}})"></pl-number-input>
+<pl-number-input answers-name="vy" comparison="sigfig" digits="3" label="$v_y = $ (in {{params.unitsSpeed}}, include sign)"></pl-number-input>

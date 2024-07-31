@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion Question</title>
+</head>
+<body>
+    <pl-question-panel>
+    <p>
+      The absolute temperature of a body is {{params.T}} {{params.unitsTemperature}}.
+    </p>
+    </pl-question-panel>
+
+    <p> What's the equivalent temperature in {{params.unitsTemperatureC}}? </p>
+    <pl-number-input answers-name="Tc" comparison="sigfig" digits="2" label="Tc  (in {{params.unitsTemperatureC}})"></pl-number-input>
+</body>
+</html>

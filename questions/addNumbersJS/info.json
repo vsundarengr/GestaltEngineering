@@ -1,0 +1,35 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Add two numbers",
+    "stem":"Add two numbers",
+    "topic": "Algebra",
+    "tags": ["addition", "numbers"],
+    "prereqs":[""],
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+	"resources": [
+	{
+		"type": "video",
+		"name": "video",
+		"title": "Video",
+		"url": "https://youtu.be/2losDFFHByI"
+	},
+	{
+		"type": "file",
+		"name": "nspepdf",
+		"title": "NSPE Code of ethics PDF",
+		"url": "https://www.nspe.org/sites/default/files/resources/pdfs/Ethics/CodeofEthics/NSPECodeofEthicsforEngineers.pdf"
+	},
+	{
+		"type": "webpage",
+		"name": "nspeweb",
+		"title": "NSPE Code of ethics online",
+		"url": "https://www.nspe.org/resources/ethics/code-ethics"
+	}
+	]
+}

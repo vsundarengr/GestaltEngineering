@@ -1,0 +1,22 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        In this problem, we calculate the maximum height reached by a nut detaching from a plane mid-flight. The plane flies at a speed of <em>{{params.v}} {{params.unitsSpeed}}</em> and an ascent angle of <em>{{params.theta}} degrees</em> above the horizontal. We ignore air resistance and assume the nut moves straight at a constant speed before descending.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        The initial velocity \( v_0 = {{params.v}} \) {{params.unitsSpeed}} at an angle \(\theta = {{params.theta}}\) degrees provides the setup. Gravity acts downward with an acceleration of \( a = -{{params.unitsAcc}} \).
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        To find the maximum height, we use:
+        1. The vertical component of initial velocity: \(v_{0y} = v_0 \sin(\theta)\).
+        2. The change in height: \(\Delta y = \frac{-v_{0y}^2}{2a}\), since at the apex, the vertical velocity \(v_{fy} = 0\).
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        The maximum height is directly obtained from \(\Delta y\), without needing to add it to the initial height, reflecting the nut's peak altitude from its detachment point.
+    </pl-hint>
+    <pl-hint level="5" data-type="text">
+        This approach uses kinematic equations and trigonometry to dissect the projectile motion, emphasizing gravity's role in shaping the trajectory.
+    </pl-hint>
+    <pl-hint level="6" data-type="text">
+        The maximum height reached by the nut, applying these principles, is <strong>{{correct_answers.h}} {{params.unitsDist}}</strong>.
+    </pl-hint>
+</pl-solution-panel>

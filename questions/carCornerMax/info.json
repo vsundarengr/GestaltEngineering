@@ -1,0 +1,29 @@
+{
+    "uuid": "2dcba91d6-64d1-4ef9-c430-ad2133f25b2f",
+    "title": "Car cornering",
+    "stem":"Car Corner",
+    "topic": "Curvilinear motion",
+    "tags": ["acceleration", "curvilinear"],
+    "prereqs": ["translation", "fbd", "newtonslaw"],
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "hx1",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7383244&node=31671458&a=80869590&preload=false"
+        },
+        {
+            "type": "video",
+            "name": "hx2",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7859731&node=33271174&a=56906342"
+        }
+    ]
+}

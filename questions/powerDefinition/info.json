@@ -1,0 +1,15 @@
+{
+    "uuid": "7c4ccac6-1031-43ed-a673-feb64c2a8bbf",
+    "title": "Various ways of power",
+	"stem": "Test your understanding of power",
+    "topic": "Dynamics",
+    "tags": ["speed", "velocity", "acceleration", "power"],
+    "prereqs":"",
+	"isAdaptive": "false",
+	"createdBy": "sundar@google.com",
+	"qType":"ma",
+	"nSteps": 1,
+	"updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "none"
+}

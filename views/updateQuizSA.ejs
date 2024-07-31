@@ -1,0 +1,77 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Update Quiz</h2>
+    </div>
+</header>
+
+<div class="goback">
+    <button> Go back to course </button>
+</div>
+
+
+<form class="updateQuiz" data-cid="<%= courseId %>" data-qid="<%= quizId %>">
+    <label for="fname"> Updated Quiz File Name </label>
+    <input name="fname" type="text" /> <br>
+
+    <label for="startDate">Start Date for module:</label>
+    <input type="date" id="startDate" name="startDate">
+
+    <label for="endDate">End Date for module:</label>
+    <input type="date" id="endDate" name="endDate">
+    
+    <button> Update </button>
+    <div class="update error"></div>
+
+</form>
+
+<script>
+    const updateQuizForm = document.querySelector('.updateQuiz');
+    updateQuizForm.addEventListener('submit', async(e)=>{
+        e.preventDefault();
+        const updateError = document.querySelector('.update.error');
+        const fname = updateQuizForm.fname.value;
+        const startDate = updateQuizForm.startDate.value;
+        const endDate = updateQuizForm.endDate.value;
+        const courseId = updateQuizForm.dataset.cid;
+        const quizId = updateQuizForm.dataset.qid;
+        const jsonToSend = { fname: fname, 
+                             startDate: startDate,
+                             endDate: endDate,
+                             courseId: courseId,
+                             quizId: quizId};
+
+        console.log(jsonToSend);
+
+        try {
+            const endPoint = '/updateQuizSA';
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify(jsonToSend),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+            if (data.updated) {
+                 location.assign('/courses/' + updateQuizForm.dataset.cid);
+            }
+            else {
+                updateError.textContent = 'Unable to update quiz';
+            }
+
+        } catch(err) {
+            console.log(err);
+        }
+
+    });
+
+    const goback = document.querySelector('.goback');
+    goback.addEventListener('click', (e)=>{
+    location = "/courses/" + updateQuizForm.dataset.cid;
+    });
+
+</script>
+
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,22 @@
+{
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Sensible cooling",
+    "stem":"Sensible cooling",
+    "topic": "psychrometrics",
+    "tags": ["thermodynamics", "psychrometrics", "air-conditioning"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Sensible cooling",
+            "url": "https://ucr.yuja.com/V/Video?v=9116421&node=39108037&a=206098202&autoplay=1"
+        }]
+}

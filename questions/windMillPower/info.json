@@ -1,0 +1,23 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Wind mill",
+    "stem":"heat",
+    "topic": "fluids",
+    "tags": ["mass", "flowrate"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "acc1",
+            "title": "Flow rate and mass conservation",
+            "url": "https://ucr.yuja.com/V/Video?v=7931953&node=33757495&a=27069657"
+        }
+    ]
+}

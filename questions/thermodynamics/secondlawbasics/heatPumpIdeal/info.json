@@ -1,0 +1,23 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Carnot heat pump ",
+    "stem":"heat",
+    "topic": "thm",
+    "tags": ["secondlaw", "temperature", "power"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "thermo",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=9901457&node=43382709&a=80861115"
+        }
+    ]
+}

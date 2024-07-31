@@ -1,0 +1,11 @@
+
+<pl-question-panel>
+  <p> A car of {{params.md}} {{params.unitsMass}} {{params.masslabel}} is traveling on a level road. </p>
+  <p> The distance between the front and the rear wheels is {{params.L}} {{params.unitsDist}}.</p>
+  <p> The distance of the center of mass of the car is {{params.wtDist}}% of the distance between the front and the rear wheels behind the front wheel. The center of mass is at a height {{params.h}} {{params.unitsDist}} from the ground.</p>
+  <p> What are the maximum acceleration and maximum deceleration (in {{params.unitsAcc}}) permitted before the wheels lose contact with the ground? </p>
+</pl-question-panel>
+
+
+<pl-number-input answers-name="amax" comparison="sigfig" digits="3" label="Max acceleration (in {{params.unitsAcc}}) ="></pl-number-input>
+<pl-number-input answers-name="dmax" comparison="sigfig" digits="3" label="Max deceleration (in {{params.unitsAcc}}) ="></pl-number-input>

@@ -1,0 +1,29 @@
+{
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Properties from dry bulb and wet bulb temperature",
+    "stem":"Wet bulb temperature",
+    "topic": "psychrometrics",
+    "tags": ["thermodynamics", "psychrometrics"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video1",
+            "title": "Adiabatic Saturation Temperature",
+            "url": "https://ucr.yuja.com/V/Video?v=9119590&node=39117641&a=75730621&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video2",
+            "title": "Dry-bulb and wet-bulb example",
+            "url": "https://ucr.yuja.com/V/Video?v=9116238&node=39107482&a=70731376&autoplay=1"
+        }
+    ]
+}

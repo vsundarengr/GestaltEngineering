@@ -1,0 +1,15 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-8740-93d233ffbb2f",
+    "title": "Moments and beams",
+    "stem":"Compute moments",
+    "topic": "mechanics",
+    "tags": ["vectors", "forces"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript"
+}

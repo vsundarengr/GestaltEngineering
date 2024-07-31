@@ -1,0 +1,16 @@
+<pl-question-panel>
+  <pl-figure file-name="inclinedHorizontal.png"></pl-figure>
+  <p></p>
+The figure shows a horizontal force P = {{params.P}} {{params.unitsForce}} acting on a {{params.masslabel}} of {{params.m}} {{params.unitsMass}} that slides on a rough inclined surface with coefficient of kinetic friction {{params.muk}}. The angle of the incline is $ \theta = {{params.theta}} $. 
+<p>
+  What's the work done (in {{params.unitsWork}}) by each of the forces acting on the block when it moves {{params.distance}} {{params.unitsDist}}  <u> {{params.direction}} </u> the incline? Include sign of the work.
+</p>
+</pl-question-panel>
+
+<pl-number-input answers-name="WP" comparison="sigfigs" digits="3" label="Work by external force "></pl-number-input>
+<pl-number-input answers-name="WN" comparison="sigfigs" digits="3" label="Work by normal reaction"></pl-number-input>
+<pl-number-input answers-name="WW" comparison="sigfigs" digits="3" label="Work by weight"></pl-number-input>
+<pl-number-input answers-name="Wf" comparison="sigfigs" digits="3" label="Work by friction"></pl-number-input>
+
+
+

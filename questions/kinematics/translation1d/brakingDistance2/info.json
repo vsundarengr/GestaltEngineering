@@ -1,0 +1,22 @@
+{
+    "uuid": "d7f6b8a1-9c4d-4e3b-8e3a-6f3c2d1a9e2f",
+    "title": "Braking Distance Calculation",
+    "stem": "Calculating the time required for a car to come to rest given its braking distance and initial speed",
+    "topic": "Physics",
+    "tags": [
+        "kinematics",
+        "braking distance",
+        "car physics"
+    ],
+    "prereqs": [
+        "Understanding of kinematics equations",
+        "Knowledge of car braking systems"
+    ],
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

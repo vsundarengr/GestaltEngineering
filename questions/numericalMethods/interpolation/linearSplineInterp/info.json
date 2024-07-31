@@ -1,0 +1,22 @@
+{
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Linear spline interpolation",
+    "stem":"Add two numbers",
+    "topic": "Algebra",
+    "tags": ["numbers", "interpolation"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Video: Linear spline",
+            "url": "https://youtu.be/NyuUC_AOV2s"
+        }]
+}

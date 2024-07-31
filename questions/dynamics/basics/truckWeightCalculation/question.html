@@ -1,0 +1,6 @@
+<pl-question-panel>
+  <p> A truck is traveling at {{params.speed}} {{params.unitsSpeed}} and requires a braking force of {{params.force}} {{params.unitsForce}} to come to a halt in {{params.distance}} {{params.unitsDist}}. </p>
+  <p> Determine the {{params.masslabel}} of the truck. </p>
+</pl-question-panel>
+
+<pl-number-input answers-name="w" comparison="sigfig" digits="3" label="{{params.masslabel}} (in {{params.unitsWeight}})"></pl-number-input>

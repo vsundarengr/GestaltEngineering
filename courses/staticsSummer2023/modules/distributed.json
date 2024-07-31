@@ -1,0 +1,124 @@
+{
+ "title": "Distributed forces",
+ 
+ "topics": "distributed",
+ "pre-reqs": ["geometry", "trigonometry", "forces", "moments"],
+ "createdBy": "sundar@google.com",
+ "contents": [
+ { "name": "objectives",
+	"title":"Objectives",
+	"type": "static_content",
+	"objectives": ["analyze static structures with distributed forces"],
+	"additionalinfo": ""
+ },
+ { "name": "quiz1",
+   "title": "Background quiz",
+   "type": "quiz",
+   "questions": [ "beamWeights"],
+   "order": "random",
+   "selection": {"min": 3, "max": 7},
+   "numquest": 10,
+   "graded": true,
+   "contents": [
+	{ "fname": "statics/supportReactions/beamWeights",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/supportReactions/beamWeights1",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	}]
+ },
+ { "name": "vid1",
+   "title": "Distributed forces",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=3331052&node=14548634&a=22131950&autoplay=1"
+ },
+  { "name": "quiz1",
+   "title": "Quiz 1",
+   "type": "quiz",
+   "questions": [ "addNumbersMultiple"],
+   "order": "random",
+   "selection": {"min": 4, "max": 7},
+   "numquest": 10,
+   "graded": true,
+   "contents": [
+	{ "fname": "statics/distributed/frameDistForce",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/distributed/distForces1",
+	  "min" : 2,
+	  "max" : 3,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/distributed/distForces1Fixed",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	}]
+ },
+   { "name": "quiz2",
+   "title": "Quiz 2",
+   "type": "quiz",
+   "questions": [ "addNumbersMultiple"],
+   "order": "random",
+   "selection": {"min": 7, "max": 9},
+   "numquest": 10,
+   "graded": true,
+   "contents": [
+	{ "fname": "statics/distributed/distForces2Fixed",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/distributed/distForces3Fixed",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/distributed/distForces4Fixed",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/distributed/distForces2",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/distributed/distForces3",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/distributed/distForces4",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	}]
+ }]
+ }

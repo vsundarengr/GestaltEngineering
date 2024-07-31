@@ -1,0 +1,25 @@
+<pl-solution-panel>
+    
+    <pl-hint level="1" data-type="text"> Since the entry is radial, the inlet triangle is a right triangle.  </pl-hint>
+    <pl-hint level="2" data-type="text"> By continuity, the flow rate at the inner radius (entry) and the flow rate at the outer radius (exit) is the same. The volumetric flow rate at the entry and exit is $ V_n A $ </pl-hint>
+    <pl-hint level="3" data-type="text"> Draw the outlet triangle with the blade velocity $ u_2 $  as one side. The relative velocity vector $ V_{r2} $ makes an angle {{params.beta2deg}} degrees with $ u_2 $. Also $ V_{t2} $ can be computed </pl-hint>
+    <pl-hint level="4" data-type="text"> Work done per unit mass $ w = V_{t2} R_2 $ </pl-hint>
+    <pl-hint level="5" data-type="text"> Determine the stagnation temperature and pressure at the entry  </pl-hint>
+    <pl-hint level="6" data-type="text"> Use the work done per mass to determine stagnation temperature at exit of impeller</pl-hint>
+    <pl-hint level="7" data-type="text"> Use isentropic process to determine stagnation pressure at exit of impeller</pl-hint>
+    <pl-hint level="8" data-type="text"> The stagnation pressure and temperature at the exit of the compressor is the same as as the corresponding values at the exit of the impeller</pl-hint>
+    <pl-hint level="9" data-type="text"> 
+        <ul>
+            <li> $ u_1 = R_1 \omega $ and $ u_2 = R_2 \omega $</li>
+            <li> $ V_{t2} = u_2 - V_{n2} \, cot \beta_2  \implies V_{t2} = {{params.Vt2}} $ </li>
+            <li> Work per unit mass = $ V_{t2} u_2 = {{params.Vt2}} \times {{params.u2}} = {{correct_answers.workpermass}} {{params.unitsWorkPerMass}} .$</li>
+            <li> Stagnation temperature at entry: $ T_{01} = T_1 + \frac{V_1^2}{2 C_p} = (273 + {{params.temperature}}) + \frac{ {{correct_answers.Vn1}}^2 }{2 \times {{params.Cp}}} = {{correct_answers.T01}} \, {{params.unitsTemperatureAbs}} $ </li>
+            <li> Stagnation pressure  at entry: $ P_{01} = P_1 \times (\frac{T_{01} }{T_1})^{ \gamma/(\gamma -1)} = {{params.pressure}} \times (\frac{ {{correct_answers.T01}} }{ 273 + {{params.temperature}} })^{1.4/(1.4-1)} = {{correct_answers.P01}} {{params.unitsPressure}} $ </li>
+            <li> Stagnation temperature at exit of impeller: $ w = h_{02} - h_{01}  = C_p (T_{02} - T_{01}) \implies T_{02} = {{correct_answers.T02}} {{params.unitsTemperatureAbs}} $ </li>
+            
+            <li> Stagnation pressure at exit of impeller:$ P_{02} = P_{01} \times (\frac{T_{02} }{ T_{01} })^{ \gamma/(\gamma -1)} = {{correct_answers.P01}} \times (\frac{ {{correct_answers.T02}} }{ {{correct_answers.T01}} })^{1.4/(1.4-1)} = {{correct_answers.P02}} {{params.unitsPressure}} $</li>
+            <li> $ P_{03} = P_{02} $ and $ T_{03} = T_{02} $ </li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+

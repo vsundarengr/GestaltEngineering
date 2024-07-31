@@ -1,0 +1,45 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">Problem Statement: A {{params.W_t}} lb truck is towing a {{params.W_tr}} lb trailer. The coefficient of rolling friction between the road and the truck-trailer system is {{params.mu}}. The acceleration of the truck-trailer system at a certain instant is {{params.a}} ft/s². The problem requires finding the force in pounds (lb) in the hitch that connects the truck and trailer.</pl-hint>
+    <pl-hint level="2" data-type="text">Known Variables Description:
+        <ul>
+            <li>Weight of the truck ($W_t$) = {{params.W_t}} lb</li>
+            <li>Weight of the trailer ($W_{{tr}}$) = {{params.W_tr}} lb</li>
+            <li>Coefficient of rolling friction ($\mu$) = {{params.mu}}</li>
+            <li>Acceleration ($a$) = {{params.a}} ft/s²</li>
+            <li>Gravitational acceleration ($g$) = 32.2 ft/s² (assuming Earth's standard gravity)</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="3" data-type="text">Equation Setup: The force in the hitch can be found by analyzing the forces acting on the truck and trailer system. The equations of motion for the system can be set up as follows:
+        <ul>
+            <li>For the x-direction (horizontal): $\Sigma F_x = F_T \cos(\theta) - F_r - W_{{tr}} \sin(\theta) = m a$</li>
+            <li>For the y-direction (vertical): $\Sigma F_y = N - W_{{tr}} \cos(\theta) + F_T \sin(\theta) = 0$</li>
+        </ul>
+        Where:
+        <ul>
+            <li>$F_T$ is the traction force</li>
+            <li>$F_r$ is the rolling friction force</li>
+            <li>$N$ is the normal force</li>
+            <li>$\theta$ is the angle of the hitch with the horizontal (not given, assuming horizontal hitch, $\theta = 0$)</li>
+        </ul>
+        From these equations, we can derive:
+        <ul>
+            <li>$F_r = \mu N$</li>
+            <li>$N = W_{{tr}} \cos(\theta) - F_T \sin(\theta)$</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="4" data-type="text">Solution Process:
+        <ol>
+            <li>Since $\theta$ is assumed to be 0 (horizontal hitch), $\cos(\theta) = 1$ and $\sin(\theta) = 0$.</li>
+            <li>The normal force ($N$) is equal to the weight of the trailer ($W_{{tr}}$) because $\theta = 0$.</li>
+            <li>The rolling friction force ($F_r$) is $\mu$ times the normal force ($N$).</li>
+            <li>Substitute the expressions for $N$ and $F_r$ into the $\Sigma F_x$ equation and solve for $F_T$.</li>
+        </ol>
+        The final equation to find the traction force ($F_T$) is:
+        $$F_T = \frac{{W_{{tr}} (\cos(\theta) \mu + \sin(\theta)) + m a}}{{\cos(\theta) + \sin(\theta) \mu}}$$
+        Substituting the known values and solving for $F_T$:
+        $$F_T = \frac{{{{params.W_tr}} (1 \cdot {{params.mu}} + 0) + ({{params.W_t}} + {{params.W_tr}})/32.2 \cdot {{params.a}}}}{{1 + 0 \cdot {{params.mu}}}}$$
+        $$F_T = \frac{{{{params.W_tr}} \cdot {{params.mu}} + {{correct_answers.F}}}}{{1}}$$
+        $$F_T = {{correct_answers.F}} lb$$
+    </pl-hint>
+    <pl-hint level="5" data-type="text">Explanation and Clarification: The traction force ($F_T$) is the force required to overcome the rolling friction and accelerate the truck-trailer system. Since the hitch angle $\theta$ is assumed to be 0, the problem simplifies to a horizontal force analysis. The weight of the trailer is used to calculate the normal force because the truck's weight does not affect the force in the hitch directly for this analysis.</pl-hint>
+</pl-solution-panel>

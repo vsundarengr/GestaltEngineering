@@ -1,0 +1,22 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        <p>To begin, let's understand the concept behind finding the minimum stopping distance. It can be determined using the kinematic equation:</p>
+        <p>\( \Delta x = -\frac{v_c^2}{2a} \),</p>
+        <p>where \( v_c \) is the initial speed and \( a \) is the deceleration.</p>
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        <p>Next, we substitute the specific problem parameters into the formula. Your given data is:</p>
+        <ul>
+            <li>Initial Speed (\( v_c \)): <b>{params.speed} {params.unitsSpeed}</b></li>
+            <li>Deceleration (\( a \)): <b>{params.deceleration} {params.unitsDeceleration}</b></li>
+        </ul>
+        <p>Our formula now looks like this:</p>
+        <p>\( \Delta x = -\frac{{params.speed}^2}{2 \times {params.deceleration}} \)</p>
+        <p>Remember to convert units if necessary, to maintain consistency throughout the calculation.</p>
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        <p>With the provided data, we can determine the minimum distance that must be maintained to avoid a collision:</p>
+        <p>\( \Delta x = {correct_answers.d} {params.unitsDistance} \)</p>
+        <p>This is the minimum stopping distance required under the given conditions.</p>
+    </pl-hint>
+</pl-solution-panel>

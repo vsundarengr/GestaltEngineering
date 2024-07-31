@@ -1,0 +1,12 @@
+<pl-question-panel>
+  <pl-figure file-name="rollercoaster1.png"></pl-figure>
+  <p></p>
+  The cart of the roller coaster shown below has a {{params.masslabel}} of {{params.mass}} {{params.unitsMass}}. It starts at point A from rest, down the slope to B, up the ramp to C and then down the slope to D before negotiating the loop of radius {{params.R}} {{params.unitsDist}}.
+  The heights of points A, B, C and D above the reference datum are respectively {{params.HA}} {{params.unitsDist}}, {{params.HB}}{{params.unitsDist}}, {{params.HC}} {{params.unitsDist}} and {{params.HD}} {{params.unitsDist}}.
+  What is the normal force between the cart and the roller coaster track (in {{params.unitsForce}}) at points D, E and F? 
+</pl-question-panel>
+
+
+<pl-number-input answers-name="Nd" comparison="sigfig" digits="3" label="$N_D$"></pl-number-input>
+<pl-number-input answers-name="Ne" comparison="sigfig" digits="3" label="$N_E$"></pl-number-input>
+<pl-number-input answers-name="Nf" comparison="sigfig" digits="3" label="$N_F$"></pl-number-input>

@@ -1,0 +1,24 @@
+{
+    "uuid": "1f435c36-1126-43b0-aba5-627eeb2e10f9",
+    "title": "Cross product",
+	"stem": "Cross product", 
+    "topic": "Linear Algebra",
+    "tags": ["basic", "vector", "algebra", "operations", "addition"],
+	"prereqs": "",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript",
+	"resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Video",
+            "url": "https://youtu.be/ONjX_-GusWA?t=246"
+        }]
+}
+
+

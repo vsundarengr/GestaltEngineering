@@ -1,0 +1,66 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Review Quiz  Performance</h2>
+    </div>
+</header>
+
+<div class="goback">
+    <button> Go back to course </button>
+</div>
+
+<h3> Number of questions in quiz = <%= numQuestions %></h3>
+
+<table>
+    <tr>
+        <th>  Email</th>
+        <th>  Served</th>
+        <th>  Attempted</th>
+        <th>  Correct</th>
+        <th>  Correct on first attempt</th>
+    </tr>
+    <% for (let i = 0; i < saQuizzes.length; i++) {%> 
+        <tr>
+            <td>  <%= saQuizzes[i].email %> </td>
+            <td>  <%= saQuizzes[i].quizData.numServed %> </td>
+            <td>  <%= saQuizzes[i].quizData.numAttempts %></td>
+            <td>  <%= saQuizzes[i].quizData.numCorrect %></td>
+            <td>  <%= saQuizzes[i].quizData.numFirstAttemptCorrect %></td>
+        </tr>    
+    <%} %>
+</table>
+
+
+<form class="downloadcsvform" data-cid="<%= courseId %>" data-qid="<%= quizId %>" data-ctid="<%= ctempId %>"> 
+</form>
+<button onClick="downloadCSV()"> Download csv file </button>
+<script>
+    
+function downloadCSV()
+{
+    console.log('Not doing anything');
+    let downloadCSVForm = document.querySelector(".downloadcsvform");
+    let cid = downloadCSVForm.dataset.cid;
+    let qid = downloadCSVForm.dataset.qid;
+    let ctid = downloadCSVForm.dataset.ctid;
+
+    const urlSearch = new URLSearchParams({courseId: cid, quizId: qid, ctempId: ctid});
+    const endPoint = "/downloadQuizSACSV?" + urlSearch.toString();
+    console.log('Endpoint is ', endPoint);
+    location.assign(endPoint);
+
+}
+
+const goback = document.querySelector('.goback');
+goback.addEventListener('click', (e)=>{
+  e.preventDefault();
+ let downloadCSVForm = document.querySelector(".downloadcsvform");
+
+ location = "/courses/" + downloadCSVForm.dataset.cid;
+});
+
+</script>
+
+
+<%- include('partials/footer'); -%>

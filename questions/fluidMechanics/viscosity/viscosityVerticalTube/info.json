@@ -1,0 +1,22 @@
+{
+    "uuid": "1f435c36-1126-43b0-aba5-627eeb2e10f9",
+    "title": "Viscosity",
+	"stem": "Fluid density", 
+    "topic": "Fluid Mechanics",
+    "tags": ["density"],
+	"prereqs": "volume",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript",
+	"resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Basics",
+            "url": "https://ucr.yuja.com/V/Video?v=9883035&node=43319969&a=155233886"
+        }]
+}

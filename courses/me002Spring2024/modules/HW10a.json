@@ -1,0 +1,174 @@
+{
+"name": "hw10a ",
+"title": "Preclass 10a",
+"topics" : [ 
+{
+			"name": "roll1",
+			"title": "Rolling without slipping",
+			"contents": [
+			{ "fname": "kinematics/vehicles/carwheelSpeed",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/vehicles/carwheelSpeedAcc",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "rolldiff",
+			"title": "Differential speed",
+			"contents": [
+			{ "fname": "kinematics/vehicles/carwheelDifferential",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "energy1",
+			"title": "Basic definitions of energy",
+			"contents": [
+			{ "fname": "kineticEnergyDefn",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "springEnergyDefn",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "potential",
+			"title": "Gravity and energy",
+			"contents": [
+			{ "fname": "potentialEnergyDiff",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "rollerCoaster1",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "spring1",
+			"title": "Spring and Energy",
+			"contents": [
+			{ "fname": "springMassVerticalUp",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "springMassCompression",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "spring2",
+			"title": "Springs and ramps: 1",
+			"contents": [
+			{ "fname": "springBallRampHeight",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "springBallRampMaxHeight",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "spring3",
+			"title": "Springs and ramps: 2",
+			"contents": [
+			{ "fname": "springBallRampSpeedProjectile",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "springMassCompression",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "springBallRampSpeedAtTop",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "spring4",
+			"title": "More work",
+			"contents": [
+			{ "fname": "springMassCompression",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "rollerCoaster2",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "spring5",
+			"title": "Two springs",
+			"contents": [
+			{ "fname": "twoSpringsMass",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "worke",
+			"title": "Work energy principle",
+			"contents": [
+			{ "fname": "workInclinedHorizontalWE",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+}
+]
+}

@@ -1,0 +1,11 @@
+<pl-question-panel>
+  <p> A cylindrical vessel of radius {{params.radius}} {{params.unitsDist}} and height {{params.height}} {{params.unitsDist}} has hemispherical caps at both ends. The tank is initially filled with {{params.fluidName}} (molar mass = {{params.mw}} {{params.unitsMW}} ) at initial pressure {{params.p1}} {{params.unitsPressure}} and {{params.T1}} {{params.unitsTemperature}}.</p>
+  <p> Gas is pumped into the vessel till the pressure and temperature are, respectively, {{params.p2}} {{params.unitsPressure}} and {{params.T2}} {{params.unitsTemperature}}. </p>
+</pl-question-panel>
+  
+  
+  Determine the mass $ \Delta m $ of {{params.fluidName}} that is pumped into the vessel?
+  <pl-number-input answers-name="deltam" comparison="sigfig" digits="3" label=" $ \Delta m $ (in {{params.unitsMass}}) "></pl-number-input>
+ 
+  Determine the volume $ \Delta V $ of {{params.fluidName}}, measured at 101.3 kPa and 20 degree C, that is pumped into the vessel?
+  <pl-number-input answers-name="deltaV" comparison="sigfig" digits="3" label=" $ \Delta V $ (in {{params.unitsVolume}}) "></pl-number-input>

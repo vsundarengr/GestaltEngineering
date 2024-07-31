@@ -1,0 +1,15 @@
+{
+    "uuid": "1f435c36-1126-43b0-aba5-623596510f9",
+    "title": "Convert components to magnitude and angle",
+	"stem": "Vector Components", 
+    "topic": "Linear Algebra",
+    "tags": ["basic", "vector", "algebra", "operations", "addition", "components"],
+	"prereqs": "",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

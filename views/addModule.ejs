@@ -1,0 +1,68 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Add Module</h2>
+    </div>
+</header>
+
+<div class="goback">
+    <button> Go back to course </button>
+</div>
+
+
+<form class="addModule" data-doc="<%= courseId %>">
+    <label for="fname"> Module File name </label>
+    <input name="fname" type="text" /> <br>
+
+    <label for="startDate">Start Date for module:</label>
+    <input type="date" id="startDate" name="startDate">
+
+    <label for="endDate">End Date for module:</label>
+    <input type="date" id="endDate" name="endDate">
+    
+    <button> Add </button>
+
+</form>
+
+<script>
+    const addModuleForm = document.querySelector('.addModule');
+    addModuleForm.addEventListener('submit', async(e)=>{
+        e.preventDefault();
+        const fname = addModuleForm.fname.value;
+        const startDate = addModuleForm.startDate.value;
+        const endDate = addModuleForm.endDate.value;
+        const courseId = addModuleForm.dataset.doc;
+        const jsonToSend = { fname: fname, 
+                             startDate: startDate,
+                             endDate: endDate,
+                             courseId: courseId};
+
+        console.log(jsonToSend);
+
+        try {
+            const endPoint = '/addModule';
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify(jsonToSend),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+            location.assign('/courses/' + addModuleForm.dataset.doc);
+
+        } catch(err) {
+            console.log(err);
+        }
+
+    });
+
+    const goback = document.querySelector('.goback');
+    goback.addEventListener('click', (e)=>{
+    location = "/courses/" + addModuleForm.dataset.doc;
+    });
+
+</script>
+
+
+<%- include('partials/footer'); -%>

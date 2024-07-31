@@ -1,0 +1,75 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Add Quiz</h2>
+    </div>
+</header>
+
+<div class="goback">
+    <button> Go back to course </button>
+</div>
+
+
+<form class="addQuiz" data-doc="<%= courseId %>">
+    <label for="fname"> Quiz File name </label>
+    <input name="fname" type="text" /> <br>
+
+    <label for="startDate">Start Date for module:</label>
+    <input type="date" id="startDate" name="startDate">
+
+    <label for="endDate">End Date for module:</label>
+    <input type="date" id="endDate" name="endDate">
+    
+    <button> Add </button>
+    <div class="add error"></div>
+
+</form>
+
+<script>
+    const addQuizForm = document.querySelector('.addQuiz');
+    addQuizForm.addEventListener('submit', async(e)=>{
+        e.preventDefault();
+        const addError = document.querySelector('.add.error');
+        const fname = addQuizForm.fname.value;
+        const startDate = addQuizForm.startDate.value;
+        const endDate = addQuizForm.endDate.value;
+        const courseId = addQuizForm.dataset.doc;
+        const jsonToSend = { fname: fname, 
+                             startDate: startDate,
+                             endDate: endDate,
+                             courseId: courseId};
+
+        console.log(jsonToSend);
+
+        try {
+            const endPoint = '/addQuizSA';
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify(jsonToSend),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+            if (data.added) {
+                 location.assign('/courses/' + addQuizForm.dataset.doc);
+            }
+            else {
+                addError.textContent = 'Unable to add quiz';
+            }
+
+        } catch(err) {
+            console.log(err);
+        }
+
+    });
+
+    const goback = document.querySelector('.goback');
+    goback.addEventListener('click', (e)=>{
+    location = "/courses/" + addQuizForm.dataset.doc;
+    });
+
+</script>
+
+
+<%- include('partials/footer'); -%>

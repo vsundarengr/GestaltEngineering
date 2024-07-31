@@ -1,0 +1,23 @@
+{
+    "uuid": "2f435c36-1126-43b0-aba5-627eeb2e10f9",
+    "title": "Compute second numerical derivatives",
+	"stem": "Compute second numerical derivatives", 
+    "topic": "Numerical methods",
+    "tags": ["basic", "vector", "algebra", "operations", "addition", "derivatives", "calculus"],
+	"prereqs": "",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript",
+	"resources": [
+		{
+			"type": "video",
+			"name": "video",
+			"title": "Video",
+			"url": "https://youtu.be/qc6_ky2tj1g"
+		}
+		]
+}

@@ -1,0 +1,47 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-8740-ad2133ffbb2f",
+    "title": "Cable tensions: Static equilibrium",
+    "stem":"cable tensions",
+    "topic": "Statics",
+    "tags": ["forces", "vectors","components", "equilibrium"],
+    "prereqs":["vectors"],
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "acc1",
+            "title": "Introduction to stress and strain",
+            "url": "https://www.youtube.com/embed/aQf6Q8t1FQE"
+        },
+        {
+            "type": "video",
+            "name": "acc2",
+            "title": "Young's modulus",
+            "url": "https://www.youtube.com/embed/DLE-ieOVFjI"
+        },
+        {
+            "type": "video",
+            "name": "acc3",
+            "title": "Poisson's Ratio",
+            "url": "https://www.youtube.com/embed/DLE-ieOVFjI"
+        },
+        {
+            "type": "video",
+            "name": "acc4",
+            "title": "Solved Problems",
+            "url": "https://ucr.yuja.com/V/Video?v=7889869&node=33443777&a=89962652&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "twocables",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=9853079&node=43247523&a=183491048"
+        }
+	]
+}

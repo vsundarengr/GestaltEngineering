@@ -1,0 +1,105 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Manage Users </h2>
+    </div>
+</header>
+
+<form class="addUsersHere">
+    <label for="siusers"> Enter email of users to be added separated by commas: </label>
+    <input type="textarea" id="siusers" name="siusers">
+</br>
+    <button> Add users </button>
+</form>
+
+</br>
+
+<form class = "addUsersFile">
+    <label for="sifname">Select a file containing student emails:</label>
+    <input type="text" id="sifname" name="sifname">
+    </br>
+    <button> Add users </button>
+</br>
+</form>
+
+
+<form class="resetUserPassword">
+    <label for="respass"> Enter email of user to reset (only one): </label>
+    <input type="textarea" id="respass" name="respass">
+</br>
+    <button> Add users </button>
+</form>
+
+<script>
+
+    const resetUserPasswordForm = document.querySelector('.resetUserPassword');
+    resetUserPasswordForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        let useremail = document.getElementById('respass').value;
+        console.log('About to reset password for ', useremail);
+        try {
+            const endPoint = '/resetPassword';
+            const res = await fetch (endPoint, {
+                method: 'POST',
+                body: JSON.stringify({useremail: useremail}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            if (data.changed) {
+                console.log('User password reset');
+            }
+            else {
+                console.log('Unable to reset password');
+            }
+        } catch (err) { console.log('Error reseting password',err);}
+    })
+
+    const addUsersHereForm = document.querySelector('.addUsersHere');
+    addUsersHereForm.addEventListener('submit', async e =>{
+        e.preventDefault();
+        siusers = document.getElementById('siusers');
+        console.log('Users are: ', siusers.value);
+        try {
+            const endPoint = '/addUsers';
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify({data: siusers.value, intype: "enum"}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+       //     location.assign('/courses/' + addModuleForm.dataset.doc);
+
+        } catch(err) {
+            console.log(err);
+        }
+    })
+
+    const addUsersFileForm = document.querySelector('.addUsersFile');
+    addUsersFileForm.addEventListener('submit', async e=>{
+        e.preventDefault();
+        siFileName = document.getElementById('sifname');
+        console.log('File name is ', siFileName.value);
+
+        try {
+            const endPoint = '/addUsers';
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify({data: siFileName.value, intype: "file"}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+       //     location.assign('/courses/' + addModuleForm.dataset.doc);
+
+        } catch(err) {
+            console.log(err);
+        }
+
+
+    })
+
+</script>
+
+<%- include('partials/footer'); -%>

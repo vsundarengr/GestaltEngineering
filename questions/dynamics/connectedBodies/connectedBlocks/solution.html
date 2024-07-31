@@ -1,0 +1,27 @@
+<pl-solution-panel>
+    <pl-figure file-name="twoBlocksPulley.png"></pl-figure>
+    <pl-hint level="1" data-type="text">First, let's understand the system dynamics. The two-block system is influenced by gravity, causing mass 2 to accelerate downwards and mass 1 to move upwards.</pl-hint>
+    <pl-hint level="2" data-type="text">Given variables:
+        <ul>
+            <li>Mass of block 1 ($m_1$): {{params.m1}} {{params.unitsMass}}</li>
+            <li>Mass of block 2 ($m_2$): {{params.m2}} {{params.unitsMass}}</li>
+            <li>Gravitational acceleration ($g$): {{params.units.acceleration}} m/s$^2$</li>
+            <li>Time ($t$): {{params.time}} {{params.timeUnit}}</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="3" data-type="text">The net force ($F_{{net}}$) on the system is due to the difference in gravitational forces on the two masses. This can be expressed as:
+        \[ F_{{net}} = m_2g - m_1g \]
+        Using Newton's second law, $F_{{net}} = ma$, where $a$ is the acceleration of the system, we can solve for $a$:
+        \[ a = g \frac{{(m_2 - m_1)}}{{(m_2 + m_1)}} \]
+    </pl-hint>
+    <pl-hint level="4" data-type="text">The distance traveled by mass 1 ($\Delta y$) can be found using the kinematic equation for uniformly accelerated motion, since the initial velocity ($v_0$) is zero:
+        \[ \Delta y = v_0t + \frac{{1}}{{2}}at^2 \]
+        1. Calculate the acceleration ($a$) of the system:
+        \[ a = {{params.units.acceleration}} \frac{{({{params.m2}} - {{params.m1}})}}{{({{params.m2}} + {{params.m1}})}} \]
+        \[ a = {{correct_answers.a}} m/s^2 \] <!-- Assuming 'a' is also provided in the correct_answers -->
+        2. Calculate the distance ($\Delta y$) that mass 1 has moved:
+        \[ \Delta y = 0 + \frac{{1}}{{2}}({{correct_answers.a}})({{params.time}})^2 \]
+        \[ \Delta y = {{correct_answers.h}} {{params.unitsDist}} \]
+    </pl-hint>
+    <pl-hint level="5" data-type="text">The acceleration is calculated by taking the net force due to gravity and dividing it by the total mass of the system. The distance is then calculated using the kinematic equation, which accounts for the initial velocity being zero and the constant acceleration over the time interval.</pl-hint>
+</pl-solution-panel>

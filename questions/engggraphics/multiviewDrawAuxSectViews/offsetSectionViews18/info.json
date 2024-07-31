@@ -1,0 +1,15 @@
+{
+    "uuid": "7c4ccac6-1031-43ed-a685-feb64c2afccd",
+    "title": "Offset Section Views",
+	"stem": "Multiview Drawings, Auxiliary and Section Views",
+    "topic": "engg_graphics",
+    "tags": ["Offset Section Views", "Spatial Awareness", "3D Visualization"],
+    "prereqs":"",
+	"isAdaptive": "false",
+	"createdBy": "sundar@google.com",
+	"qType":"mcq",
+	"nSteps": 1,
+	"updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "none"
+}

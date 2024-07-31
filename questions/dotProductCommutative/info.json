@@ -1,0 +1,15 @@
+{
+    "uuid": "7c4ccac6-1031-43ea-a673-feb64c2f8ccd",
+    "title": "Dot Product",
+	"stem": "Test your understanding about dot products",
+    "topic": "Math",
+    "tags": ["vectors", "dot", "product"],
+    "prereqs":"",
+	"isAdaptive": "false",
+	"createdBy": "sundar@google.com",
+	"qType":"mcq",
+	"nSteps": 1,
+	"updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "none"
+}

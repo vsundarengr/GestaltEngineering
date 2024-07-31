@@ -1,0 +1,23 @@
+{
+  "uuid": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p",
+  "title": "Heating a Tank of Water",
+  "stem": "A tank 2 ft x 2 ft x 1 ft is half full of water at 50°F. It is to be heated to 100°F. How much heat (in BTU) must be supplied?",
+  "topic": "Thermodynamics",
+  "tags": [
+    "heat transfer",
+    "energy",
+    "temperature change",
+    "thermodynamics"
+  ],
+  "prereqs": [
+    "basic understanding of heat transfer",
+    "knowledge of specific heat capacity"
+  ],
+  "isAdaptive": true,
+  "createdBy": "lberm007@ucr.edu",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

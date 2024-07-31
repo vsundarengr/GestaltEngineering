@@ -1,0 +1,20 @@
+{
+    "uuid": "a1b9c8e7-4d3f-2a1b-1c0d-9e8f7a6b5c4d",
+    "title": "Boeing 747 Take-off Acceleration",
+    "stem": "Calculating the time required for a Boeing 747 to accelerate from rest to take-off speed",
+    "topic": "Physics",
+    "tags": [
+        "Boeing 747",
+        "acceleration",
+        "thrust",
+        "physics"
+    ],
+    "prereqs": "Understanding of Newton's laws of motion and basic kinematics",
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

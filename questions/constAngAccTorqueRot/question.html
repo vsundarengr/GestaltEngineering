@@ -1,0 +1,8 @@
+
+<pl-question-panel>
+  <p> {{params.article}} {{params.object}} with {{params.masstag}} {{params.mass}} {{params.unitsmass}} with radius {{params.radius}} {{params.unitsdist}} rotating at a speed of {{params.v1}} {{param_labels.unitsv1}}. If a {{params.torque}} {{params.unitstorque}} {{params.torquelabel}} is applied to the {{params.object}} for {{params.time}} seconds, what is the final angular speed (in {{param_labels.unitsv2}} ) of the {{params.object}} ?  How many rotations does the {{params.object}} complete in {{params.time}} seconds (round up to the nearest integer)?</p>
+</pl-question-panel>
+
+<pl-number-input answers-name="angspeed" comparison="sigfigs" digits="3" label="{{correct_answers_labels.angspeed}}="></pl-number-input>
+<pl-number-input answers-name="numrot" comparison="sigfigs" digits="3" label="{{correct_answers_labels.numrot}}="></pl-number-input>
+

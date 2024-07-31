@@ -1,0 +1,22 @@
+{
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Adiabatic mixing",
+    "stem":"adiabatic mixing",
+    "topic": "psychrometrics",
+    "tags": ["thermodynamics", "psychrometrics", "air-conditioning"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Adiabatic mixing",
+            "url": "https://ucr.yuja.com/V/Video?v=9116641&node=39108755&a=165969206&autoplay=1"
+        }]
+}

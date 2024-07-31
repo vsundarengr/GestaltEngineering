@@ -1,0 +1,30 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">Problem Statement: The problem involves calculating the initial temperature of water in a tank before a certain amount of heat is added to raise its temperature to {{params.finalTemp}}°{{params.unitsTemp}}.</pl-hint>
+    <pl-hint level="2" data-type="text">Known Variables Description:
+        <ul>
+            <li>Volume of the tank: \( {{params.a}} \times {{params.b}} \times {{params.c}} = {{params.a * params.b * params.c}} \) {{params.unitsDist}}^3</li>
+            <li>Volume of water (half full): \( \frac{1}{2} \times ({{params.a * params.b * params.c}}) = {{params.fillFraction * params.a * params.b * params.c}} \) {{params.unitsDist}}^3</li>
+            <li>Density of water: \( {{params.densityWater}} \) lb/{{params.unitsDist}}^3</li>
+            <li>Mass of water: \( {{params.mass}} \) lb</li>
+            <li>Specific heat of water: \( c_p = {{params.specificHeatWater}} \) BTU/lb°{{params.unitsTemp}}</li>
+            <li>Final temperature: \( T_f = {{params.finalTemp}}°{{params.unitsTemp}} \)</li>
+            <li>Heat added: \( Q = {{params.heatRequired}} \) {{params.unitsHeat}}</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="3" data-type="text">Equation Setup: The initial temperature can be found by rearranging the heat equation:
+        \[ T_i = T_f - \frac{Q}{m \cdot c_p} \]
+        where:
+        <ul>
+            <li>\( Q \) is the heat added (in {{params.unitsHeat}}),</li>
+            <li>\( m \) is the mass of the water (in lb),</li>
+            <li>\( c_p \) is the specific heat capacity of water (in BTU/lb°{{params.unitsTemp}}),</li>
+            <li>\( T_f \) is the final temperature (in °{{params.unitsTemp}}).</li>
+        </ul>
+    </pl-hint>
+    <pl-hint level="4" data-type="text">Solution Process:
+        <ol>
+            <li>Using the given final temperature, mass of water, specific heat of water, and the heat added, calculate the initial temperature of the water in the tank:</li>
+            <li>\[ T_i = {{params.finalTemp}} - \frac{{params.heatRequired}}{{params.mass \cdot params.specificHeatWater}} \] = {{correct_answers.initialTemp}}°{{params.unitsTemp}}.</li>
+        </ol>
+    </pl-hint>
+</pl-solution-panel>

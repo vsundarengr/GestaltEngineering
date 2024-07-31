@@ -1,0 +1,7 @@
+<pl-question-panel>
+  <p> A tank of length {{params.a}} {{params.unitsDist}}, width {{params.b}} {{params.unitsDist}} and height {{params.c}} {{params.unitsDist}} is {{params.fillFraction}} full of water at an unknown initial temperature. </p>
+  <p> It is to be heated to {{params.finalTemp}} {{params.unitsTemp}} and requires {{params.heatRequired}} {{params.unitsHeat}} of heat to do so. </p>
+  <p> Determine the initial temperature of the water </p>
+</pl-question-panel>
+
+<pl-number-input answers-name="initialTemp" comparison="sigfig" digits="3" label="Initial Temperature (in {{params.unitsTemp}}) ="></pl-number-input>

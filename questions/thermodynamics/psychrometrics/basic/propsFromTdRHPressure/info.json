@@ -1,0 +1,22 @@
+{
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Properties from Td and RH at pressure",
+    "stem":"compute all properties",
+    "topic": "Psychrometrics",
+    "tags": ["thermodynamics", "psychrometrics"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Humidity ratio",
+            "url": "https://ucr.yuja.com/V/Video?v=9120677&node=39120645&a=81888313&autoplay=1"
+        }]
+}

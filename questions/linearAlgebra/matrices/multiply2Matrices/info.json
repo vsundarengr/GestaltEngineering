@@ -1,0 +1,22 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Multiply two matrices",
+    "stem":"Multiply two matrices",
+    "topic": "Linear algebra",
+    "tags": ["addition", "numbers"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Video",
+            "url": "https://youtu.be/btE7E24wUWI?t=215"
+        }]
+}

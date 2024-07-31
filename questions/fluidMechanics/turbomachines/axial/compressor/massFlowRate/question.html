@@ -1,0 +1,14 @@
+<pl-question-panel>
+  <p> An axial-flow compressor is used to compress {{params.Vdot}} {{params.unitsFlowRate}} of air at temperature {{params.temperature}} {{params.unitsTemperature}} and pressure {{params.pressure}} {{params.unitsPressure}}. </p>
+  <p> The hub radius is {{params.r1}} {{params.unitsDiameter}} and the tip radius is {{params.r2}} {{params.unitsDiameter}}. </p>
+  <p> The compressor rotates at {{params.omegad}} rpm. </p>
+</pl-question-panel>
+  
+  What is the mass flow rate (in {{params.unitsMassRate}} ) through the compressor?
+  <pl-number-input answers-name="mdot" comparison="sigfig" digits="3" label=" Mass flow rate (in {{params.unitsMassRate}}) "></pl-number-input>
+ 
+  What is the axial velocity of the fluid (in {{params.unitsSpeed}} ) through the compressor?
+  <pl-number-input answers-name="Va" comparison="sigfig" digits="3" label=" Axial flow velocity (in {{params.unitsSpeed}}) "></pl-number-input>
+ 
+
+  

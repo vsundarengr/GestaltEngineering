@@ -1,0 +1,14 @@
+<pl-question-panel>
+  <pl-figure file-name="twoblocks.png"></pl-figure>
+  <p> The figure shows two blocks A and B. Block A has {{params.masslabel}} of {{params.mA}} {{params.unitsMass}} rests on a surface with coefficient of kinetic friction {{params.muA}}.</p>
+  <p> The force acting on block A is $ P = {{params.P}} {{params.unitsForce}} $. </p>
+  <p> Block B has {{params.masslabel}} of {{params.mB}} {{params.unitsMass}} rests on block A. </p>
+  <p> The coefficient of kinetic friction betwwen the two blocks is {{params.muB}}. </p>
+
+</pl-question-panel>
+
+What's the tension (in {{params.unitsForce}}) in the cable?
+<pl-number-input answers-name="T" comparison="sigfig" digits="3" label="Normal reaction (in {{params.unitsForce}})"></pl-number-input>
+
+What's the acceleration (in {{params.unitsAcceleration}}) of the two blocks?
+<pl-number-input answers-name="a" comparison="sigfig" digits="3" label="Acceleration (in {{params.unitsAcceleration}})"></pl-number-input>

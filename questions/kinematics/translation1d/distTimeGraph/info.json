@@ -1,0 +1,21 @@
+{
+    "uuid": "d7f7a3e6-8b3d-4e3d-9c3a-6f7d8e9a2b1c",
+    "title": "Distance-Time Graphs",
+    "stem": "On a distance-time graph, a horizontal straight line indicates",
+    "topic": "Physics",
+    "tags": [
+        "distance-time graph",
+        "physics",
+        "motion"
+    ],
+    "prereqs": [
+        "Understanding of distance and time measurements"
+    ],
+    "isAdaptive": "false",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "none"
+}

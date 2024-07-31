@@ -1,0 +1,24 @@
+{
+    "uuid": "8b4891d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Trapezoid integration",
+    "stem":"Add two numbers",
+    "topic": "Integration",
+    "tags": ["root", "algorithm"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "stepType": "none",
+	"resources": [
+	{
+		"type": "video",
+		"name": "video",
+		"title": "Video",
+		"url": "https://youtu.be/n4W0IR_Zxag"
+	}
+	]
+}

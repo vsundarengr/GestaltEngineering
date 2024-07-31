@@ -1,0 +1,15 @@
+<pl-figure file-name="siphon.png"></pl-figure>
+<p> </p>
+<pl-question-panel>
+  <p> A pipe has diameter {{params.D}} {{params.unitsDiameter}} is dipped {{params.h2}} {{params.unitsDist}} into a tank of {{params.fluidName}} (specific gravity = {{params.sg}}) and used as a siphon. <p> </p>
+  <p> The highest point of the siphon is {{params.h4}} {{params.unitsDist}} above the fluid level while the exit of the siphon is at height {{params.h6}} {{params.unitsDist}} below the level of the fluid.</p> 
+  <p> The pressure of the fluid on the tank is atmospheric. </p>
+</pl-question-panel>
+  
+  
+  What is the pressure (in  {{params.unitsPressure}}) at the level of entrance to the siphon pipe outside the pipe? 
+  <pl-number-input answers-name="p2" comparison="sigfig" digits="3" label=" Pressure (in {{params.unitsPressure}}) "></pl-number-input>
+  What is the pressure (in  {{params.unitsPressure}}) at the level of entrance to the siphon pipe inside the pipe? 
+  <pl-number-input answers-name="p3" comparison="sigfig" digits="3" label="Pressure (in {{params.unitsPressure}})"></pl-number-input>
+  What is the pressure (in  {{params.unitsPressure}}) at the highest point  inside the pipe? 
+  <pl-number-input answers-name="p4" comparison="sigfig" digits="3" label="Pressure (in {{params.unitsPressure}})"></pl-number-input>

@@ -1,0 +1,19 @@
+{
+    "uuid": "d7f7a3e6-8b3d-4e3b-9c3a-6f3d7a8b3d4e",
+    "title": "Velocity-Time Graph",
+    "stem": "On a velocity-time graph, a downward sloping line indicates",
+    "topic": "Physics",
+    "tags": [
+        "velocity-time graph",
+        "physics",
+        "kinematics"
+    ],
+    "prereqs": "Understanding of velocity-time graphs and kinematics",
+    "isAdaptive": "false",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "none"
+}

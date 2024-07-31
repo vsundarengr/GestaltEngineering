@@ -1,0 +1,14 @@
+{
+    "uuid": "8b4891d4-045-4d1-4e89-4567-ad4833f25b2f",
+    "title": "Angular Velocity Vector",
+    "topic": "Rotational Kinematics",
+    "tags": ["acceleration", "velocity", "angular acceleration", "angular velocity"],
+	"prereqs": ["acceleration","velocity","geometry", "vector","vec2d"],
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript"
+}

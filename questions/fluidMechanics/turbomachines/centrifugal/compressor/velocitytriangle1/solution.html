@@ -1,0 +1,15 @@
+<pl-solution-panel>
+    
+    <pl-hint level="1" data-type="text"> Since the entry is radial, the inlet triangle is a right triangle.  </pl-hint>
+    <pl-hint level="2" data-type="text"> By continuity, the flow rate at the inner radius (entry) and the flow rate at the outer radius (exit) is the same. The volumetric flow rate at the entry and exit is $ V_n A $ </pl-hint>
+    <pl-hint level="3" data-type="text"> Draw the outlet triangle with the blade velocity $ u_2 $  as one side. The relative velocity vector $ V_{r2} $ makes an angle {{params.beta2deg}} degrees with $ u_2 $. Also $ V_{n2} $ can be computed </pl-hint>
+    <pl-hint level="4" data-type="text"> 
+        <ul>
+            <li> $ \beta_1 = \tan^{-1} \frac{ V_1}{u_1} \implies \beta_1 = \tan^{-1} \frac{ {{params.V1}} }{ {{params.u1}} } \implies \beta_1 = {{params.beta1deg}} $</li>
+            <li> Volumetric flow rate: $ \dot{V} = 2 \pi R_1 b_1 V_{n1} = 2 \pi R_2 b_2 V_{n2} \implies V_{n2} = {{params.Vn2}} $ {{params.unitsSpeed}} </li>
+            <li> $ V_{t2} = u_2 - V_{n2} \, cot \beta_2  \implies V_{t2} = {{params.Vt2}} $ {{params.unitsSpeed}} </li>
+            <li> $ \alpha_2 = \tan^{-1} \frac{ V_{n2} }{ V_{n1} } \implies \alpha_2 = {{params.alpha2deg}}  $ </li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+

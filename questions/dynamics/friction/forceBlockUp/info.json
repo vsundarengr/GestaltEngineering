@@ -1,0 +1,29 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-8740-fab6433ffbb2f",
+    "title": "Upwards force on block flat surface",
+    "stem":"Compute work on a block",
+    "topic": "work",
+    "tags": ["force", "secondlaw","displacement"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "fric1",
+            "title": "Introduction to Friction",
+            "url": "https://ucr.yuja.com/V/Video?v=7484053&node=32085401&a=28951739&preload=false"
+        },
+        {
+            "type": "video",
+            "name": "fric2",
+            "title": "Friction examples",
+            "url": "https://ucr.yuja.com/V/Video?v=3359497&node=14548635&a=2361088"
+        }
+    ]
+}

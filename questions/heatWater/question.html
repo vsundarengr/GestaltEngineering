@@ -1,0 +1,15 @@
+<pl-question-panel>
+<p>
+  A pipe of diameter {{params.d}} {{params.unitsDiameter}} carries {{params.vdot}} {{params.unitsFlowRate}} of {{params.fluidName}}. 
+  </p>
+<p> The fluid enters the pipe at a temperature of {{params.Ti}} {{params.unitsTemperature}} and exits at {{params.Tf}} {{params.unitsTemperature}} </p>
+ <p> The specific heat of {{params.fluidName}} is {{params.Cp}} {{params.unitsCp}}. Its specific gravity is {{params.sg}} </p>
+  
+</p>
+</pl-question-panel>
+
+
+<p> How much heat (in {{params.unitsHeatRate}}) was supplied to heat the fluid </p>
+<pl-number-input answers-name="Q" comparison="sigfig" digits="3" label="Q  (in {{params.unitsHeatRate}})"></pl-number-input>
+<p> What is the speed (in {{params.unitsSpeed}} ) of the fluid flowing in the pipe? </p>
+<pl-number-input answers-name="v" comparison="sigfig" digits="3" label="v  (in {{params.unitsSpeed}})"></pl-number-input>

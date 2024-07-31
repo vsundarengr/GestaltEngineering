@@ -1,0 +1,17 @@
+<pl-question-panel>
+  <p> An axial-flow compressor is used to compress {{params.Vdot}} {{params.unitsFlowRate}} of air at temperature {{params.temperature}} {{params.unitsTemperature}} and pressure {{params.pressure}} {{params.unitsPressure}}. </p>
+  <p> The hub radius is {{params.r1}} {{params.unitsDiameter}} and the tip radius is {{params.r2}} {{params.unitsDiameter}}. </p>
+  <p> The compressor rotates at {{params.omegad}} rpm. </p>
+  <p> The blade angle at the inlet and the exit are respectively $ {{params.beta1deg}}^\circ$ and $ {{params.beta2deg}}^\circ $</p>
+  <p> Blade angles are measured with respect to the axial direction. Blade angle measured in the same direction as the rotation of the blade are positives while those opposite to the rotation of the blade are negative.</p>
+  <p> The axial component of the velocity is uniform across the compressor.</p>
+</pl-question-panel>
+  
+  What is the stagnation pressure (in {{params.unitsPressure}} ) at the inlet of the compressor?
+  <pl-number-input answers-name="P01" comparison="sigfig" digits="3" label=" $ P_{01} $ (in {{params.unitsPressure}}) "></pl-number-input>
+
+  What is the stagnation temperature (in {{params.unitsTemperatureAbs}} ) at the inlet of the compressor?
+  <pl-number-input answers-name="T01" comparison="sigfig" digits="3" label=" $ T_{01} $ (in {{params.unitsTemperatureAbs}}) "></pl-number-input>
+ 
+ 
+  

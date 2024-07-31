@@ -1,0 +1,17 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        The car initially moves at a speed of {params.v1} {params.unitsSpeed}. We need to calculate the distance it travels in {params.t1} {params.unitsTime} while decelerating.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        First, convert the initial speed to the appropriate unit system and then calculate the deceleration using the formula \( a = -\frac{{v}^2}{2 \times s} \), where \( v \) is the initial speed and \( s \) is the braking distance.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        The deceleration \( a \) is calculated as \( a = -\frac{{params.v1\_converted}^2}{2 \times {params.d1}} \). Use this to find the distance traveled in {params.t1} {params.unitsTime}.
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        The distance traveled during deceleration is given by \( \Delta x = v_0 \times t + \frac{1}{2} \times a \times t^2 \). Substitute \( v_0 \), \( a \), and \( t \) to calculate \(\Delta x\).
+    </pl-hint>
+    <pl-hint level="5" data-type="text">
+        Therefore, the total distance covered by the car in {params.t1} {params.unitsTime} is approximately {correct_answers.d} {params.unitsDist}.
+    </pl-hint>
+</pl-solution-panel>

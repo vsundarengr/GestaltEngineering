@@ -1,0 +1,23 @@
+{
+    "uuid": "3f435c36-1126-43b0-aba5-627eeb2e10f9",
+    "title": "Convert Polar to Cartesian",
+	"stem": "Convert Polar to Cartesian", 
+    "topic": "Linear Algebra",
+    "tags": ["basic", "vector", "algebra", "polar", "cartesian"],
+	"prereqs": "",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript",
+	"resources": [
+        {
+            "type": "video",
+            "name": "vec1",
+            "title": "Introduction to vectors",
+            "url": "https://ucr.yuja.com/V/Video?v=3310673&node=14548642&a=213981555&preload=false"
+        }
+	]
+}

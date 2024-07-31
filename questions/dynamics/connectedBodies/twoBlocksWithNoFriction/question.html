@@ -1,0 +1,15 @@
+<pl-question-panel>
+  <pl-figure file-name="twoBlocks1.png"></pl-figure>
+  <p> The two blocks shown in the figure rest on a smooth surface.  </p>
+  <p> Block A has {{params.masslabel}} {{params.mA}} {{params.unitsMass}} while Block B has {{params.masslabel}} {{params.mB}} {{params.unitsMass}}.</p>
+  <p> A force P = {{params.P}} {{params.unitsForce}} acts as shown.</p>
+</pl-question-panel>
+
+What's the minimum force (in {{params.unitsForce}}) required to get the blocks moving?
+<pl-number-input answers-name="Pmin" comparison="sigfig" digits="3" label="$ P_{min} $ (in {{params.unitsForce}})"></pl-number-input>
+
+What's the acceleration (in {{params.unitsAcc}}) of the two blocks?
+<pl-number-input answers-name="a" comparison="sigfig" digits="3" label="Acceleration (in {{params.unitsAcc}})"></pl-number-input>
+
+What's the magnitude of the normal reaction (in {{params.unitsForce}}) between the two blocks?
+<pl-number-input answers-name="F" comparison="sigfig" digits="3" label="Normal reaction (in {{params.unitsForce}})"></pl-number-input>

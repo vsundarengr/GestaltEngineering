@@ -1,0 +1,30 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "3D moments",
+    "stem":"Statics",
+    "topic": "3D moments",
+    "tags": ["Force analysis", "Moment","Vectors"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "epere194@ucr.edu",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video1",
+            "title": "3D Forces",
+            "url": "https://ucr.yuja.com/V/Video?v=5164437&node=23502542&a=150234393&autoplay=1"
+        },
+        {
+            "type": "video",
+            "name": "video2",
+            "title": "3D Moments",
+            "url": "https://ucr.yuja.com/V/Video?v=5164436&node=23502530&a=199099799&autoplay=1"
+        }]
+}
+
+

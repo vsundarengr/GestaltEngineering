@@ -1,0 +1,29 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text"> Since the entry is axial, the inlet triangle is a right triangle.  </pl-hint>
+    <pl-hint level="2" data-type="text"> Use the volumetric flow rate and the dimensions to find the axial velocity </pl-hint>
+    <pl-hint level="3" data-type="text"> Draw the outlet triangle with the blade velocity $ u_b $  as one side. The relative velocity vector $ V_{r2} $ makes an angle {{params.beta2deg}} degrees with $ u $.  </pl-hint>
+    <pl-hint level="4" data-type="text"> Determine the stagnation temperature and pressure at the entry  </pl-hint>
+    <pl-hint level="5" data-type="text"> Use the work done per mass to determine stagnation temperature at exit of impeller</pl-hint>
+    <pl-hint level="6" data-type="text"> Use isentropic process to determine stagnation pressure at exit of impeller</pl-hint>
+    <pl-hint level="7" data-type="text"> Use energy balance along with $ V_2 $ to determine to temperature and pressure at the exit of impeller </pl-hint>
+    <pl-hint level="8" data-type="text"> Repeat for exit of compressor </pl-hint>
+    <pl-hint level="9" data-type="text"> Degree of reaction is the ratio of the enthalpy increase across the rotor to the enthalpy increase across the stage</pl-hint> 
+    <pl-hint level="9" data-type="text"> 
+        <ul>
+            <li> $ V_a  = \bar{r} \omega = \omega \times ({{params.r1}} + {{params.r2}})/2 = {{correct_answers.Va}} {{params.unitsSpeed}} $ </li>
+            <li> $ V_{t2} = u_2 - V_{a} \, cot \beta_2  \implies V_{t2} = {{correct_answers.Vt2}}  {{params.unitsSpeed}} $ </li>
+            <li> Work per unit mass = $ V_{t2} u_b = {{correct_answers.Vt2}} \times {{params.ub}} = {{correct_answers.workpermass}} {{params.unitsWorkPerMass}} $</li>
+            <li> Stagnation temperature at entry: $ T_{01} = T_1 + \frac{V_1^2}{2 C_p} = (273 + {{params.temperature}}) + \frac{ {{correct_answers.V1}}^2 }{2 \times {{params.Cp}}} = {{correct_answers.T01}} \, {{params.unitsTemperatureAbs}} $ </li>
+            <li> Stagnation pressure  at entry: $ P_{01} = P_1 \times (\frac{T_{01} }{T_1})^{ \gamma/(\gamma -1)} = {{params.pressure}} \times (\frac{ {{correct_answers.T01}} }{ 273 + {{params.temperature}} })^{1.4/(1.4-1)} = {{correct_answers.P01}} {{params.unitsPressure}} $ </li>
+            <li> Stagnation temperature at exit of impeller: $ w = h_{02} - h_{01}  = C_p (T_{02} - T_{01}) \implies T_{02} = {{correct_answers.T02}} {{params.unitsTemperatureAbs}} $ </li>
+            <li> $ \eta_{isent} = \frac{h_{02s} - h_{01} }{ h_{02} - h_{01} } \implies {{params.isentEffd}} \% = \frac{T_{02s} - T_{01} }{ T_{02} - T_{01} } \implies T_{02s} = {{correct_answers.T02s}} $ </li>
+            <li> Stagnation pressure at exit of impeller:$ P_{02} = P_{01} \times (\frac{T_{02s} }{ T_{01} })^{ \gamma/(\gamma -1)} = {{correct_answers.P01}} \times (\frac{ {{correct_answers.T02s}} }{ {{correct_answers.T01}} })^{1.4/(1.4-1)} = {{correct_answers.P02}} {{params.unitsPressure}} $</li>
+            <li> Temperature at exit of impeller: $ T_2 = T_{02} - \frac{V_2^2}{2 C_p} = {{correct_answers.T02}} - {{correct_answers.V2}}^2/(2 \times {{params.Cp}}) = {{correct_answers.T2}} {{params.unitsTemperatureAbs}} $ 
+            <li> Pressure at exit of impeller:  $ P_{2} = P_{02} \times (\frac{T_{2} }{ T_{02} })^{ \gamma/(\gamma -1)} = {{correct_answers.P2}} {{params.unitsPressure}}$  </li>
+            <li> Temperature at exit of compressor: $ T_3 = T_{02} - \frac{V_1^2}{2 C_p} = {{correct_answers.T3}} {{params.unitsTemperatureAbs}} $
+            <li> Pressure at exit of compressor: $ P_{3} = P_{02} \times (\frac{T_{3} }{ T_{02} })^{ \gamma/(\gamma -1)} = {{correct_answers.P3}} {{params.unitsPressure}}.$</li> 
+            <li> Degree of reaction = $ \frac{ T_2 - T_1 }{ T_3 - T_1} = \frac{ {{correct_answers.T2}} - {{params.T1}} }{ {{correct_answers.T3}} - {{params.T1}} } = {{correct_answers.degReaction}} $</li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+

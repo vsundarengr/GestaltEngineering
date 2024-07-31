@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> My Courses </h2>
+    </div>
+</header>
+
+<form class="courseselect"> 
+<label for="courses"> Select the course you want to work on: </label>
+<select name="courses">
+<% scInstances.forEach( si => {%> 
+    <option value="<%=si.fname %>" data-doc="<%= si.courseId %>" > <%= si.fname %> </option>
+<%}) %>
+</select>
+<button > Go to course </button>
+</form>
+
+
+
+<script>
+    const csf= document.querySelector('.courseselect');
+    csf.addEventListener('submit', e=>{
+        e.preventDefault();
+        const course = csf.courses.value;
+        const courseId =  csf.courses.options[csf.courses.selectedIndex].dataset.doc;
+  //      const courseId = courseSelectForm.options[courseSelectForm.selectedIndex].dataset.doc;
+        const endPoint = '/showStudentCourse/' + courseId;
+      //  console.log(`${course} selected: Routing to ${endPoint}`);
+        location.assign(endPoint );
+    })
+</script>
+
+<%- include('partials/footer'); -%>

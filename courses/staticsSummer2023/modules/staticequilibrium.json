@@ -1,0 +1,123 @@
+{
+    "title": "Static equilibrium",
+    "topics": "equilibrium",
+    "pre-reqs": ["geometry", "trigonometry", "linear motion", "rotational kinematics", "fbd", "forces", "moments"],
+    "createdBy": "sundar@google.com",
+    "contents": [
+    { "name": "objectives",
+       "title":"Objectives",
+       "type": "static_content",
+       "objectives": ["Understand Newton's laws", "Apply Newton's laws for static equilibrium", "Compute reaction forces and moments"],
+       "additionalinfo": ""
+    },
+    { "name": "prereq_quiz",
+      "title": "Background quiz",
+      "type": "quiz",
+      "order": "random",
+      "selection": {"min": 4, "max": 4},
+      "numquest": 5,
+      "graded": true,
+      "contents": [
+        { "fname": "momentBeamSingleForce",
+        "min" : 1,
+        "max" : 1,
+        "weight": 1,
+        "maxScore": 1
+      },
+      { "fname": "vectorLengthAngleToXY",
+        "min" : 1,
+        "max" : 1,
+        "weight": 1,
+        "maxScore": 1
+      },
+      { "fname": "vectorXYToLengthAngle",
+        "min" : 1,
+        "max" : 1,
+        "weight": 1,
+        "maxScore": 1
+      }
+    ]
+    },
+	{ "name": "vid1",
+    "title": "Freebody diagrams with supports",
+    "type": "video",
+    "url": "https://ucr.yuja.com/V/Video?v=3310669&node=14548626&a=141750981&preload=false"
+    },
+	{ "name": "prac1",
+	"title": "Practice Quiz", 
+      "type": "quiz",
+      "order": "random",
+      "selection": "all",
+	  "graded": "true", 
+	  "contents": [
+	   { "fname": "twocablesStaticEqbm",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       },
+       { "fname": "rollerVBlockStaticEqbm",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       },
+	    { "fname": "ladderWeight",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       }
+	  ]
+	},
+    { "name": "vid2",
+      "title": "Equilibrium",
+      "type": "video",
+      "url": "https://ucr.yuja.com/V/Video?v=3310476&node=14548639&a=94260697&preload=false"
+    },
+	 {"name": "vid3",
+      "title": "More examples on equilibrium",
+      "type": "video",
+      "url": "https://ucr.yuja.com/V/Video?v=7848418&node=33197038&a=30280209&autoplay=1"
+    },
+	{ "name": "prac1",
+	"title": "Practice Quiz", 
+      "type": "quiz",
+      "order": "random",
+      "selection": "all",
+	  "graded": "true", 
+	  "contents": [
+	   { "fname": "cantileverReactions",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       },
+       { "fname": "simplySupportedBeam",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       },
+	    { "fname": "ladderWeight2",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       },
+	   { "fname": "boomStaticEqbm",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       },
+	    { "fname": "beamCableStaticEqbm",
+         "min" : 1,
+         "max" : 1,
+         "weight": 1,
+         "maxScore": 1
+       }
+	  ]
+	}
+	]
+   }

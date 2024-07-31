@@ -1,0 +1,169 @@
+{
+"name": "hw7",
+"title": "Preclass 7",
+"topics" : [ 
+{
+			"name": "car",
+			"title": "Car Forces",
+			"contents": [
+			{ "fname": "dynamics/vehicles/carForces",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/vehicles/carForcesSimple",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "rot2",
+			"title": "Rotational and linear quantities",
+			"contents": [
+			{ "fname": "kinematics/rotational/windmillSpeed",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/rotational/windmillAcc",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+
+{
+			"name": "rot4",
+			"title": "Rotation and velocity: Vectors",
+			"contents": [
+			{ "fname": "angularVelocityVector",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "rot5",
+			"title": "Rotation and acceleration: Vectors",
+			"contents": [
+			{ "fname": "rotCentAccVectors",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "rot3",
+			"title": "Rotation and torque",
+			"contents": [
+			{ "fname": "constAngAccTorque",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "constAngAccTorqueRot",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "torque",
+			"title": "Computing moments",
+			"contents": [
+			{ "fname": "momentBeamSingleForce",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "moment4",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "torque2",
+			"title": "Computing moments: 2",
+			"contents": [
+			{ "fname": "momentBeamLine2",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "momentBeamLine",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "bank1",
+			"title": "Motion of cars on curved paths",
+			"contents": [
+			{ "fname": "carCornerBank",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "carCornerMax",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "carCornerBankForces",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "bank2",
+			"title": "Car on curved path with friction",
+			"contents": [
+			{ "fname": "carCornerMaxForces",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "bank3",
+			"title": "Plane on curved path",
+			"contents": [
+			{ "fname": "planeBank",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+}
+]
+}

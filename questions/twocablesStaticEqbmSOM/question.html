@@ -1,0 +1,25 @@
+<pl-question-panel>
+    <pl-figure file-name="twocables.png"></pl-figure>
+<p> The figure shows a {{params.masslabel}} of {{params.mass}} {{params.unitsMass}} suspended at point O by means of two cables connected to points A and B. </p>
+<p> The angle made by the cable at A $ \theta $ is {{params.angleA}} degrees while the angle made by the cable at B  $ \phi $ is {{params.angleB}} degrees</p>
+<p> The cables are made of {{params.materialName}} of diameter {{params.diam}} {{params.unitsDiameter}}.</p>
+<p> The material of the cable has yield strength {{params.sult}} {{params.unitsStress}}, shear strength {{params.tult}} {{params.unitsStress}}, modulus of elasticity {{params.E}} {{params.unitsModulusElasticity}} and Poisson's ratio {{params.nud}}</p>
+<p></p>
+
+
+</pl-question-panel>
+
+<p> What are the tensions (in {{params.unitsForce}}) in the cables OA and OB?</p>
+<pl-number-input answers-name="TA" comparison="sigfigs" digits="3" label="Tension in A (in {{params.unitsForce}})"></pl-number-input>
+<pl-number-input answers-name="TB" comparison="sigfigs" digits="3" label="Tension in B (in {{params.unitsForce}})"></pl-number-input>
+<p> What are the stresses (in {{params.unitsStress}}) in the cables OA and OB?</p>
+<pl-number-input answers-name="sigA" comparison="sigfigs" digits="3" label="Stress in A (in {{params.unitsStress}})"></pl-number-input>
+<pl-number-input answers-name="sigB" comparison="sigfigs" digits="3" label="Stress in B (in {{params.unitsStress}})"></pl-number-input>
+<p> What is the factor of safety in each of the cables?</p>
+<pl-number-input answers-name="fsA" comparison="sigfigs" digits="3" label="Factor of safety in A"></pl-number-input>
+<pl-number-input answers-name="fsB" comparison="sigfigs" digits="3" label="Factor of safety in B"></pl-number-input>
+
+
+
+
+

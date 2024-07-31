@@ -1,0 +1,29 @@
+{
+    "uuid": "1f435c36-1126-43b0-aba5-627eeb2e10f9",
+    "title": "Viscosity",
+	"stem": "Fluid density", 
+    "topic": "Fluid Mechanics",
+    "tags": ["density"],
+	"prereqs": "volume",
+	"isAdaptive": "true",
+	"createdBy": "sundar@google.com",
+    "qType": "num",
+	"nSteps": 1,
+	"updatedBy":"", 
+	"difficulty": 1,
+	"codelang": "javascript",
+	"resources": [
+        {
+            "type": "video",
+            "name": "acc1",
+            "title": "Viscosity examples 1",
+            "url": "https://ucr.yuja.com/V/Video?v=7930918&node=33750957&a=56625430"
+        },
+		{
+            "type": "video",
+            "name": "acc2",
+            "title": "Viscosity examples 2",
+            "url": "https://ucr.yuja.com/V/Video?v=7930917&node=33750956&a=117950058"
+        }
+    ]
+}

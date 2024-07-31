@@ -1,0 +1,30 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Mass conservation",
+    "stem":"heat",
+    "topic": "fluids",
+    "tags": ["heat", "temperature","specificheat"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "pitot1",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7946710&node=33825197&a=202874620"
+        },
+        {
+            "type": "video",
+            "name": "tank2",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7946709&node=33825196&a=134695014"
+        }
+
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "uuid": "7c4ccac6-843d-4392-a673-feb64c2a8bbf",
+    "title": "Centroid: semicircle",
+	"stem": "Freebody",
+    "topic": "statics",
+    "tags": ["centroid"],
+    "prereqs":"",
+	"isAdaptive": "false",
+	"createdBy": "sundar@google.com",
+	"qType":"ma",
+	"nSteps": 1,
+	"updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "none",
+    "resources": [{
+        "type": "video",
+        "name": "video1",
+        "title": "Basics",
+        "url": "https://ucr.yuja.com/V/Video?v=3328935&node=14548627&a=184705769&autoplay=1"
+    }]
+}

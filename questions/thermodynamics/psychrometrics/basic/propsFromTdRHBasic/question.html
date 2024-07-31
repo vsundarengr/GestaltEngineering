@@ -1,0 +1,16 @@
+<pl-question-panel>
+<p> Air at standard atmospheric pressure has temperature of {{params.Td}} deg C and relative humidity {{params.RH}}%.  </p>
+</pl-question-panel>
+
+<p>
+  What is the partial pressure of vapor (in kPa)?
+</p>
+<pl-number-input answers-name="pv" comparison="sigfig" digits="3" label="Partial pressure (in kPa)"></pl-number-input>
+<p>
+  What is the dew-point temperature (in deg C)?
+</p>
+<pl-number-input answers-name="Tdew" comparison="sigfig" digits="3" label="Dew point (in C)"></pl-number-input>
+<p>
+  What is the humidity ratio (in kg/ kg dry air)?
+</p>
+<pl-number-input answers-name="omega" comparison="sigfig" digits="3" label="$\omega$ (in kg/ kg d.a.)"></pl-number-input>

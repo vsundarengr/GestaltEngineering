@@ -1,0 +1,20 @@
+{
+    "uuid": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p",
+    "title": "Car Accident on Seaside Cliff Road",
+    "stem": "A car is traveling along a road winding around sea-side cliffs (like Highway 1 between Carmel and San Luis Obispo) at 54 kmph. The road has an upward slope of 5° to the horizontal. On a particularly sharp curve, the driver loses control, drives off the road and becomes air-borne. If the cliff is sheer so that it can be assumed to be vertical and is 40 m above the ocean below, approximately how far (in m) from the coast does the car hit the water?",
+    "topic": "Physics",
+    "tags": [
+        "kinematics",
+        "projectile motion",
+        "gravity",
+        "collision"
+    ],
+    "prereqs": "Basic understanding of kinematics and projectile motion",
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

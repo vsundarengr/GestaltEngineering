@@ -1,0 +1,19 @@
+{
+    "uuid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "title": "Interpreting Distance-Time Graphs",
+    "stem": "On a distance-time graph, a downward sloping line indicates",
+    "topic": "Physics",
+    "tags": [
+        "distance-time graph",
+        "motion",
+        "physics"
+    ],
+    "prereqs": "Understanding of distance, time, and basic graph interpretation",
+    "isAdaptive": "false",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "none"
+}

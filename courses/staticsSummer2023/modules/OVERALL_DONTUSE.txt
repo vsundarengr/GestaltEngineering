@@ -1,0 +1,135 @@
+db.courseinstances.find({isActive: true})
+[
+  {
+    _id: ObjectId("63cc5db7507b332bd005b6aa"),
+    isActive: true,
+    moduleList: [
+      {
+        moduleId: '25381716-caaa-4ee5-8e64-fd17dc2c1521',
+        module: {
+          title: 'Vectors',
+          objective: [
+            'review basic trigonometry',
+            'define two-dimensional vectors',
+            'represent vectors',
+            'add and subtract vectors in two dimensions'
+          ],
+          topics: 'vec2d',
+          'pre-reqs': [ 'geometry', 'trigonometry' ],
+          createdBy: 'sundar@google.com',
+          contents: [
+            {
+              name: 'prereq_quiz',
+              title: 'Background quiz',
+              type: 'quiz',
+              questions: [Array],
+              graded: 'yes',
+              contentId: '716061aa-e214-419f-9e6d-9907de6ae64e'
+            },
+            {
+              name: 'vid1',
+              title: 'Lecture video',
+              type: 'video',
+              url: 'https://youtu.be/ONjX_-GusWA',
+              contentId: '5980cce2-51ba-479a-83b2-e9a140b872d3'
+            },
+            {
+              name: 'prac_quiz',
+              title: 'Practice Problems',
+              type: 'quiz',
+              questions: [Array],
+              graded: 'no',
+              contentId: '6aa923dd-d7ca-4a35-bd1a-a1771f5e6bb8'
+            },
+            {
+              name: 'vid2',
+              title: 'Lecture video',
+              type: 'video',
+              url: 'https://youtu.be/U6i0zXH9iAQ',
+              contentId: 'dee9d0d0-f7da-490b-bad2-7f05d54182ea'
+            },
+            {
+              name: 'prac_quiz',
+              title: 'Practice Problems',
+              type: 'quiz',
+              questions: [Array],
+              graded: 'no',
+              contentId: '052ed30e-eab3-4357-a92b-2380a3fd9dd7'
+            },
+            {
+              name: 'final_quiz',
+              title: 'Quiz',
+              type: 'quiz',
+              questions: [Array],
+              graded: 'graded',
+              contentId: 'be3cdaf0-0d87-452b-9278-d75b9777ec9a'
+            }
+          ]
+        },
+        startDate: '2023-01-08',
+        endDate: '2023-01-15',
+        fileName: 'module1'
+      },
+      {
+        moduleId: 'e484faa9-96ce-42bb-8307-4cf3ad24c62f',
+        module: {
+          title: 'Vectors in Two Dimensions',
+          objective: [
+            'review basic trigonometry',
+            'define two-dimensional vectors',
+            'represent vectors',
+            'add and subtract vectors in two dimensions'
+          ],
+          topics: 'vec2d',
+          'pre-reqs': [ 'geometry', 'trigonometry' ],
+          createdBy: 'sundar@google.com',
+          contents: [
+            {
+              name: 'vid1',
+              title: 'Lecture video',
+              type: 'video',
+              url: 'https://youtu.be/ONjX_-GusWA',
+              contentId: '694c9f60-933a-4288-85d3-2e0ed69556fa'
+            },
+            {
+              name: 'vid2',
+              title: 'Lecture video',
+              type: 'video',
+              url: 'https://youtu.be/U6i0zXH9iAQ',
+              contentId: '0dbc31b7-3199-47af-8b3b-94255469c574'
+            },
+            {
+              name: 'first',
+              title: 'Reading',
+              type: 'static_page',
+              url: '/tests/firstpage.html',
+              contentId: '0d2f0fc5-410d-44ba-bcc4-8f441868c128'
+            },
+            {
+              name: 'second',
+              title: 'Reading',
+              type: 'static_page',
+              url: '/tests/second.html',
+              contentId: 'dce5b48d-895a-4ca1-b8fa-9f008efc2970'
+            }
+          ]
+        },
+        startDate: '2023-01-15',
+        endDate: '2023-01-22',
+        fileName: 'module3'
+      }
+    ],
+    name: 'Statics',
+    courseNumber: 'ME010',
+    section: '001',
+    instructor: 'sundar@google.com',
+    institution: 'ucr',
+    session: 'fall',
+    startDate: ISODate("2023-01-01T00:00:00.000Z"),
+    endDate: ISODate("2023-01-31T00:00:00.000Z"),
+    addedBy: ObjectId("63b7425d140a4915a8cc17d9"),
+    fname: 'statics',
+    createdAt: ISODate("2023-01-21T21:48:39.448Z"),
+    updatedAt: ISODate("2023-01-21T21:49:55.823Z"),
+    __v: 0
+  }

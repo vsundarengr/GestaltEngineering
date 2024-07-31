@@ -1,0 +1,22 @@
+<pl-question-panel>
+  <pl-figure file-name="figure.png" directory="clientFilesCourse"></pl-figure>
+  <p>
+    The figure shows three masses $m_A$ = {{params.mA}}kg, $m_B$ = {{params.mB}}kg and $m_C$ = {{params.mC}}kg on a inclined plane as shown. The surfaces on which A, B and C are frictionless. The pulley is massless and frictionless. The angles are θ = {{params.theta}}° and ϕ = {{params.phi}}°. 
+  </p>
+</pl-question-panel>
+
+
+<p>
+  What is the acceleration of the masses (in {{params.unitsAcc}})?  Use the following sign convention: Positive direction corresponds to block C moving up the incline.
+</p>
+<pl-number-input answers-name="acceleration" comparison="sigfig" digits="3" label="Acceleration (in {{params.unitsAcc}})"></pl-number-input>
+
+<p>
+  What's the tension (in {{params.unitsForce}}) in the cable connected to block C?
+</p>
+<pl-number-input answers-name="Tc" comparison="sigfig" digits="3" label="Tension (in {{params.unitsForce}})"></pl-number-input>
+
+<p>
+  What's the tension (in {{params.unitsForce}}) in the cable connected to block A?
+</p>
+<pl-number-input answers-name="Ta" comparison="sigfig" digits="3" label="Tension (in {{params.unitsForce}})"></pl-number-input>

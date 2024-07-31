@@ -1,0 +1,15 @@
+{
+  "uuid": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+  "title": "Acceleration of Masses on an Inclined Plane",
+  "stem": "The figure shows three masses mA = 1kg, mB = 3kg and mC = 2kg on a inclined plane as shown. The surface on which A and B is frictionless while the coefficients of static and kinetic friction between C and the surface is 0.35 and 0.3 respectively. The pulley is massless and frictionless. The angles are θ = 60° and ϕ = 30°.",
+  "topic": "Newtonian Mechanics",
+  "tags": ["inclined plane", "friction", "pulley", "Newton's laws", "acceleration"],
+  "prereqs": "Understanding of Newton's laws of motion, friction, and inclined plane problems",
+  "isAdaptive": true,
+  "createdBy": "",
+  "qType": "num",
+  "nSteps": 1,
+  "updatedBy": "",
+  "dificulty": 1,
+  "codelang": "javascript"
+}

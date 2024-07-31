@@ -1,0 +1,29 @@
+<pl-question-panel> If $ a = {{params.a}} $ and $ b = {{params.b}} $, then  which of the following is true?</pl-question-panel></p>
+
+<pl-mca-adaptive> 
+<pl-checkbox answers-name="summa" weight="1" inline="true">
+  <pl-answer choice-name="opt0" correct="false"> $ a + b = {{params.summa.opt0}} $ </pl-answer>
+  <pl-answer choice-name="opt1" correct="true"> $ a - b = {{params.summa.opt1}} $ </pl-answer>
+  <pl-answer choice-name="opt2" correct="false"> $ a \times b =  {{params.summa.opt2}} $</pl-answer>
+  <pl-answer choice-name="opt3" correct="true"> $ a^2 = {{params.summa.opt3}} $</pl-answer>
+</pl-checkbox>
+</pl-mca-adaptive>
+
+<p> 
+If $ a = {{params.a}} $ and $ b = {{params.b}} $, then  which of the following is true about $ b^2 $? 
+</p>
+<pl-mcq-adaptive> 
+  <pl-multiple-choice answers-name="summc" weight="1" inline="true">
+    <pl-answer choice-name="opt0" correct="false"> {{params.summc.opt0}} </pl-answer>
+    <pl-answer choice-name="opt1" correct="true"> {{params.summc.opt1}} </pl-answer>
+    <pl-answer choice-name="opt2" correct="false"> {{params.summc.opt2}} </pl-answer>
+    <pl-answer choice-name="opt3" correct="true"> {{params.summc.opt3}} </pl-answer>
+    <pl-answer choice-name="opt4" correct="true"> {{params.summc.opt4}} </pl-answer>
+  </pl-multiple-choice>
+  </pl-mcq-adaptive>
+
+<p> What is the value of $ a^2 - 2 $?</p> 
+
+<pl-number-input answers-name="c" comparison="sigfig" digits="3" label="$c=$"></pl-number-input>
+
+

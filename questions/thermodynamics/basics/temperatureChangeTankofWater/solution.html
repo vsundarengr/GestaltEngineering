@@ -1,0 +1,23 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        First, calculate the volume of water in the tank. Since the tank is {{params.fillFraction}} full, the volume of water is {{params.fillFraction}} of the tank's total volume.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        The total volume of the tank is {{params.length}} {{params.unitsLength}} x {{params.width}} {{params.unitsWidth}} x {{params.height}} {{params.unitsHeight}}. Therefore, the volume of water is ({{params.length}} x {{params.width}} x {{params.height}}) * {{params.fillFraction}} {{params.unitsLength}}³.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        Convert the volume of water to mass. The density of {{params.fluid}} at standard conditions is approximately {{params.densityWater}} {{params.unitsMass}}/{{params.unitsLength}}³. Thus, the mass of the water is ({{params.length}} x {{params.width}} x {{params.height}}) * {{params.fillFraction}} x {{params.densityWater}} {{params.unitsMass}}.
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        Use the formula Q = m * c * ΔT to calculate the final temperature, where Q is the heat added, m is the mass of the {{params.fluid}}, c is the specific heat capacity of {{params.fluid}}, and ΔT is the change in temperature.
+    </pl-hint>
+    <pl-hint level="5" data-type="text">
+        The specific heat capacity of {{params.fluid}} is approximately {{params.specificHeatWater}} {{params.unitsEnergy}}/{{params.unitsMass}}°{{params.unitsTemp}}. Substituting the known values: {{params.heatSupplied}} {{params.unitsHeat}} = ({{params.length}} x {{params.width}} x {{params.height}}) * {{params.fillFraction}} x {{params.densityWater}} * {{params.specificHeatWater}} * ΔT.
+    </pl-hint>
+    <pl-hint level="6" data-type="text">
+        Solve for ΔT: ΔT = {{params.heatSupplied}} / (({{params.length}} x {{params.width}} x {{params.height}}) * {{params.fillFraction}} x {{params.densityWater}} x {{params.specificHeatWater}}) = {{correct_answers.finalTempChange}}°{{params.unitsTemp}}.
+    </pl-hint>
+    <pl-hint level="7" data-type="text">
+        Therefore, the final temperature of the {{params.fluid}} is {{params.initialTemp}}°{{params.unitsTemp}} + {{correct_answers.finalTempChange}}°{{params.unitsTemp}} = {{correct_answers.finalTemp}}°{{params.unitsTemp}}.
+    </pl-hint>
+</pl-solution-panel>

@@ -1,0 +1,15 @@
+<pl-question-panel>
+<p>
+A wind turbine has diameter {{params.D}} {{params.unitsDiameter}}. Wind at speed {{params.V}} {{params.unitsSpeed}} across it. 
+The specific gravity of air is {{params.sg}}.
+</pl-question-panel>
+
+
+<p> What is the volumetric flow rate  (in {{params.unitsFlowRate}})? </p>
+<pl-number-input answers-name="Q" comparison="sigfig" digits="3" label="Q  (in {{params.unitsFlowRate}})"></pl-number-input>
+<p> What is the mass flow rate (in {{params.unitsMassRate}} ) of the fluid flowing in the pipe? </p>
+<pl-number-input answers-name="mdot" comparison="sigfig" digits="3" label="$ \dot{m}  $ (in {{params.unitsMassRate}})"></pl-number-input>
+<p> How much power (in {{params.unitsPower}}) is available in the wind? </p>
+<pl-number-input answers-name="P" comparison="sigfig" digits="3" label=" P (in {{params.unitsPower}})"></pl-number-input>
+<p> What is the power output (in {{params.unitsPower}} ) of the turbine if the efficiency of conversion is {{params.eff}}%? </p>
+<pl-number-input answers-name="Pout" comparison="sigfig" digits="3" label="$ P_{out}  $ (in {{params.unitsPower}})"></pl-number-input>

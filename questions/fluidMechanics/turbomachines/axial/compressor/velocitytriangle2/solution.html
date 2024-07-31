@@ -1,0 +1,15 @@
+<pl-solution-panel>
+    
+    <pl-hint level="1" data-type="text"> Draw the inlet velocity triangle using the information about the blade velocity, the axial component of the velocity and the inlet blade angle. The inlet triangle gives $ \alpha_1 $, $ V_{t1} $ and $ V_1 $</pl-hint>
+    <pl-hint level="2" data-type="text"> The axial velocity through the compressor is the same. Draw the outlet triangle with the blade velocity $ u_b $  as one side. The relative velocity vector $ V_{r2} $ makes an angle {{params.beta2deg}} degrees with $ u_b $.</pl-hint>
+    <pl-hint level="3" data-type="text"> 
+        <ul>
+            <li> $ u_b = \frac{2 \pi \omega}{60} \bar{r} = \frac{2 \pi \times {{params.omegad}} }{60} ({{params.r1}} + {{params.r2}})/2 \times 10^{-3} \implies u_b = {{params.ub}} {{params.unitsSpeed}} $  </li>
+            <li> $ V_{t1} = u_1 - V_{a} \, cot \beta_1 \implies V_{t1} = {{params.ub}} - {{params.Va}} \, cot {{params.beta1deg}} \implies V_{t1} = {{correct_answers.Vt1}} {{params.unitsSpeed}} $</li>
+            <li> $ V_1 = \sqrt{ V_{t1}^2 + V_{a}^2 } $ and $ \alpha_1 = \tan^{-1} \frac{ V_{t1} } {V_{n1} } $ </li>
+            <li> $ V_{t2} = u_2 - V_{n2} \, cot \beta_2  \implies V_{t2} = {{correct_answers.Vt2}} {{params.unitsSpeed}} $  </li>
+            <li> $ \alpha_2 = \tan^{-1} \frac{ V_{t2} }{ V_{a} } \implies \alpha_2 = {{correct_answers.alpha2deg}}  $ </li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+

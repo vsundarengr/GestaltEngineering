@@ -1,0 +1,11 @@
+
+<pl-question-panel>
+  <p> A barge has empty {{params.masslabel}} {{params.mbarge}} {{params.unitsMass}}. It has a length {{params.a}} {{params.unitsDist}}, width {{params.b}} {{params.unitsDist}} and height {{params.c}} {{params.unitsDist}}.</p>
+  <p> The draft when the barge carries a cargo in the ocean is {{params.h}} {{params.unitsDist}}. </p>
+  <p> Sea water has specific gravity {{params.sg}}. </p>
+  
+</pl-question-panel>
+
+<p> What's the {{params.masslabel}} of the cargo (in {{params.unitsMass}})?</p>
+<pl-number-input answers-name="mcargo" comparison="sigfig" digits="3" label="{{params.masslabel}} (in {{params.unitsMass}})="></pl-number-input>
+

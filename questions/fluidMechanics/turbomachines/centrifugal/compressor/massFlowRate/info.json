@@ -1,0 +1,31 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Centrifugal compressor: Mass flow rate",
+    "stem":"centrifugal compressor",
+    "topic": "fluids",
+    "tags": ["energy", "pressure","fluid", "turbomachines", "thermodynamics", "air"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video1",
+            "title": "Principles",
+            "url": "https://ucr.yuja.com/V/Video?v=9190079&node=39330500&a=62063130&autoplay=1"
+            
+        },
+        {
+            "type": "video",
+            "name": "video2",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=9190174&node=39330952&a=157668194&autoplay=1"
+            
+        }
+    ]
+}

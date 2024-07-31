@@ -1,0 +1,20 @@
+{
+    "uuid": "a1b9c8d7-e6f5-g4h3-i2j1k0l9m8n7",
+    "title": "Minimum Distance to Avoid Hitting a Couch",
+    "stem": "You are driving down a road at 50 mph and see a couch on the road that has fallen off a truck. You slam on the brakes decelerating the car at its maximum braking deceleration of 31 ft/s². What's the minimum distance (in feet) that the couch can be so that you can avoid hitting the couch.",
+    "topic": "Physics",
+    "tags": [
+        "kinematics",
+        "deceleration",
+        "distance",
+        "physics"
+    ],
+    "prereqs": "Understanding of kinematics and deceleration equations",
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

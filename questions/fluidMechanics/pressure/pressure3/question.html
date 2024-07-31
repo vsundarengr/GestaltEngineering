@@ -1,0 +1,12 @@
+<pl-question-panel>
+    <p> A tank of diameter {{params.D}} {{params.unitsDist}} and height {{params.H}} {{params.unitsDist}} is filled to {{params.perliq}}% of the height with {{params.fluidName}} (specific gravity = {{params.sg}}).</p>
+    <p> The space above the liquid is filled with {{params.gasName}} gas (molar mass = {{params.mw}}) at {{params.T}} {{params.unitsTemperature}}.</p>
+    <p> The pressure at the bottom of the tank is measured as {{params.pgage}} {{params.unitsPressure}} (gage).</p>
+    </pl-question-panel>
+    
+    What is the gage pressure (in {{params.unitsPressure}}) of the gas? </p>
+    <pl-number-input answers-name="pgas" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsPressure}})"></pl-number-input>
+    <p> What is the mass (in {{params.unitsMass}}) of {{params.fluidName}}?  </p>
+    <pl-number-input answers-name="m" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsMass}})"></pl-number-input>
+    <p> What is the density (in {{params.unitsDensity}}) of {{params.fluidName}}?  </p>
+    <pl-number-input answers-name="rhog" comparison="sigfig" digits="3" label="$ P $ (in {{params.unitsDensity}})"></pl-number-input>

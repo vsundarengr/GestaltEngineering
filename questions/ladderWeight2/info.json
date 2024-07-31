@@ -1,0 +1,47 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Ladder ",
+    "stem":"Static equilibrium",
+    "topic": "statics",
+    "tags": ["vectors", "forces", "moments"],
+    "prereqs":"moments",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "lad",
+            "title": "Example 1",
+            "url": "https://ucr.yuja.com/V/Video?v=9880139&node=43311492&a=24193164"
+        },
+        {
+            "type": "video",
+            "name": "lad2",
+            "title": "Example 2",
+            "url": "https://ucr.yuja.com/V/Video?v=9880138&node=43311489&a=138088170"
+        },
+        {
+            "type": "video",
+            "name": "hx1",
+            "title": "Free-body diagram with supports",
+            "url": "https://ucr.yuja.com/V/Video?v=3310669&node=14548626&a=141750981&preload=false"
+        },
+        {
+            "type": "video",
+            "name": "hx2",
+            "title": "Equilibrium",
+            "url": "https://ucr.yuja.com/V/Video?v=3310476&node=14548639&a=94260697&preload=false"
+        },
+        {
+            "type": "video",
+            "name": "hx3",
+            "title": "More examples on equilibrium",
+            "url": "https://ucr.yuja.com/V/Video?v=7848418&node=33197038&a=30280209&autoplay=1"
+        }
+	]
+}

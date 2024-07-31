@@ -1,0 +1,38 @@
+<pl-solution-panel>
+<h2>Rocket Flight Problem Solution Guide</h2>
+
+<pl-hint level="1" data-type="text">
+<p>The problem involves calculating the maximum height reached by a rocket, taking into account both the powered flight phase and the subsequent free fall. To solve this, we'll break down the calculation into manageable steps.</p>
+</pl-hint>
+
+<pl-hint level="2" data-type="text">
+<p>First, let's understand that the distance traveled during the powered phase (<b>\( \Delta d_1 \)</b>) can be calculated with the kinematic equation:</p>
+<p>\( \Delta d_1 = \frac{1}{2} a t_1^2 \),</p>
+<p>where \( a = {params.a} {params.unitsAcc} \) is the rocket's acceleration and \( t_1 = {params.t1} {params.unitsTime} \) is the time duration of the powered phase.</p>
+</pl-hint>
+
+<pl-hint level="3" data-type="text">
+<p>The rocket's final velocity at the end of the powered phase (\( V_f \)) can be determined by:</p>
+<p>\( V_f = a \cdot t_1 \).</p>
+<p>This velocity is crucial for calculating the subsequent phase of the flight.</p>
+</pl-hint>
+
+<pl-hint level="4" data-type="text">
+<p>Next, calculate the distance traveled during the free fall phase (\( \Delta d_2 \)):</p>
+<p>\( \Delta d_2 = V_f \cdot t_2 + \frac{1}{2} a_2 t_2^2 \),</p>
+<p>where \( t_2 = {params.t2} {params.unitsTime} \) (total time minus powered flight time) and \( a_2 = -9.8 {params.unitsAcc} \) (acceleration due to gravity).</p>
+</pl-hint>
+
+<pl-hint level="5" data-type="text">
+<p>Combining these calculations gives us the total height reached by the rocket:</p>
+<p>\( \Delta x = \Delta d_1 + \Delta d_2 \),</p>
+<p>This is the sum of distances traveled during the powered and free fall phases.</p>
+</pl-hint>
+
+<pl-hint level="6" data-type="text">
+<p>By substituting the given values into our equations, we find the rocket's maximum height to be:</p>
+<p>\( \Delta x = {correct_answers.h} {params.unitsDist} \).</p>
+<p>This calculation incorporates both phases of the flight to determine the rocket's peak altitude.</p>
+</pl-hint>
+
+</pl-solution-panel>

@@ -1,0 +1,15 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-8740-fab6433ffbb2f",
+    "title": "Upwards force on block flat surface",
+    "stem":"Compute work on a block",
+    "topic": "work",
+    "tags": ["force", "secondlaw","displacement"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript"
+}

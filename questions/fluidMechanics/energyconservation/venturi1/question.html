@@ -1,0 +1,13 @@
+<pl-question-panel>
+  <p> A venturi has an inlet diameter {{params.D1}} {{params.unitsDiameter}} and throat diameter {{params.D2}} {{params.unitsDiameter}}. A flow of {{params.fluidName}} at a speed of {{params.V1}} {{params.unitsSpeed}} enters the inlet to the Venturi. 
+  <p> The specific gravity of {{params.fluidName}} is {{params.sg}}. </p> 
+  <p> Pressure $ P_1 $ is measured at the inlet is {{params.p1}} {{params.unitsPressure}} absolute.</p>
+</pl-question-panel>
+  
+  
+  What is the pressure at the throat (in {{params.unitsPressure}})?
+  <pl-number-input answers-name="p2" comparison="sigfig" digits="3" label=" $ P_2 $ (in {{params.unitsPressure}}) "></pl-number-input>
+  What is the volumetric flow rate (in {{params.unitsFlowRate}}) ?
+  <pl-number-input answers-name="vdot" comparison="sigfig" digits="3" label="P (in {{params.unitsFlowRate}})"></pl-number-input>
+  What is the mass flow rate (in {{params.unitsMassRate}}) ?
+  <pl-number-input answers-name="mdit" comparison="sigfig" digits="3" label="P (in {{params.unitsMassRate}})"></pl-number-input>

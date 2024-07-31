@@ -1,0 +1,13 @@
+<pl-question-panel>
+<p>
+An ideal heat pump extract {{params.Qc}} {{params.unitsHeatRate}} and delivers {{params.Qh}} {{params.unitsHeatRate}} to a hot reservoir maintained at {{params.Tmax}} {{params.unitsTemperature}}.</div>
+</p>
+
+</pl-question-panel>
+
+<p> What is the  coefficient of performance of the heat pump? </p>
+<pl-number-input answers-name="cop" comparison="sigfig" digits="3" label="Coefficient of performance"></pl-number-input>
+<p> What is the  lowest temperature (in {{params.unitsTemperature}}) that the heat pump could operate at? </p>
+<pl-number-input answers-name="Tmin" comparison="sigfig" digits="3" label="Minimum temperature ({{params.unitsTemperature}})"></pl-number-input>
+<p> How much power (in {{params.unitsPower}}) needs to be supplied to the heat pump? </p>
+<pl-number-input answers-name="Pin" comparison="sigfig" digits="3" label="Input power (in {{params.unitsPower}})"></pl-number-input>

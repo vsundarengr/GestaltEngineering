@@ -1,0 +1,15 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Projectile Motion",
+    "stem":"Projection at an angle",
+    "topic": "Kinematics",
+    "tags": ["constant acceleration", "gravity"],
+    "prereqs":"1D kinematics",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript"
+}

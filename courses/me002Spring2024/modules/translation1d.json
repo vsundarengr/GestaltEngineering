@@ -1,0 +1,45 @@
+{
+ "title": "Translation in one dimension",
+ 
+ "topics": "trans1d",
+ "pre-reqs": ["geometry", "trigonometry"],
+ "createdBy": "sundar@google.com",
+ "contents": [
+ { "name": "objectives",
+	"title":"Objectives",
+	"type": "static_content",
+	"objectives": ["derive equations for constant velocity motion", "derive equations for constant acceleration motion"],
+	"additionalinfo": ""
+ },
+ { "name": "vid1",
+   "title": "Constant velocity motion",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=10033137&node=43793251&a=206439475"
+ },
+ { "name": "vid2",
+   "title": "Constant acceleration motion",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=10033136&node=43793248&a=208573998"
+ },
+ {
+	"type": "video",
+	"name": "acc1",
+	"title": "Example 1",
+	"url": "https://ucr.yuja.com/V/Video?v=9841354&node=43201698&a=155938166"
+},
+{
+	"type": "video",
+	"name": "acc2",
+	"title": "Example 2",
+	"url": "https://ucr.yuja.com/V/Video?v=9841355&node=43201701&a=51400943"
+},
+{
+	"type": "video",
+	"name": "acc3",
+	"title": "Example 3",
+	"url": "https://ucr.yuja.com/V/Video?v=9841353&node=43201695&a=42724774"
+}
+]
+ 
+}
+

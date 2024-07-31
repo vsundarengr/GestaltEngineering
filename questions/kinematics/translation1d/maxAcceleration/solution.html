@@ -1,0 +1,11 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        The time it takes to reach a certain speed can be calculated using the formula: \( t = \frac{v}{a} \), where \( v \) is the final speed and \( a \) is the acceleration.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        First, convert 60 mph to the selected unit system's speed unit. If the unit system is SI, multiply 60 mph by 0.44704 to get m/s. If it's USCS, multiply 60 mph by 0.44704 and then by 3.28084 to get ft/s.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        The time it takes to reach this speed is calculated using \( t = \frac{v}{a} \). Insert the converted speed \( v \) and the given acceleration \( a = {params.a} {params.unitsAcceleration} \) into the formula to find the time. The time to reach 60 mph is {correct_answers.t} {params.unitsTime}.
+    </pl-hint>
+</pl-solution-panel>

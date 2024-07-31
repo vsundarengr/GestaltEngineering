@@ -1,0 +1,27 @@
+<pl-question-panel>
+  <p> A centrifugal compressor has an impeller of inner radius {{params.r1}} {{params.unitsDiameter}} and outer radius {{params.r2}} {{params.unitsDiameter}}. </p>
+  <p> The impeller width at the inner radius is {{params.b1}} {{params.unitsDiameter}} and at the outer radius is {{params.b2}} {{params.unitsDiameter}}.</p>
+  <p> The blade angle at the exit is $ {{params.beta2deg}}^\circ $. </p>
+  <p> The compressor operates at {{params.omegad}} rpm </p>
+  <p> Air enters radially with speed of {{params.Vn1}} {{params.unitsSpeed}} with a temperature $ {{params.temperature}} $ {{params.unitsTemperature}} and pressure  {{params.pressure}} {{params.unitsPressure}}. </p>
+  <p></p>
+</pl-question-panel>
+  
+  
+  What is the work done per unit mass (in {{params.unitsWorkPerMass}}) ?
+  <pl-number-input answers-name="workpermass" comparison="sigfig" digits="3" label=" Work per unit mass (in {{params.unitsWorkPerMass}}) "></pl-number-input>
+
+  What is the magnitude of the velocity (in {{params.unitsSpeed}}) at the outlet?
+  <pl-number-input answers-name="V2" comparison="sigfig" digits="3" label="Magnitude of velocity (in {{params.unitsSpeed}})"></pl-number-input>
+
+  What is the stagnation pressure (in {{params.unitsPressure}} ) at the exit of the impeller?
+  <pl-number-input answers-name="P02" comparison="sigfig" digits="3" label=" Stagnation pressure  (in {{params.unitsPressure}}) "></pl-number-input>
+
+  What is the stagnation temperature (in {{params.unitsTemperatureAbs}} ) at the exit of the impeller?
+  <pl-number-input answers-name="T02" comparison="sigfig" digits="3" label=" Stagnation temperature (in {{params.unitsTemperatureAbs}}) "></pl-number-input>
+ 
+  What is the stagnation pressure (in {{params.unitsPressure}} ) at the exit of the compressor?
+  <pl-number-input answers-name="P02" comparison="sigfig" digits="3" label=" Stagnation pressure  (in {{params.unitsPressure}}) "></pl-number-input>
+
+  What is the stagnation temperature (in {{params.unitsTemperatureAbs}} ) at the exit of the compressor?
+  <pl-number-input answers-name="T02" comparison="sigfig" digits="3" label=" Stagnation temperature (in {{params.unitsTemperatureAbs}}) "></pl-number-input>

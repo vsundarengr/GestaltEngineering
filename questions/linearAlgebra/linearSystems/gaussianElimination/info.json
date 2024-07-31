@@ -1,0 +1,28 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Gaussian elimination",
+    "stem":"Multiply two matrices",
+    "topic": "Linear algebra",
+    "tags": ["matrix", "equations"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "python",
+    "resources": [
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Video: Gaussian Elimination",
+            "url": "https://youtu.be/IRm2VXdxiww"
+        },
+        {
+            "type": "video",
+            "name": "video",
+            "title": "Video: Solving Algebraic Equations",
+            "url": "https://youtu.be/WawDlPbK7Go"
+        }]
+}

@@ -1,0 +1,187 @@
+{
+"name": "hw8",
+"title": "Preclass 8",
+"topics" : [ 
+{
+			"name": "tipslide",
+			"title": "Tipping vs sliding",
+			"contents": [
+			{ "fname": "blockToppleSlide",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "blockToppleSlideAngle",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "car",
+			"title": "Car Forces",
+			"contents": [
+			{ "fname": "dynamics/vehicles/carForces",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/vehicles/carForcesSimple",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "carreact1",
+			"title": "Stationary Car: Wheel Reactions",
+			"contents": [
+			{ "fname": "carWheelReactionsStaticLevel",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "carWheelReactionsStaticSlope",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+
+{
+			"name": "carreact2",
+			"title": "Car on level road: Wheel reactions",
+			"contents": [
+			{ "fname": "carWheelReactionsAccLevel",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "carWheelReactionsMaxAccLevel",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "carreact3",
+			"title": "Car on inclined road: Wheel reactions",
+			"contents": [
+			{ "fname": "carWheelReactionsAccSlope",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "carWheelReactionsMaxAccSlope",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "carreact4",
+			"title": "Car on curve: Wheel reactions",
+			"contents": [
+			{ "fname": "carWheelReactionsCurveLevel",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "carWheelReactionsCurveMaxSpeed",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "torque",
+			"title": "Computing moments",
+			"contents": [
+			{ "fname": "momentBeamSingleForce",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "moment4",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "torque2",
+			"title": "Computing moments: 2",
+			"contents": [
+			{ "fname": "momentBeamLine2",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "momentBeamLine",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "bank2",
+			"title": "Car on curved path with friction",
+			"contents": [
+			{ "fname": "carCornerMaxForces",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "cantreact",
+			"title": "Support reactions",
+			"contents": [
+			{ "fname": "cantileverReactions",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "curvmotion",
+			"title": "Curvilinear motion and reactions",
+			"contents": [
+			{ "fname": "beadCurvilinear",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+}
+]
+}

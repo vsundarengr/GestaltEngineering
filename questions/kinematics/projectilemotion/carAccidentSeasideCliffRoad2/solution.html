@@ -1,0 +1,39 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text">
+        The problem involves calculating the horizontal distance a car travels after driving off a cliff with an upward slope of {{params.angle}} degrees. The car becomes airborne at a height of {{params.H}} {{params.unitsDist}} above the ocean, traveling at {{params.v}} {{params.unitsSpeed}}. The goal is to determine the distance from the coast where the car will impact the water.
+    </pl-hint>
+    <pl-hint level="2" data-type="text">
+        Known Variables:
+        - Initial velocity \( V_c = {{params.v}} \) {{params.unitsSpeed}}.
+        - Slope angle \( \theta = {{params.angle}}^\circ \).
+        - Cliff height \( h = {{params.H}} \) {{params.unitsDist}}.
+        - Gravity \( g = 9.8 \) m/s\(^2\) or \( 32.2 \) ft/s\(^2\) depending on the unit system.
+    </pl-hint>
+    <pl-hint level="3" data-type="text">
+        Conversion and Equation Setup:
+        1. For SI units: Convert velocity to m/s: \( V_c = {{params.v}} \times \frac{1000}{3600} \).
+        2. For USCS units: Convert velocity to ft/s: \( V_c = {{params.v}} \times \frac{5280}{3600} \).
+        3. Decompose \( V_c \) into horizontal (\( V_{cx} \)) and vertical (\( V_{cy} \)) components:
+           - \( V_{cx} = V_c \cos(\theta) \)
+           - \( V_{cy} = V_c \sin(\theta) \)
+    </pl-hint>
+    <pl-hint level="4" data-type="text">
+        Calculating Distance:
+        1. Use the vertical motion equation to find flight time \( t \) by solving \( -\frac{1}{2} g t^2 + V_{cy} t - h = 0 \).
+        2. With \( t \), compute horizontal distance \( \Delta x = V_{cx} t \).
+    </pl-hint>
+    <pl-hint level="5" data-type="text">
+        Analysis:
+        - The car's trajectory is analyzed by separating its motion into horizontal and vertical components.
+        - The time of flight, \( t \), influences the horizontal distance, requiring precise calculation from vertical motion parameters.
+        - The quadratic equation used is derived from kinematic equations for vertical displacement and velocity.
+    </pl-hint>
+    <pl-hint level="6" data-type="text">
+        Educational Objective:
+        This guide aims to enhance understanding of projectile motion, breaking down the problem into manageable segments, applying kinematic equations for time and distance calculations, and using trigonometry to analyze velocity components.
+    </pl-hint>
+    <pl-hint level="7" data-type="text">
+        Conclusion:
+        The car will impact the water at a distance of {{correct_answers.d}} {{params.unitsDist}} from the coast, as determined by applying principles of projectile motion to the given parameters.
+    </pl-hint>
+</pl-solution-panel>

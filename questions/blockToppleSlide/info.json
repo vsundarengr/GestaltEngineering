@@ -1,0 +1,15 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-8740-fab6433ffbb2f",
+    "title": "Toppling and sliding",
+    "stem":"Force for topple and slide",
+    "topic": "rigid body",
+    "tags": ["force", "vectors","displacement", "moments"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript"
+}

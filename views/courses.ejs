@@ -1,0 +1,49 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Courses</h2>
+    </div>
+</header>
+
+<form class="addCourseForm">
+    <button> Add Course </button>
+</form>
+
+<div class="questions content">
+    <table> 
+        <thead>
+            <tr> 
+                <th> Name </th>
+                <th> Institution </th>
+                <th> Dates </th>
+                <th> Instructor </th>
+                <th> Active </th>
+            </tr>
+        </thead>
+        <tbody> 
+    <% if (courses.length > 0) {%>
+        <% courses.forEach( course =>{%>
+            <tr> 
+                <td> <a class="single" href="courses/<%= course._id%>" >  <%= course.name %> </a> </td>
+                <td> <%= course.institution %> </td>
+                <td> <%= course.startDate %> - <%= course.endDate %> </td>
+                <td> <%= course.instructor %> </td>
+                <td> <%= course.isActive %> </td>
+          </tr>
+        <%}) ;%>
+    <%} %>
+        </tbody>
+</table>
+</div>
+
+
+<script> 
+    const form = document.querySelector('.addCourseForm');
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        location.assign('/addCourse');
+    })
+</script>
+
+<%- include('partials/footer'); -%>

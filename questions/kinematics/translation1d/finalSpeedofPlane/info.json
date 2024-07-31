@@ -1,0 +1,19 @@
+{
+    "uuid": "f7d6b7a1-8e3d-4e3b-9c3a-6f7d8e9a0b1c",
+    "title": "Final Speed of a Plane",
+    "stem": "A plane is cruising at 800 kmph and travels a distance of 22 km over a period of 1 minute.",
+    "topic": "Physics",
+    "tags": [
+        "kinematics",
+        "speed",
+        "motion"
+    ],
+    "prereqs": "Understanding of speed, distance, and time calculations",
+    "isAdaptive": "true",
+    "createdBy": "lberm007@ucr.edu",
+    "qType": "num",
+    "nSteps": 1,
+    "updatedBy": "",
+    "dificulty": 1,
+    "codelang": "javascript"
+}

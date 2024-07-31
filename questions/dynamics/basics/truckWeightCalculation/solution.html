@@ -1,0 +1,26 @@
+<pl-solution-panel>
+    <!-- Introduction and Brief Guide -->
+    <pl-introduction>
+        <p>This guide will help you solve the problem of calculating the weight of a truck based on given parameters using a physics formula. Follow the steps and hints provided for a comprehensive understanding.</p>
+    </pl-introduction>
+    
+    <!-- Step 1: Understanding the Problem -->
+    <pl-hint level="1" data-type="text">
+        <strong>Understanding the Formula:</strong> The weight of the truck can be calculated using the formula: \( W = \frac{F \times d}{v^2} \), where \( F \) is the braking force in newtons, \( d \) is the distance in meters, and \( v \) is the speed in meters per second. This formula helps in understanding how the weight influences braking efficiency.
+    </pl-hint>
+    
+    <!-- Step 2: Substituting the Values -->
+    <pl-hint level="2" data-type="formula">
+        <p><strong>Substitute the Given Values:</strong> To find the weight, we’ll insert our specific values into the formula. Therefore, we compute \( W = \frac{{{params.force}} \times {{params.distance}}}{{{params.speed}}^2} \). It is crucial to ensure all units are consistent for accurate calculations (e.g., if force is given in kilonewtons, convert it to newtons).</p>
+    </pl-hint>
+    
+    <!-- Final Step: Showing the Correct Answer -->
+    <pl-hint level="3" data-type="result">
+        <strong>Final Calculation:</strong> Based on the substituted values, the weight of the truck is calculated to be \( m = {{correct_answers.w}} {{params.unitsWeight}} \). This result consolidates our understanding and application of the formula in practical scenarios.
+    </pl-hint>
+    
+    <!-- Conclusion -->
+    <pl-footer>
+        <p>This exercise demonstrates the importance of unit conversion and careful substitution in problem-solving within the STEM field. By following these steps, you can accurately determine critical physical quantities from given data.</p>
+    </pl-footer>
+</pl-solution-panel>

@@ -1,0 +1,11 @@
+<pl-question-panel>
+<p>
+An refrigerator operates between a high temperature of {{params.Tmax}} {{params.unitsTemperature}} and a minimum temperature of {{params.Tmin}} {{params.unitsTemperature}} </div>
+</p>
+<p> It is to extract {{params.Qc}} {{params.unitsHeatRate}} from the reservoir at the lower temperature.</p>
+</pl-question-panel>
+
+<p> What is the maximum coefficient of performance of the refrigerator? </p>
+<pl-number-input answers-name="cop" comparison="sigfig" digits="3" label="Coefficient of performance"></pl-number-input>
+<p> If the refrigerator operates at {{params.eff}}% of the COP of the ideal refrigeration, how much power (in {{params.unitsPower}}) needs to be supplied to the refrigerator? </p>
+<pl-number-input answers-name="Pin" comparison="sigfig" digits="3" label="Input power (in {{params.unitsPower}})"></pl-number-input>

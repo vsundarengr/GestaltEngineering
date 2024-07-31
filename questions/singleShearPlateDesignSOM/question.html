@@ -1,0 +1,12 @@
+<pl-question-panel>
+  <pl-figure file-name="singleshear.png"></pl-figure>
+<p>
+  Two plates are held together by a rivet  whose diameter is to be determined. The plates are loaded by a force F = {{params.Fd}} {{params.unitsForce}}.
+</p>
+<p> The rivet is made of {{params.materialName}} with yield strength {{params.sult}} {{params.unitsStress}}, shear yield strength of {{params.tult}} {{params.unitsStress}}, modulus of elasticity {{params.E}} {{params.unitsModulusElasticity}} and Poisson's ratio {{params.nud}}</p>
+</pl-question-panel>
+
+If the factor of safety is to be {{params.fs}}, what is the minimum diameter (in {{params.unitsDiameter}}) of the rivet?
+<pl-number-input answers-name="desdia" comparison="sigfig" digits="3" label="d (in {{params.unitsDiameter}})"></pl-number-input>
+
+

@@ -1,0 +1,23 @@
+{
+    "uuid": "8abcd91d6-64d1-4e89-b72d-ad2133f25b2f",
+    "title": "Airplace force",
+    "stem":"Airplace force",
+    "topic": "Force",
+    "tags": ["kinematics", "force"],
+    "prereqs":"kinematics",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript",
+    "resources": [
+        {
+            "type": "video",
+            "name": "hx1",
+            "title": "Example",
+            "url": "https://ucr.yuja.com/V/Video?v=7383244&node=31671458&a=80869590&preload=false"
+        }
+    ]
+}

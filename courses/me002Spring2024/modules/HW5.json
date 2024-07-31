@@ -1,0 +1,102 @@
+{
+"name": "hw5",
+"title": "Preclass 5",
+"topics" : [ 
+{
+			"name": "newtona",
+			"title": "Newton's laws: Application",
+			"contents": [
+			{ "fname": "dynamics/basics/forceBlockNoFrictionDown",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/forceBlockNoFrictionUp",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtonc1",
+			"title": "Newton's laws: Connected Bodies 1",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/noFrictionTwoBlocksAngle",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtonc2",
+			"title": "Newton's laws: Connected Bodies 2",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/twoBlocksWithNoFriction",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "friction1",
+			"title": "Basic friction",
+			"contents": [
+			{ "fname": "dynamics/friction/forceBlockDown",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/friction/forceBlockUp",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "friction2",
+			"title": "Friction and inclined planes",
+			"contents": [
+			{ "fname": "dynamics/friction/forceInclinedParallel",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/friction/forceInclinedParallelMinMax",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "friction3",
+			"title": "Friction and connected bodies",
+			"contents": [
+			{ "fname": "dynamics/friction/blockPulley1",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/friction/blockPulleyInclined",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+}
+]
+}

@@ -1,0 +1,11 @@
+
+<pl-question-panel>
+  <p> A solid object with {{params.masslabel}} {{params.m}} {{params.unitsMass}} is placed on a weighing machine such that the object and the weighing scale are both completed submerged in  {{params.fluid}} (specific gravity = {{params.sg}}).</p>
+  <p> The weight registered by the weighing machine in the fluid is {{params.mb}} {{params.unitsMass}}. </p>
+  <p> What is the volume (in {{params.unitsVolume}}) and its specific gravity of the object? </p>
+</pl-question-panel>
+
+
+<pl-number-input answers-name="volume" comparison="sigfig" digits="3" label="Volume (in {{params.unitsVolume}}) ="></pl-number-input>
+
+<pl-number-input answers-name="sgstone" comparison="sigfig" digits="3" label="Specific gravity ="></pl-number-input>

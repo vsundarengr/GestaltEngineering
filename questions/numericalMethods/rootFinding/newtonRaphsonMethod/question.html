@@ -1,0 +1,11 @@
+<pl-question-panel>
+  <p> Consider the function $ p(x) = {{params.polyString}} $</p>
+  <p> Use the Newton-Raphson method to determine the root of the polynomial starting with $ x = {{params.xg}} $ </p>
+  <p> For each step, indicate the lower and upper limit of the updated intervals and the absolute value of the relative error in that step </p>
+</pl-question-panel>
+
+<pl-static-text name="stepNumber">  <h4>  Iteration 1 </h4> </pl-static-text>
+
+<pl-number-input answers-name="xr" comparison="sigfig" digits="3" label="Root estimate "> </pl-number-input>
+<pl-number-input answers-name="curErr" comparison="sigfig" digits="3" label="Relative error" > </pl-number-input>
+

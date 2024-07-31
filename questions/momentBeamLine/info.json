@@ -1,0 +1,15 @@
+{
+    "uuid": "8ab3561d6-64d1-4e89-8740-93d8634ffbb2f",
+    "title": "Moment of a force on a beam",
+    "stem":"Compute moments",
+    "topic": "mechanics",
+    "tags": ["vectors", "forces"],
+    "prereqs":"",
+    "isAdaptive": "true",
+    "createdBy": "sundar@google.com",
+    "qType":"num",
+    "nSteps": 1,
+    "updatedBy":"", 
+    "difficulty": 1,
+	"codelang": "javascript"
+}

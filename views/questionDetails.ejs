@@ -1,0 +1,465 @@
+<%- include('partials/header'); -%>
+
+
+
+<div class="goback">
+    <button> Show all questions </button>
+</div>
+
+<header>
+    <div class="headings">
+      <h3><%= title %>: <%= question.title%></h3>
+    </div>
+  </header>
+
+
+
+  <div class="qdetails"> 
+    <a class ="delete" data-doc="<%= question._id %>"> 
+        <img src="/trashcan.svg" alt="delete icon" />
+    </a>
+    <table>
+        <tr>
+            <td> Location </td>
+            <td> <%= question.location %> </td>
+        </tr>
+        <tr>
+            <td> topic </td>
+            <td> <%= question.topic %> </td>
+        </tr>
+        <tr>
+            <td> question type </td>
+            <td> <%= question.type %></td>
+        </tr>
+        <tr>
+            <td> tags </td>
+            <td> <%= question.tags %></td>
+        </tr>
+        <tr>
+            <td> pre-requisites </td>
+            <td> <%= question.prereqs %> </td>
+        </tr>
+        <tr>
+            <td> created by </td>
+            <td> <%= question.topic %></td>
+        </tr>
+        <tr>
+            <td> adaptive </td>
+            <td> <%= question.isadaptive %></td>
+        </tr>
+        <tr>
+            <td> number of steps </td>
+            <td> <%= question.nSteps %> </td>
+        </tr>
+
+    </table>
+  </div>
+
+
+<div class="updatejson" data-doc="<%= question._id %>" data-loc="<%= question.location %>">
+    <button> Update json file </button>
+</div>
+
+<div class="updatehtml" data-doc="<%= question._id %>" data-loc="<%= question.location %>">
+    <button> Update HTML </button>
+</div>
+
+<div class="updatesoln" data-doc="<%= question._id %>" data-loc="<%= question.location %>">
+    <button> Update Solution </button>
+</div>
+
+
+<div class = "newvariant" data-doc="<%= question._id %>">
+    <button> Create new variant </button>
+</div>
+
+<div class = "questionbody"> 
+<%- htmlString %>
+</div>
+
+<input type="hidden" id="currentLevel" name="currentLevel" value="0">
+<div class = "hints">
+    
+</div>
+
+<div class="submit" data-doc="<%= questionInstId %>">
+    <button> Submit answer </button>
+</div>
+
+<div class="nextstep" data-doc="<%= questionInstId %>">
+    <% if (question.nSteps > 1) {%> 
+    <button id="nextstepbutton"> Next step </button>
+    <% } %>
+</div>
+
+<div class="showanswers" data-doc="<%= questionInstId %>">
+    <button id="showanswers"> Show answer</button>
+</div>
+
+<div class="showhints" data-doc="<%= questionInstId %>">
+    <button id="showhints"> Show hint </button>
+</div>
+
+<% if (typeof question.resources && question.resources.length > 0 ) { %>
+<div class="showresources" data-doc="<%= question._id %>">
+    <label for="resources"> Choose a resource:  </label>
+    <select name="resources" id="resources" class="resources">
+        <% for (let i =0 ; i < question.resources.length; i++) { %>
+            <option data-url = "<%= question.resources[i].url %>" id= "<%= question.resources[i].name %>" value="<%= question.resources[i].name %>"> <%= question.resources[i].title %> </option>
+        <% } %>
+    </select>
+    <button id="resbutton" value="submit" onClick="showResources()"> Show resource </button>    
+</div>
+<%} %>
+
+
+<script>
+
+  
+
+    function showResources(){
+        const showResources = document.querySelector('.showresources');
+        const qid = showResources.dataset.doc;
+        const selection = document.querySelector('#resources');
+        const selopt = document.getElementById(selection.value);
+        const url = selopt.dataset.url;
+        console.log('URL in selection is ', url);
+        window.open(url);
+    }
+
+    const nextStepForm = document.querySelector('.nextstep');
+    nextStepForm.addEventListener('click', async(e)=>{
+        e.preventDefault();
+        const questionInstId = nextStepForm.dataset.doc;
+        const urlSearch = new URLSearchParams({qid: questionInstId});
+        const endPoint = '/showNextStep?' + urlSearch.toString();
+        console.log('ENDPOINT = ', endPoint);
+        try {
+            const res = await fetch(endPoint);
+            const data = await res.json();
+            console.log('RESPONSE (next step) IS ', data);
+            const sn = document.querySelector('[name=stepNumber]');
+            sn.innerHTML = `<h4> Iteration: ${data.nextStep} </h4> `;
+            let responseEls = document.getElementsByClassName('response');
+            for (let i = 0; i < responseEls.length; i++) {
+                responseEls[i].value = '';
+            }
+            let feedbacks = document.getElementsByClassName('feedback')
+            
+            for (let i = 0; i < feedbacks.length; i++) {
+                console.log('Feedback is ', feedbacks[i].innerHTML);
+                feedbacks[i].innerHTML = '';
+            }
+            if (data.lastStep === true ) {
+                document.getElementById('nextstepbutton').setAttribute('disabled','true');
+            }
+
+        } catch (err) {
+            console.log('ERROR in getting next step is ', err);
+        }
+
+    });
+
+
+    const updateHTMLForm = document.querySelector('.updatehtml');
+    updateHTMLForm.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const qid = updateJsonForm.dataset.doc;
+        const loc = updateJsonForm.dataset.loc;
+        let pf = {
+            qid: qid,
+            location: loc
+        };
+
+        const endPoint = '/questionUpdateHTML';
+        console.log('Endpoint = ',  endPoint);
+        try {
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify(pf),
+                headers: {'Content-Type': 'application/json'}
+            });
+
+            const data = await res.json();
+            console.log('Data updated = ', data.updated);
+        }
+        catch (err) {
+            console.log('Unable to fetch in updatejson');
+        }
+
+    });
+
+
+    const updateSolutionForm = document.querySelector('.updatesoln');
+    updateSolutionForm.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const qid = updateJsonForm.dataset.doc;
+        const loc = updateJsonForm.dataset.loc;
+        let pf = {
+            qid: qid,
+            location: loc
+        };
+
+        const endPoint = '/questionUpdateSolution';
+        console.log('Endpoint = ',  endPoint);
+        try {
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify(pf),
+                headers: {'Content-Type': 'application/json'}
+            });
+
+            const data = await res.json();
+            console.log('Data updated = ', data.updated);
+        }
+        catch (err) {
+            console.log('Unable to fetch in updatejson');
+        }
+
+    });
+
+    const updateJsonForm = document.querySelector('.updatejson');
+    updateJsonForm.addEventListener('click', async (e)=> {
+        e.preventDefault();
+        const qid = updateJsonForm.dataset.doc;
+        const loc = updateJsonForm.dataset.loc;
+        let pf = {
+            qid: qid,
+            location: loc
+        };
+        const endPoint = '/questionUpdateJson';
+        console.log('Endpoint = ',  endPoint);
+        try {
+            const res = await fetch(endPoint, {
+                method: 'POST',
+                body: JSON.stringify(pf),
+                headers: {'Content-Type': 'application/json'}
+            });
+
+            const data = await res.json();
+            console.log('Data updated = ', data.updated);
+        }
+        catch (err) {
+            console.log('Unable to fetch in updatejson');
+        }
+
+    });
+
+    const submitAnswer = document.querySelector('.submit');
+    submitAnswer.addEventListener('click', async (e)=>{
+        e.preventDefault();
+        const endpoint = '/checkAttempt';
+     
+        let answerForms = document.querySelectorAll('.answers');
+        responses = {};
+        for (let i = 0 ; i < answerForms.length; i++) {
+            let formName = answerForms[i].getAttribute('name');
+            console.log('Found !', formName);
+            let responseEls = answerForms[i].getElementsByClassName('response');
+            console.log('Number of responses is ', responseEls.length);
+            resp = [];
+            chbxs = {};
+            for (let j = 0; j < responseEls.length; j++) {
+                id = responseEls[j].getAttribute('id');
+                type = responseEls[j].getAttribute('type');
+                name = responseEls[j].getAttribute('name');
+                console.log(`ID ${id} NAME ${name} TYPE: ${type} `);
+                if ( type === 'text' || type === 'number') {
+                    val = responseEls[j].value;
+                    console.log(`ID is ${id} and VALUE is ${val}`);
+                    let d = {responseId: name, type: "text", studentResponse: val};
+                    resp.push(d);
+                } else if (type === 'radio') {
+                    if (responseEls[j].checked) {
+                        let d = {responseId: name, type: "radio", studentResponse: id};
+                        resp.push(d);                    
+                    }
+                } else if (type === 'checkbox') {
+                    if (responseEls[j].checked) {
+                        let k ; 
+                        for (k = 0; k < resp.length; k++) {
+                            if (resp[k].responseId === name)
+                                break;
+                        }
+                        if (k >= resp.length){
+                            let d = {responseId: name, type: "checkbox", studentResponse: [id]};
+                            resp.push(d); 
+                        } else {
+                            resp[k].studentResponse.push(id);
+                        }
+                    }
+                } else if (type === 'matrix') {
+                    val = responseEls[j].value;
+                    console.log(`ID is ${id} and VALUE is ${val}`);
+                    let d = {responseId: name, type: "matrix", studentResponse: val};
+                    resp.push(d);
+                }
+                }
+            responses[formName] = resp;
+        }
+
+        console.log(responses);
+        
+        try {
+            const json1 = {
+                instanceId: submitAnswer.dataset.doc,
+                responses: responses
+            }
+            console.log('JSON IS : ', json1);
+            const res = await fetch(endpoint, {
+                method: 'POST',
+                body: JSON.stringify(json1),
+                headers: {'Content-Type': 'application/json'}
+            });
+
+            const data = await res.json();
+            console.log('INCOMING DATA IS :', data);
+            let datar = data.responses;
+            answerForms = document.querySelectorAll('.answers');
+            for (let i = 0 ; i < answerForms.length; i++) {
+                  let formName = answerForms[i].getAttribute('name');
+                  let responseEls = answerForms[i].getElementsByClassName('response');
+                  let formFeedback = answerForms[i].getElementsByClassName('feedback');
+                  let formFeed = datar[formName];
+                  console.log('FORM FEED IS ', formFeed);
+                  for (let j = 0; j < formFeed.length; j++) {
+                    let itemFeed = formFeed[j];
+                  //  console.log('IOTEM FEED IUS ', itemFeed);
+                    id = responseEls[j].getAttribute('id');
+                    type = responseEls[j].getAttribute('type');
+                    name = responseEls[j].getAttribute('name');
+                    let cr = itemFeed['checkRes'].res;
+                    if (cr) {
+                        formFeedback[0].innerHTML = 'Correct!';
+                        console.log('Setting FEedbak CHECK RES IS ', cr);
+                      console.log('INNER HTML IS ', formFeedback[0].innerHTML);
+                    } else {
+                        formFeedback[0].innerHTML = itemFeed['checkRes'].errors;
+                   //     formFeedback[0].innerHTML = 'Incorrect!';
+                    }
+                    // if ( type === 'text') {
+                    //     let cr = itemFeed['checkRes'].res;
+                    //     if (cr) {
+                    //         formFeedback[0].innerHTML = 'Correct!';
+                    //         console.log('Setting FEedbak CHECK RES IS ', cr);
+                    //         console.log('INNER HTML IS ', formFeedback[0].innerHTML);
+                    //     } else {
+                    //         formFeedback[0].innerHTML = 'Incorrect!';
+                    //     }
+                        
+                    // }
+                    //  else if (type === 'radio') {
+                    //     checkRes = itemFeed['checkRes'];
+                    //     console.log('CHECK RES RADIO IS ', checkRes.res);
+
+                    // }
+                    //  else if (type === 'checkbox') {
+                    //     checkRes = itemFeed['checkRes'];
+                    //     console.log('CHECK RES CHECKBOX IS ', checkRes.res);
+                    // }
+
+            }
+        }
+
+
+        } catch(err){
+           console.log('Error checking Answer: ', err);
+        }
+    });
+
+    const showHints = document.querySelector('.showhints');
+    showHints.addEventListener('click', async (e)=>{
+        e.preventDefault();
+        const currentLevel = Number(document.getElementById('currentLevel').value);
+        const questionInstId = showAnswer.dataset.doc;
+        const urlSearch = new URLSearchParams({qid: questionInstId, currentLevel: currentLevel});
+        const endPoint = '/showHint?' + urlSearch.toString();
+        //const endPoint = '/showHint/' + questionInstId;
+        console.log('Endpont is ', endPoint);
+        fetch(endPoint)
+        .then (response => response.json())
+        .then (data => {
+          //  console.log('Data = ', data.hintString);
+            document.getElementById('currentLevel').value = currentLevel + 1;
+            const hints = document.querySelector('.hints')
+            hints.innerHTML = data.hintString;
+            MathJax.typeset();
+        })
+        .catch( err=> {console.log('Unable to retrieve hint'), err});
+    });
+
+    const showAnswer = document.querySelector('.showanswers');
+    showAnswer.addEventListener( 'click', async (e)=>{
+    e.preventDefault();
+    const questionInstId = showAnswer.dataset.doc;
+    const endPoint = '/showAnswer/' + questionInstId;
+   // console.log('Fetching answer from ', endPoint);
+    fetch(endPoint)
+        .then (response => response.json())
+        .then (data => {
+          //  console.log('DATA RETURNED FROM SHOW ANSWER IS ', data);
+            answerForms = document.querySelectorAll('.answers');
+            let answers = data.answers;
+            console.log('ALL ANSWERS ARE ', answers);
+            for (let i = 0 ; i < answerForms.length; i++) {
+                let formName = answerForms[i].getAttribute('name');
+                let formFeedback = answerForms[i].getElementsByClassName('feedback');
+                console.log('FORM NAME IS ', formName);
+                let ans = answers[formName];
+                let ansType = typeof ans;
+                
+                if (isNaN(ans)) {
+                    if (ansType === 'string') {
+                        formFeedback[0].innerHTML = ans ;
+                        MathJax.typeset();
+                    }
+                    else {
+                    let answerText = 'Correct selection: ';
+                    for (let j = 0; j < answers[formName].length; j ++) {
+                        let answerId = answers[formName][j];
+                        console.log('Answer ID = ', answerId);
+                        let ch = answerForms[i].querySelector(`#${answerId}`);
+                        answerText += ch.value;
+                        answerText += `</br>`;
+                    }
+                   // formFeedback[0].innerHTML = answers[formName];
+                   formFeedback[0].innerHTML = answerText;
+                }
+                } else {
+                    ans = Math.round(100*ans)/100;
+                    formFeedback[0].innerHTML = ans;
+                }
+                formFeedback[0].style.color = 'blue';
+         //       document.getElementById('submitanswers').setAttribute('disabled','true');              
+             }
+            })
+        .catch( err=> console.log('Cannot retrieve answers ', err));
+});
+
+    const trashcan = document.querySelector('a.delete');
+    trashcan.addEventListener('click', (e)=>{
+        const endpoint = `/questionDetails/${trashcan.dataset.doc}`;
+        console.log(`Deleting record ${endpoint}`);
+        fetch(endpoint, {
+            method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => window.location.href = data.redirect)
+        .catch( err => console.log(err))
+    });
+
+    const newinstance = document.querySelector('.newvariant');
+    newinstance.addEventListener('click', (e)=>{
+        const endpoint = `/questionInstance/${newinstance.dataset.doc}`
+        console.log(endpoint);
+        location = endpoint;
+    });
+
+
+    const goback = document.querySelector('.goback');
+    goback.addEventListener('click', (e)=>{
+        location = "/allQuestions";
+    });
+</script>
+
+<%- include('partials/footer'); -%>

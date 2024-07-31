@@ -1,0 +1,14 @@
+<pl-question-panel>
+  <pl-figure file-name="twoblocksinccable.png"></pl-figure>
+  <p> The figure shows two blocks A and B moving on a surface and connected by a cable and being tugged by a force P = {{params.P}} {{params.unitsForce}}. </p>
+  <p> The {{params.masslabel}} of block A is {{params.mA}} {{params.unitsMass}} while the {{params.masslabel}} of block B is {{params.mB}} {{params.unitsMass}}. </p>
+  <p> The coefficient of kinetic friction between A and the surface is {{params.muA}} while the coefficient of friction between B and the surface is {{params.muB}}.</p>
+  <p> The cable makes an angle {{params.theta}} degrees. </p>
+</pl-question-panel>
+
+What's the tension (in {{params.unitsForce}}) in the cable?
+<pl-number-input answers-name="T" comparison="sigfig" digits="3" label="Normal reaction (in {{params.unitsForce}})"></pl-number-input>
+
+What's the acceleration (in {{params.unitsAcceleration}}) of the two blocks?
+<pl-number-input answers-name="a" comparison="sigfig" digits="3" label="Acceleration (in {{params.unitsAcceleration}})"></pl-number-input>
+

@@ -1,0 +1,95 @@
+<%- include('partials/header'); -%>
+
+<header>
+    <div class="headings">
+      <h2> Add Course</h2>
+    </div>
+</header>
+
+<form class = "addCourse">
+    <label for="cname"> Course name :</label>
+    <input name="cname" type="text" /> <br>
+   
+    <label for="courseNumber"> Course number  :</label> 
+    <input name="courseNumber" type="text"/> <br>
+    
+    <label for="section"> Section  :</label> 
+    <input name="section" type="text"/> 
+    
+    <label for="instructor"> Instructor email  :</label> 
+    <input name="instructor" type="email"/> 
+
+    <label for="institution"> Select the institution to add this course: </label>
+    <select name="institution">
+        <option value="ucr"> U.C. Riverside </option>
+        <option value="cpp"> Cal Poly Pomona </option>
+        <option value="mtsac"> Mt. San Antonio Community College </option>
+    </select> <br>
+
+    <label for ="session"> Select the session to add this course: </label>
+    <select name="session">
+            <option value="fall"> Fall </option>
+            <option value="winter"> Winter </option>
+            <option value="spring"> Spring </option>
+            <option value="summer"> Summer </option>
+    </select>
+
+    <label for="startDate">Start Date for course:</label>
+    <input type="date" id="startDate" name="startDate">
+
+    <label for="endDate">End Date for course:</label>
+    <input type="date" id="endDate" name="endDate">
+
+    <label for="fname"> Course File name :</label>
+    <input name="fname" type="text" /> <br>
+
+    <button> Add </button>
+
+</form>
+
+<script>
+    const addCourseForm = document.querySelector('.addCourse');
+    addCourseForm.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const cname = addCourseForm.cname.value;
+        const courseNumber = addCourseForm.courseNumber.value;
+        const section = addCourseForm.section.value;
+        const instructor = addCourseForm.instructor.value;
+        const institution = addCourseForm.institution.value;
+        const session = addCourseForm.session.value;
+        const startDate = addCourseForm.startDate.value;
+        const endDate = addCourseForm.endDate.value;
+        const fname = addCourseForm.fname.value;
+
+        const jsonToSend = {cname: cname,
+                            courseNumber: courseNumber,
+                            section: section,
+                            instructor: instructor,
+                            institution:institution,
+                            session: session,
+                            startDate:startDate,
+                            endDate:endDate,
+                            fname: fname
+                        };
+        console.log(jsonToSend);
+
+        try {
+            const res = await fetch('/addCourse', {
+                method: 'POST',
+                body: JSON.stringify(jsonToSend),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            console.log('DATA is ', data);
+            location.assign('/courses');
+        } catch (err) {
+            console.log(err);
+        }
+
+       // location.assign('/addCourse');
+    })
+</script>
+
+
+
+<%- include('partials/footer'); -%>

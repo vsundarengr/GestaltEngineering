@@ -1,0 +1,50 @@
+<%- include('partials/header'); -%>
+
+
+<form>
+    <label for="questionLocation"> Enter the directory where the file is located </label>
+    <input type="text" name="questionLocation" required />
+    <div class="questionLocation error"></div>
+    <button> Insert question </button>
+</form>
+
+<script>
+    const form = document.querySelector('form');
+    const questionError = document.querySelector('.questionLocation.error');
+    form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const quest = form.questionLocation.value;
+        try {
+            const res = await fetch('/insertQuestion', {
+                method: 'POST',
+                body: JSON.stringify({location: quest}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const data = await res.json();
+            // if (data.errors){
+            //     questionError.textContent = data.errors.question;
+            // }
+            let errString ='';
+            let k = 0;
+            let hasErrors = false;
+            for (i in data.errors){                
+                if (data.errors[i] !== ''){
+                    errString += data.errors[i] + '<br/>'; 
+                    hasErrors = true;            
+                 }
+                k = k + 1;
+            }
+            questionError.innerHTML = errString;
+
+            if (!hasErrors) {
+               location.assign('/allQuestions'); 
+            }
+
+      
+        } catch (err) {
+            console.log(err);
+        }
+    });
+</script>
+
+<%- include('partials/footer'); -%>

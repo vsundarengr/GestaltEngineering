@@ -1,0 +1,138 @@
+{
+"name": "trans1d",
+"title": "Translation 1D",
+"topics" : [ 
+{
+	"name": "units",
+	"title": "Unit conversion",
+	"contents": [
+			{ "fname": "unitConversions/speedConversion",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "basicconcepts",
+	"title": "Basic Concepts",
+	"contents": [
+			{ "fname": "kinematics/translation1d/velTimeGraph",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/distTimeGraph",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/distTimeGraph2",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/constantVelocity",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "numproblems",
+	"title": "Basic numerical problems",
+	"contents": [
+			{ "fname": "kinematics/translation1d/acclTranslation",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/brakingDistance",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/brakingDistance2",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/maxAcceleration",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "avgspeed",
+	"title": "Average speed",
+	"contents": [
+			{ "fname": "kinematics/translation1d/averageVelAccel",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/averageVelMultiple",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "moreprobs",
+	"title": "More problems",
+	"contents": [
+			{ "fname": "kinematics/translation1d/constAcc1",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/carSpeedReduction",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/decelCalc",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "motiongravity",
+	"title": "Motion under gravity",
+	"contents": [
+			{ "fname": "kinematics/translation1d/constAcc2",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/ballThrownUp",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+}
+]
+}

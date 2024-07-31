@@ -1,0 +1,122 @@
+{
+ "title": "Centroid",
+ 
+ "topics": "centroid",
+ "pre-reqs": ["geometry", "trigonometry", "forces", "moments"],
+ "createdBy": "sundar@google.com",
+ "contents": [
+ { "name": "objectives",
+	"title":"Objectives",
+	"type": "static_content",
+	"objectives": ["compute centroid of areas","compute centroid of composite areas"],
+	"additionalinfo": ""
+ },
+ { "name": "quiz1",
+   "title": "Background quiz",
+   "type": "quiz",
+   "questions": [ "beamWeights"],
+   "order": "random",
+   "selection": {"min": 3, "max": 7},
+   "numquest": 10,
+   "graded": true,
+   "contents": [
+	{ "fname": "statics/supportReactions/beamWeights",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	},
+	{ "fname": "statics/supportReactions/beamWeights1",
+	  "min" : 1,
+	  "max" : 1,
+	  "weight": 1,
+	  "maxScore": 1
+	}]
+ },
+ { "name": "vid1",
+   "title": "Centroid of areas",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=3328935&node=14548627&a=184705769&autoplay=1"
+ },
+ { "name": "vid2",
+   "title": "Centroid of composite areas",
+   "type": "video",
+   "url": "https://ucr.yuja.com/V/Video?v=3328894&node=14548628&a=150108333&autoplay=1"
+ },
+  { "name": "quiz1",
+   "title": "Quiz 1",
+   "type": "quiz",
+   "questions": [ "addNumbersMultiple"],
+   "order": "random",
+   "selection": {"min": 5, "max": 7},
+   "numquest": 10,
+   "graded": true,
+   "contents": [
+	{ "fname": "statics/centroid/parabolic1",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/centroid/parabolic2",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/centroid/parabolic3",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/centroid/parabolic4",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	}]
+ },
+   { "name": "quiz2",
+   "title": "Quiz 2",
+   "type": "quiz",
+   "questions": [ "addNumbersMultiple"],
+   "order": "random",
+   "selection": {"min": 6, "max": 7},
+   "numquest": 10,
+   "graded": true,
+   "contents": [
+	{ "fname": "statics/centroid/tbeamcentroid",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/centroid/trapezoidcentroid",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/centroid/semicircular",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	},
+	{ "fname": "statics/centroid/recthole",
+	  "min" : 1,
+	  "max" : 2,
+	  "weight": 1,
+	  "maxScore": 1,
+	  "fracQuestions": [1.0, 1.0]
+	}]
+ }]
+ }

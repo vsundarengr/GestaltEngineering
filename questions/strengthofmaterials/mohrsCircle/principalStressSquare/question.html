@@ -1,0 +1,27 @@
+<pl-question-panel>
+The figure shows the state of plane stress for an element. 
+<p>
+</p>  
+{{params.svgString}}
+</pl-question-panel>
+
+<u>  Use the usual conventions for the sign of the stresses. </u>
+<p> </p>
+<p> </p>
+What is the maximum principal stress (in {{params.unitsStress}})?
+<pl-number-input answers-name="sigmamax" comparison="sigfig" digits="3" label=" $ \sigma_1 $ (in {{params.unitsStress}})"></pl-number-input>
+
+What is the angle (in degrees) made by the plane corresponding to the maximum principal stress with the x-axis?
+<pl-number-input answers-name="thetap1" comparison="sigfig" digits="3" label=" $ \theta_1 $ (in {{params.unitsStress}})"></pl-number-input>
+
+What is the minimum principal stress (in {{params.unitsStress}})?
+<pl-number-input answers-name="sigmamin" comparison="sigfig" digits="3" label=" $ \sigma_2 $ (in {{params.unitsStress}})"></pl-number-input>
+
+What is the angle (in degrees) made by the plane corresponding to the minimum principal stress with the x-axis?
+<pl-number-input answers-name="thetap2" comparison="sigfig" digits="3" label=" $ \theta_2 $ (in {{params.unitsStress}})"></pl-number-input>
+
+What is the maximum shear stress (in {{params.unitsStress}})?
+<pl-number-input answers-name="taumax" comparison="sigfig" digits="3" label=" $ \tau $ (in {{params.unitsStress}})"></pl-number-input>
+
+What is the angle (in degrees) made by the plane corresponding to the minimum principal stress with the x-axis?
+<pl-number-input answers-name="thetas" comparison="sigfig" digits="3" label=" $ \theta_s $ (in {{params.unitsStress}})"></pl-number-input>

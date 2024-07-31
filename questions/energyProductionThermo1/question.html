@@ -1,0 +1,13 @@
+<pl-question-panel>
+<p>
+A power plant operates at a maximum temperature of {{params.Tmin}} {{params.unitsTemperature}} and at an ambient temeperature of {{params.Tmax}} {{params.unitsTemperature}}. 
+</p>
+<p> The power plant is to produce an electrical output power is {{params.Pout}} {{params.unitsPower}}. The plants operates at {{params.frac}}% of the ideal efficiency.</p>
+<p> The power plant uses fuel with heating value {{params.hv}} {{params.unitsHV}}. </p>
+</pl-question-panel>
+
+
+<p> How much power (in {{params.unitsPower}}) needs to be supplied to the plant? </p>
+<pl-number-input answers-name="Pin" comparison="sigfig" digits="3" label="Input power (in {{params.unitsPower}})"></pl-number-input>
+<p> How much mass (in {{params.unitsMassRate}}) needs to be supplied to the plant? </p>
+<pl-number-input answers-name="mdot" comparison="sigfig" digits="3" label="$ \dot{m} $ (in {{params.unitsMassRate}})"></pl-number-input>

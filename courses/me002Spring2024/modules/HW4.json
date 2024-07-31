@@ -1,0 +1,168 @@
+{
+"name": "hw4",
+"title": "Preclass 4",
+"topics" : [ 
+{
+	"name": "trans1",
+	"title": "Translation 1D",
+	"contents": [
+			{ "fname": "kinematics/translation1d/finalSpeedofPlane",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/minimumDistanceCouch",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/translation1d/rocketLaunchHeight",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "projectile",
+	"title": "Projectiles",
+	"contents": [
+			{ "fname": "kinematics/projectilemotion/planeNutAcc",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "kinematics/projectilemotion/carAccidentSeasideCliffRoad2",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "basicvectors",
+	"title": "Basic vectors",
+	"contents": [
+			{ "fname": "unitVector",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "vectorLengthAngleToXY",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "vectorXYToLengthAngle",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+	"name": "addvectors",
+	"title": "Vector addition",
+	"contents": [
+			{ "fname": "addVectorsGeometry",
+				  "min" : 1,
+				  "max" : 20,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+	]
+},
+{
+			"name": "newtonb",
+			"title": "Newton's laws: Basics",
+			"contents": [
+			{ "fname": "dynamics/basics/truckWeightCalculation",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/truckBrakingForceCalculation",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/uniformAccelerationForceCalculation",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/stoppingDistanceCalculation",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtona",
+			"title": "Newton's laws: Application",
+			"contents": [
+			{ "fname": "dynamics/basics/elevatorReaction",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			},
+			{ "fname": "dynamics/basics/elevatorReactionTension",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtonc1",
+			"title": "Newton's laws: Connected Bodies 1",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/connectedBlocks",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtonc2",
+			"title": "Newton's laws: Connected Bodies 2",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/accelerationMassesInclinedPlaneSmooth",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+},
+{
+			"name": "newtonc3",
+			"title": "Newton's laws: Connected Bodies 3",
+			"contents": [
+			{ "fname": "dynamics/connectedBodies/forceTruckTrailerSmooth",
+				  "min" : 1,
+				  "max" : 8,
+				  "weight": 1,
+				  "maxScore": 1
+			}
+			]
+}
+]
+}

@@ -1,0 +1,12 @@
+<pl-question-panel>
+<p> A pipe of diameter {{params.D1}} {{params.unitsDiameter}} carries a flow of {{params.fluidName}} at a pressure of {{params.P}} {{params.unitsPressure}} (absolute) and temperature {{params.T}} {{params.unitsTemperature}}. The fluid flows with a speed of {{params.V1}} {{params.unitsSpeed}}. </p>
+<p> It is connected by a T-junction to another pipe of diameter {{params.D2}} {{params.unitsDiameter}} carrying {{params.fluidName}} with a speed of {{params.V2}} {{params.unitsSpeed}} and the same temperature and pressure.</p>
+<p> The two stream mix and exit through an outlet pipe with diameter {{params.D3}} {{params.unitsDiameter}}. </p>
+</pl-question-panel>
+
+<p > What is the fluid speed (in {{params.unitsSpeed}} )in the outlet pipe?</p>
+<pl-number-input answers-name="V" comparison="sigfig" digits="3" label="$ V $ (in {{params.unitsSpeed}})"></pl-number-input>
+<p> What is the volumetric flow rate of the fluid in {{params.unitsFlowRate}}?</p>
+<pl-number-input answers-name="Q" comparison="sigfig" digits="3" label="$ \dot{V} $ (in {{params.unitsFlowRate}})"></pl-number-input>
+<p> What is the mass flow rate (in {{params.unitsMassRate}} ) of the fluid flowing in the pipe? </p>
+<pl-number-input answers-name="m" comparison="sigfig" digits="3" label="v  (in {{params.unitsMassRate}})"></pl-number-input>

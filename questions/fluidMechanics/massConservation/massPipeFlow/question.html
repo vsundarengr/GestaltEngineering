@@ -1,0 +1,9 @@
+<pl-question-panel>
+<p> A pipe of diameter {{params.D}} {{params.unitsDiameter}} carries a flow of {{params.fluidName}} (specific gravity = {{params.sg}}). The fluid flows with a speed of {{params.V}} {{params.unitsSpeed}}. </p>
+</pl-question-panel>
+
+
+<p> What is the volumetric flow rate of the fluid in {{params.unitsFlowRate}}?</p>
+<pl-number-input answers-name="Q" comparison="sigfig" digits="3" label="$ \dot{V} $ (in {{params.unitsFlowRate}})"></pl-number-input>
+<p> What is the mass flow rate (in {{params.unitsMassRate}} ) of the fluid flowing in the pipe? </p>
+<pl-number-input answers-name="m" comparison="sigfig" digits="3" label="v  (in {{params.unitsMassRate}})"></pl-number-input>

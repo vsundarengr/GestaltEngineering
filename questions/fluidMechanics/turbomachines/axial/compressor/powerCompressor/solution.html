@@ -1,0 +1,19 @@
+<pl-solution-panel>
+    <pl-hint level="1" data-type="text"> Determine $ \dot{m} = \rho A V_a =\rho \pi (R_2^2 - R_1^2) V_a$ </pl-hint>
+    <pl-hint level="2" data-type="text">  Draw the outlet triangle with the blade velocity $ u_b $  as one side. The relative velocity vector $ V_{r1} $ makes an angle {{params.beta1deg}} degrees with $ u_b $. Also $ V_{t1} $ can be computed</pl-hint>
+    <pl-hint level="3" data-type="text"> Draw the outlet triangle with the blade velocity $ u_b $  as one side. The relative velocity vector $ V_{r2} $ makes an angle {{params.beta2deg}} degrees with $ u_b $. Also $ V_{t2} $ can be computed </pl-hint>
+    <pl-hint level="4" data-type="text"> The torque is $ T = \dot{m} (V_{t2} - V_{t1}) \bar{r} $, $ P = \dot{m} (V_{t2} - V_{t1}) u_b $ and $ w = (V_{t2} - V_{t1}) u_b $ </pl-hint>
+    <pl-hint level="5" data-type="text"> 
+        <ul>
+            <li> Use ideal gas law to find $ \rho = {{correct_answers.rho}}  $ {{params.unitsDensity}} </li>
+            <li> $ \dot{V} = \pi (R^2 - R_1^2) = \pi ( {{params.r2}}^2 - {{params.r1}}^2) = {{params.Vdot}} $</li>
+            <li> $ \dot{m} = \rho  \dot{V} = {{correct_answers.rho}} \times {{params.Vdot}}  \implies \dot{m} = {{correct_answers.mdot}} {{params.unitsMassRate}} $ </li>
+            <li> $ V_{t1} = u_2 - V_{a} \, cot \beta_1  \implies V_{t1} = {{correct_answers.Vt1}}  {{params.unitsSpeed}} $ </li>
+            <li> $ V_{t2} = u_2 - V_{a} \, cot \beta_2  \implies V_{t2} = {{correct_answers.Vt2}}  {{params.unitsSpeed}} $ </li>
+            <li> $ T  =  \dot{m}( V_{t2} -V_{t1}) \bar{r} = {{correct_answers.mdot}} \times ( {{correct_answers.Vt2}} - {{correct_answers.Vt1}}) \times {{params.r2}} = {{correct_answers.torque}} {{params.unitsTorque}} $ </li>
+            <li> $ Power = \dot{m} ( V_{t2} -V_{t1})\bar{r} = {{correct_answers.mdot}} \times ( {{correct_answers.Vt2}} - {{correct_answers.Vt1}}) \times R_2 = {{correct_answers.power}} {{params.unitsPower}} $ </li>
+            <li> Work per unit mass = $ ( V_{t2} -V_{t1}) u_b = ( {{correct_answers.Vt2}} - {{correct_answers.Vt1}}) \times {{params.ub}} = {{correct_answers.workpermass}} {{params.unitsWorkPerMass}} $</li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+

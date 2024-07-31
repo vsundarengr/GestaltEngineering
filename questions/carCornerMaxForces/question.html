@@ -1,0 +1,12 @@
+<pl-question-panel>
+A car of {{params.masslabel}} {{params.mass}} {{params.unitsMass}} travels on an unbanked road with radius {{params.radius}} {{params.unitsDist}}. The coefficient of static friction between the road and the tires of the car is {{params.mu}}.
+
+What is the maximum safe speed (in {{params.unitsSpeed}} ) with which the car can negotiate the corner? 
+<pl-number-input answers-name="speed" comparison="sigfig" digits="3" label="{{correct_answers_labels.speed}} "></pl-number-input>
+What is the friction force (in {{params.unitsForce}}) ? 
+<pl-number-input answers-name="Ff" comparison="sigfig" digits="3" label="{{correct_answers_labels.Ff}} "></pl-number-input>
+What is the normal force (in {{params.unitsForce}}) exerted by the road on the car?
+<pl-number-input answers-name="N" comparison="sigfig" digits="3" label="{{correct_answers_labels.N}} "></pl-number-input>
+
+</pl-question-panel>
+

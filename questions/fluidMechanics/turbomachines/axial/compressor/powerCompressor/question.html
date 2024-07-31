@@ -1,0 +1,22 @@
+<pl-question-panel>
+  <p> An axial-flow compressor is used to compress air at temperature {{params.temperature}} {{params.unitsTemperature}} and pressure {{params.pressure}} {{params.unitsPressure}}. </p>
+  <p> Air enters the rotor stage with an axial component of velocity {{params.Va}} {{params.unitsSpeed}}. The blade velocity is {{params.ub}} {{params.unitsSpeed}}. </p>
+  <p> The blade angle at the inlet and the exit are respectively $ {{params.beta1deg}}^\circ$ and $ {{params.beta2deg}}^\circ $</p>
+  <p> The hub radius is {{params.r1}} {{params.unitsDiameter}} and the tip radius is {{params.r2}} {{params.unitsDiameter}}. </p>
+  <p> Blade angles are measured with respect to the axial direction. Blade angle measured in the same direction as the rotation of the blade are positives while those opposite to the rotation of the blade are negative.</p>
+  <p> The axial component of the velocity is uniform across the compressor.</p>
+</pl-question-panel>
+  
+  
+  What is the torque (in {{params.unitsTorque}}) required for the compressor?
+  <pl-number-input answers-name="torque" comparison="sigfig" digits="3" label=" Torque (in N-m) "></pl-number-input>
+
+  What is the work done per unit mass (in {{params.unitsWorkPerMass}}) ?
+  <pl-number-input answers-name="workpermass" comparison="sigfig" digits="3" label=" Work per unit mass (in {{params.unitsWorkPerMass}}) "></pl-number-input>
+
+  What is the power required by the compressor (in {{params.unitsPower}}) ?
+  <pl-number-input answers-name="power" comparison="sigfig" digits="3" label="Power (in {{params.unitsPower}})"></pl-number-input>
+ 
+  What is the magnitude of the velocity (in {{params.unitsSpeed}}) at the outlet?
+  <pl-number-input answers-name="V2" comparison="sigfig" digits="3" label="Magnitude of velocity (in {{params.unitsSpeed}})"></pl-number-input>
+

@@ -1,0 +1,18 @@
+<pl-solution-panel>
+    
+    <pl-hint level="1" data-type="text"> The mass flow rate is the product of density and volumetric flow rate  </pl-hint>
+    <pl-hint level="2" data-type="text"> Compute the density </pl-hint>
+    <pl-hint level="3" data-type="text"> Density of air can be determined using the ideal gas law</pl-hint>
+    <pl-hint level="4" data-type="text"> To determine the axial velocity, use $ \dot{V} = A V_a $ </pl-hint>
+    <pl-hint level="5" data-type="text"> The area through which the fluid flows is $ A = \pi (R_2^2 - R_1^2) $ </pl-hint>
+    <pl-hint level="6" data-type="text"> 
+        <ul>
+            <li> From the ideal gas law, $ \rho = \frac{P}{R \times T} $ </li>
+            <li> $ \rho = \frac{ {{params.pressure}} }{ {{params.gasConstant}} \times ({{params.temperature}} + 273) } $</li>
+            <li> $ \implies \rho = {{correct_answers.rho}} $ {{params.unitsDensity}} </li>
+            <li> $ \dot{m} = \rho  \dot{V} = {{correct_answers.rho}} \times {{params.Vdot}}  \implies \dot{m} = {{correct_answers.mdot}} {{params.unitsMassRate}} $ </li>
+            <li> $ \dot{V} = A V_a \implies V_a = \frac{ \dot{V} }{ \pi (R_2^2 - R_1^2) } = \frac{ {{params.Vdot}}  }{ \pi ({{params.r1}}^2 - {{params.r1}}^2)} = {{correct_answers.Va}} {{params.unitsSpeed}} $ </li>
+        </ul>
+    </pl-hint>
+</pl-solution-panel>
+
