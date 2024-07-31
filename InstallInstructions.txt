@@ -1,0 +1,10 @@
+INSTALLATION INSTRUCTIONS
+The app requires you to have the latest distributions of NodeJs 18.4 or above, Python 3.9 or above, and MongoDB. 
+1. Run npm install from the install directory. This should install the required packages
+2. Locate the .env file in the root directory. Set the MONGOURI path in the .env file to point to your MongoDB repository. Also set the PORT variable if necessary. By default, it is set to 5000.
+3. In the MongoDB repository, manually create a collection called “users”. This collection has four fields: “email”, “password”, “institution” and “isJustCreated”. The first two are required. Set the email field to a valid email, and the password to a string that is at least 8 characters. If you have additional users to add, you can do it manually here or you can use the Gestalt app as admin. 
+4. To add a user to admin, first go to the MongoDB repository, create a collection called “adminusers”. This collection has an “admins” array. Add the object id of the user that you want to be admin. This is manual at this point.
+5. Once one user account has been created and added to the admin, then you can create other accounts using the admin page in Gestalt.
+6. Go to the directory where you downloaded the code. Go to the root folder and verify that there is a file called “app.js” in that folder. 
+7. Type nodemon app on the command prompt. 
+8. Open a browser and type in localhost:5000 in the search bar. 
